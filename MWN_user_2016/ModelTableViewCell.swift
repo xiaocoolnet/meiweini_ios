@@ -49,7 +49,7 @@ class ModelTableViewCell: UITableViewCell {
         zanBtn.setImage(UIImage(named: "ic_shoucang-0.png"), forState: .Normal)
         
         massageBtn.frame = CGRectMake(WIDTH-115, 120, 30, 25)
-        massageBtn.backgroundColor = UIColor.orangeColor()
+        massageBtn.setImage(UIImage(named: "ic_liangtian-fen.png"), forState: .Normal)
         
         presentBtn.frame = CGRectMake(WIDTH-65, 120, 60, 25)
         presentBtn.backgroundColor = UIColor.orangeColor()

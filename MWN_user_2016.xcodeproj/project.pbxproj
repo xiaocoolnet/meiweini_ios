@@ -118,6 +118,10 @@
 		183178391CC765A100D93D8A /* LiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183178381CC765A100D93D8A /* LiveTableViewCell.swift */; };
 		18501EA71CCDBB7D00B6A614 /* SafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EA61CCDBB7D00B6A614 /* SafeViewController.swift */; };
 		18501EA91CCDBBCE00B6A614 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EA81CCDBBCE00B6A614 /* ServiceViewController.swift */; };
+		18501EAB1CCE06CC00B6A614 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EAA1CCE06CC00B6A614 /* CommentTableViewCell.swift */; };
+		18501EAF1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EAE1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift */; };
+		18501EB11CCE0DF200B6A614 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EB01CCE0DF200B6A614 /* PhotoTableViewCell.swift */; };
+		18501EB31CCE17C200B6A614 /* RecommendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EB21CCE17C200B6A614 /* RecommendTableViewCell.swift */; };
 		1863CD341CCA0D43000B4DCF /* BeautyPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863CD331CCA0D43000B4DCF /* BeautyPicViewController.swift */; };
 		1892A4341CC5C76900AD7F52 /* ChildsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A4331CC5C76900AD7F52 /* ChildsViewController.swift */; };
 		189DA5571CCC51650004B76D /* ChildsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DA5561CCC51650004B76D /* ChildsTableViewCell.swift */; };
@@ -310,6 +314,10 @@
 		183178381CC765A100D93D8A /* LiveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTableViewCell.swift; sourceTree = "<group>"; };
 		18501EA61CCDBB7D00B6A614 /* SafeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeViewController.swift; sourceTree = "<group>"; };
 		18501EA81CCDBBCE00B6A614 /* ServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		18501EAA1CCE06CC00B6A614 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		18501EAE1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoalbumTableViewCell.swift; sourceTree = "<group>"; };
+		18501EB01CCE0DF200B6A614 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		18501EB21CCE17C200B6A614 /* RecommendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendTableViewCell.swift; sourceTree = "<group>"; };
 		1863CD331CCA0D43000B4DCF /* BeautyPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyPicViewController.swift; sourceTree = "<group>"; };
 		1892A4331CC5C76900AD7F52 /* ChildsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildsViewController.swift; sourceTree = "<group>"; };
 		189DA5561CCC51650004B76D /* ChildsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildsTableViewCell.swift; sourceTree = "<group>"; };
@@ -769,6 +777,10 @@
 			children = (
 				183178281CC71E2000D93D8A /* ModelTableViewCell.swift */,
 				18CFDDE81CC85ED700924F39 /* BusinessTableViewCell.swift */,
+				18501EAA1CCE06CC00B6A614 /* CommentTableViewCell.swift */,
+				18501EB21CCE17C200B6A614 /* RecommendTableViewCell.swift */,
+				18501EAE1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift */,
+				18501EB01CCE0DF200B6A614 /* PhotoTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1232,6 +1244,7 @@
 				180767721CBF76770062F4A5 /* String+Haneke.swift in Sources */,
 				18AA05911CC5052300BDCDF9 /* MassageViewController.swift in Sources */,
 				180767631CBF76770062F4A5 /* Cache.swift in Sources */,
+				18501EB31CCE17C200B6A614 /* RecommendTableViewCell.swift in Sources */,
 				189DA6DB1CCCA70F0004B76D /* UIImage+MultiFormat.m in Sources */,
 				189DA6DE1CCCA70F0004B76D /* UIImageView+WebCache.m in Sources */,
 				180767911CBF76770062F4A5 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
@@ -1240,6 +1253,7 @@
 				180767781CBF76770062F4A5 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				189DA6D51CCCA70F0004B76D /* SDWebImageDownloader.m in Sources */,
 				18A995D61CC9C11F00C4ACC0 /* MineBusinessViewController.swift in Sources */,
+				18501EAB1CCE06CC00B6A614 /* CommentTableViewCell.swift in Sources */,
 				1804BA0E1CC65FBD00854F60 /* MeijiaViewController.swift in Sources */,
 				1807678B1CBF76770062F4A5 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				180767C01CBF7A720062F4A5 /* MineViewController.swift in Sources */,
@@ -1320,6 +1334,7 @@
 				180767731CBF76770062F4A5 /* UIButton+Haneke.swift in Sources */,
 				189DA6DD1CCCA70F0004B76D /* UIImageView+HighlightedWebCache.m in Sources */,
 				180767CA1CBF7C3D0062F4A5 /* PasswordViewController.swift in Sources */,
+				18501EAF1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift in Sources */,
 				189DA6D41CCCA70F0004B76D /* SDWebImageDecoder.m in Sources */,
 				18AA058E1CC504CE00BDCDF9 /* LocationViewController.swift in Sources */,
 				189DA6D11CCCA70F0004B76D /* NSData+ImageContentType.m in Sources */,
@@ -1337,6 +1352,7 @@
 				1863CD341CCA0D43000B4DCF /* BeautyPicViewController.swift in Sources */,
 				180767601CBF76770062F4A5 /* SourceLocation.swift in Sources */,
 				180767A31CBF76770062F4A5 /* PhotoBrowser.swift in Sources */,
+				18501EB11CCE0DF200B6A614 /* PhotoTableViewCell.swift in Sources */,
 				1807677F1CBF76770062F4A5 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				180767811CBF76770062F4A5 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
 				1FF7A3151CBF69800048638F /* AppDelegate.swift in Sources */,
