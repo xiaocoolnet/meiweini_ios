@@ -116,6 +116,8 @@
 		183178351CC7577F00D93D8A /* BeautyLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183178341CC7577F00D93D8A /* BeautyLiveViewController.swift */; };
 		183178371CC7592F00D93D8A /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183178361CC7592F00D93D8A /* VideoTableViewCell.swift */; };
 		183178391CC765A100D93D8A /* LiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183178381CC765A100D93D8A /* LiveTableViewCell.swift */; };
+		18501EA71CCDBB7D00B6A614 /* SafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EA61CCDBB7D00B6A614 /* SafeViewController.swift */; };
+		18501EA91CCDBBCE00B6A614 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EA81CCDBBCE00B6A614 /* ServiceViewController.swift */; };
 		1863CD341CCA0D43000B4DCF /* BeautyPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863CD331CCA0D43000B4DCF /* BeautyPicViewController.swift */; };
 		1892A4341CC5C76900AD7F52 /* ChildsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A4331CC5C76900AD7F52 /* ChildsViewController.swift */; };
 		189DA5571CCC51650004B76D /* ChildsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DA5561CCC51650004B76D /* ChildsTableViewCell.swift */; };
@@ -306,6 +308,8 @@
 		183178341CC7577F00D93D8A /* BeautyLiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyLiveViewController.swift; sourceTree = "<group>"; };
 		183178361CC7592F00D93D8A /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		183178381CC765A100D93D8A /* LiveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTableViewCell.swift; sourceTree = "<group>"; };
+		18501EA61CCDBB7D00B6A614 /* SafeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeViewController.swift; sourceTree = "<group>"; };
+		18501EA81CCDBBCE00B6A614 /* ServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 		1863CD331CCA0D43000B4DCF /* BeautyPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyPicViewController.swift; sourceTree = "<group>"; };
 		1892A4331CC5C76900AD7F52 /* ChildsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildsViewController.swift; sourceTree = "<group>"; };
 		189DA5561CCC51650004B76D /* ChildsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildsTableViewCell.swift; sourceTree = "<group>"; };
@@ -719,7 +723,7 @@
 			isa = PBXGroup;
 			children = (
 				180767BF1CBF7A720062F4A5 /* MineViewController.swift */,
-				18A995CB1CC9C01000C4ACC0 /* SetViewController.swift */,
+				18501EA51CCDBB4400B6A614 /* SetUp */,
 				18A995CD1CC9C08300C4ACC0 /* MineMassageViewController.swift */,
 				18A995CF1CC9C0C000C4ACC0 /* MineConcernViewController.swift */,
 				18A995D11CC9C0D500C4ACC0 /* MineRedViewController.swift */,
@@ -848,6 +852,16 @@
 				18D262871CC091C700485B13 /* MeasureTool.swift */,
 			);
 			name = Tool;
+			sourceTree = "<group>";
+		};
+		18501EA51CCDBB4400B6A614 /* SetUp */ = {
+			isa = PBXGroup;
+			children = (
+				18A995CB1CC9C01000C4ACC0 /* SetViewController.swift */,
+				18501EA61CCDBB7D00B6A614 /* SafeViewController.swift */,
+				18501EA81CCDBBCE00B6A614 /* ServiceViewController.swift */,
+			);
+			name = SetUp;
 			sourceTree = "<group>";
 		};
 		1892A4321CC5C70300AD7F52 /* Beautiful */ = {
@@ -1192,6 +1206,7 @@
 				1807678D1CBF76770062F4A5 /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				18FA28671CC487DA00B73CCC /* ChildCollectionViewCell.swift in Sources */,
 				180767551CBF76770062F4A5 /* CFSnapKit.swift in Sources */,
+				18501EA91CCDBBCE00B6A614 /* ServiceViewController.swift in Sources */,
 				18D262841CC0795A00485B13 /* PhoneVerifyViewController.swift in Sources */,
 				1807676D1CBF76770062F4A5 /* Log.swift in Sources */,
 				1807677C1CBF76770062F4A5 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
@@ -1309,6 +1324,7 @@
 				18AA058E1CC504CE00BDCDF9 /* LocationViewController.swift in Sources */,
 				189DA6D11CCCA70F0004B76D /* NSData+ImageContentType.m in Sources */,
 				18A995D21CC9C0D500C4ACC0 /* MineRedViewController.swift in Sources */,
+				18501EA71CCDBB7D00B6A614 /* SafeViewController.swift in Sources */,
 				1807676F1CBF76770062F4A5 /* NSFileManager+Haneke.swift in Sources */,
 				18A995C81CC9BA2B00C4ACC0 /* MineOneTableViewCell.swift in Sources */,
 				1807679B1CBF76770062F4A5 /* PhotoBrowser+CollectionViewExtend.swift in Sources */,

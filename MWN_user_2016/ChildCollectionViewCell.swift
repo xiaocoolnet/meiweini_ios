@@ -23,23 +23,23 @@ class ChildCollectionViewCell: UICollectionViewCell {
         
         backgroundColor = UIColor.clearColor()
         
-        imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: CGRectGetWidth(self.frame) - 20, height: ((CGRectGetWidth(self.frame) - 20))/11*7))
+        imageView = UIImageView(frame: CGRect(x: 0, y: 10, width: CGRectGetWidth(self.frame), height: (CGRectGetWidth(self.frame))/11*7))
         imageView?.backgroundColor = rand_color()
         
         if let imageView = imageView {
             self.addSubview(imageView)
             
-            name = UILabel(frame: CGRect(x: 10, y: CGRectGetMaxY(imageView.frame)+5, width: CGRectGetWidth(self.frame) - 100, height: 20))
+            name = UILabel(frame: CGRect(x: 0, y: CGRectGetMaxY(imageView.frame)+5, width: CGRectGetWidth(self.frame) - 100, height: 20))
             //name?.backgroundColor = UIColor.orangeColor()
             name?.font = UIFont.systemFontOfSize(14)
             
-            number = UILabel(frame: CGRect(x: CGRectGetWidth(self.frame) - 90, y: CGRectGetMaxY(imageView.frame)+5, width: 80, height: 20))
+            number = UILabel(frame: CGRect(x: CGRectGetWidth(self.frame) - 80, y: CGRectGetMaxY(imageView.frame)+5, width: 80, height: 20))
             //number.backgroundColor = UIColor.greenColor()
             number.textAlignment = .Right
             number.font = UIFont.systemFontOfSize(13)
             number.textColor = UIColor(red: 202/255.0, green: 202/255.0, blue: 202/255.0, alpha: 1.0)
             
-            contact = UILabel(frame: CGRect(x: 10, y: CGRectGetMaxY(imageView.frame) + 30, width: CGRectGetWidth(self.frame) - 20, height: 20))
+            contact = UILabel(frame: CGRect(x: 0, y: CGRectGetMaxY(imageView.frame) + 30, width: CGRectGetWidth(self.frame) - 20, height: 20))
             //contact.backgroundColor = UIColor.brownColor()
             contact.font = UIFont.systemFontOfSize(13)
             contact.textColor = GREY

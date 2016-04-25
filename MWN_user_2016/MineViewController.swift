@@ -43,7 +43,7 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         backBtn.layer.cornerRadius = 25
         
         setBtn.frame = CGRectMake(WIDTH-45, 30, 30, 30)
-        setBtn.backgroundColor = UIColor.orangeColor()
+        setBtn.setImage(UIImage(named: "ic_set.png"), forState: .Normal)
         setBtn.addTarget(self, action: #selector(MineViewController.setUpView), forControlEvents: .TouchUpInside)
         
         massageBtn.frame = CGRectMake(WIDTH-100, 30, 40, 30)

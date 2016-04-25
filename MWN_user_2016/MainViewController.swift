@@ -53,8 +53,8 @@ class MainViewController: UIViewController,UIScrollViewDelegate,UICollectionView
     func createCollectionView() {
         let flowlayout = UICollectionViewFlowLayout()
         flowlayout.scrollDirection = .Vertical
-        flowlayout.itemSize = CGSize(width: UIScreen.mainScreen().bounds.width / 2, height: UIScreen.mainScreen().bounds.width*0.9 / 2)
-        flowlayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        flowlayout.itemSize = CGSize(width: (UIScreen.mainScreen().bounds.width-30) / 2, height: (UIScreen.mainScreen().bounds.width-40) / 2)
+        flowlayout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10)
         flowlayout.minimumInteritemSpacing = 0.0;
         flowlayout.minimumLineSpacing      = 0.0;
         collectionView = UICollectionView(frame: CGRectMake(0, 0, WIDTH, HEIGHT-60), collectionViewLayout: flowlayout)
