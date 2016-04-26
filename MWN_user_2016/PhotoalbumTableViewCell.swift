@@ -29,7 +29,7 @@ class PhotoalbumTableViewCell: UITableViewCell {
         price.font = UIFont.systemFontOfSize(19)
         price.textColor = UIColor(red: 247/255.0, green: 80/255.0, blue: 1/255.0, alpha: 1.0)
         price.textAlignment = .Right
-        comment.frame = CGRectMake(10, 35, WIDTH-30, 45)
+        comment.frame = CGRectMake(10, 35, WIDTH-35, 45)
         comment.textColor = UIColor(red: 129/255.0, green: 129/255.0, blue: 129/255.0, alpha: 1.0)
         comment.font = UIFont.systemFontOfSize(14)
         comment.numberOfLines = 0

@@ -62,8 +62,8 @@ class BeautyVidViewController: UIViewController,UITableViewDelegate,UITableViewD
 // 但愿个点击方法
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print(indexPath.row)
-        let next = NextViewViewController()
-        self.navigationController?.pushViewController(next, animated: true)
+        let video = VideoViewController()
+        self.navigationController?.pushViewController(video, animated: true)
         
         
     }

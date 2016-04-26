@@ -121,7 +121,6 @@
 		18501EAB1CCE06CC00B6A614 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EAA1CCE06CC00B6A614 /* CommentTableViewCell.swift */; };
 		18501EAF1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EAE1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift */; };
 		18501EB11CCE0DF200B6A614 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EB01CCE0DF200B6A614 /* PhotoTableViewCell.swift */; };
-		18501EB31CCE17C200B6A614 /* RecommendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EB21CCE17C200B6A614 /* RecommendTableViewCell.swift */; };
 		1863CD341CCA0D43000B4DCF /* BeautyPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863CD331CCA0D43000B4DCF /* BeautyPicViewController.swift */; };
 		1892A4341CC5C76900AD7F52 /* ChildsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A4331CC5C76900AD7F52 /* ChildsViewController.swift */; };
 		189DA5571CCC51650004B76D /* ChildsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DA5561CCC51650004B76D /* ChildsTableViewCell.swift */; };
@@ -148,6 +147,10 @@
 		189DA6E51CCCBA0F0004B76D /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 189DA6E21CCCBA0F0004B76D /* 1.plist */; };
 		189DA6E61CCCBA0F0004B76D /* 2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 189DA6E31CCCBA0F0004B76D /* 2.plist */; };
 		189DA6E71CCCBA0F0004B76D /* 3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 189DA6E41CCCBA0F0004B76D /* 3.plist */; };
+		18A5EBBE1CCF023D009FB017 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBBD1CCF023D009FB017 /* VideoViewController.swift */; };
+		18A5EBC01CCF02EF009FB017 /* VideoPlayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBBF1CCF02EF009FB017 /* VideoPlayTableViewCell.swift */; };
+		18A5EBC21CCF09E7009FB017 /* UserMassageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBC11CCF09E7009FB017 /* UserMassageViewController.swift */; };
+		18A5EBC41CCF1744009FB017 /* DownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBC31CCF1744009FB017 /* DownViewController.swift */; };
 		18A995C81CC9BA2B00C4ACC0 /* MineOneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A995C71CC9BA2B00C4ACC0 /* MineOneTableViewCell.swift */; };
 		18A995CA1CC9BC3300C4ACC0 /* MineTwoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A995C91CC9BC3300C4ACC0 /* MineTwoTableViewCell.swift */; };
 		18A995CC1CC9C01000C4ACC0 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A995CB1CC9C01000C4ACC0 /* SetViewController.swift */; };
@@ -317,7 +320,6 @@
 		18501EAA1CCE06CC00B6A614 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		18501EAE1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoalbumTableViewCell.swift; sourceTree = "<group>"; };
 		18501EB01CCE0DF200B6A614 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
-		18501EB21CCE17C200B6A614 /* RecommendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendTableViewCell.swift; sourceTree = "<group>"; };
 		1863CD331CCA0D43000B4DCF /* BeautyPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyPicViewController.swift; sourceTree = "<group>"; };
 		1892A4331CC5C76900AD7F52 /* ChildsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildsViewController.swift; sourceTree = "<group>"; };
 		189DA5561CCC51650004B76D /* ChildsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildsTableViewCell.swift; sourceTree = "<group>"; };
@@ -361,6 +363,10 @@
 		189DA6E21CCCBA0F0004B76D /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
 		189DA6E31CCCBA0F0004B76D /* 2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 2.plist; sourceTree = "<group>"; };
 		189DA6E41CCCBA0F0004B76D /* 3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 3.plist; sourceTree = "<group>"; };
+		18A5EBBD1CCF023D009FB017 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		18A5EBBF1CCF02EF009FB017 /* VideoPlayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayTableViewCell.swift; sourceTree = "<group>"; };
+		18A5EBC11CCF09E7009FB017 /* UserMassageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMassageViewController.swift; sourceTree = "<group>"; };
+		18A5EBC31CCF1744009FB017 /* DownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownViewController.swift; sourceTree = "<group>"; };
 		18A995C71CC9BA2B00C4ACC0 /* MineOneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineOneTableViewCell.swift; sourceTree = "<group>"; };
 		18A995C91CC9BC3300C4ACC0 /* MineTwoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineTwoTableViewCell.swift; sourceTree = "<group>"; };
 		18A995CB1CC9C01000C4ACC0 /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
@@ -731,6 +737,7 @@
 			isa = PBXGroup;
 			children = (
 				180767BF1CBF7A720062F4A5 /* MineViewController.swift */,
+				18A5EBC11CCF09E7009FB017 /* UserMassageViewController.swift */,
 				18501EA51CCDBB4400B6A614 /* SetUp */,
 				18A995CD1CC9C08300C4ACC0 /* MineMassageViewController.swift */,
 				18A995CF1CC9C0C000C4ACC0 /* MineConcernViewController.swift */,
@@ -749,6 +756,7 @@
 				183178381CC765A100D93D8A /* LiveTableViewCell.swift */,
 				189DA6A61CCCA5E10004B76D /* RANFlowLayout.swift */,
 				189DA6A41CCCA5970004B76D /* RANCollectionViewCell.swift */,
+				18A5EBBF1CCF02EF009FB017 /* VideoPlayTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -765,9 +773,9 @@
 			isa = PBXGroup;
 			children = (
 				1831782C1CC7546000D93D8A /* BeautyViewController.swift */,
-				1863CD331CCA0D43000B4DCF /* BeautyPicViewController.swift */,
-				183178321CC7576B00D93D8A /* BeautyVidViewController.swift */,
-				183178341CC7577F00D93D8A /* BeautyLiveViewController.swift */,
+				18A5EBBC1CCF01FB009FB017 /* Picture */,
+				18A5EBBB1CCF01F8009FB017 /* Video */,
+				18A5EBB91CCF01EB009FB017 /* Live */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -778,7 +786,6 @@
 				183178281CC71E2000D93D8A /* ModelTableViewCell.swift */,
 				18CFDDE81CC85ED700924F39 /* BusinessTableViewCell.swift */,
 				18501EAA1CCE06CC00B6A614 /* CommentTableViewCell.swift */,
-				18501EB21CCE17C200B6A614 /* RecommendTableViewCell.swift */,
 				18501EAE1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift */,
 				18501EB01CCE0DF200B6A614 /* PhotoTableViewCell.swift */,
 			);
@@ -797,6 +804,7 @@
 			children = (
 				180767C31CBF7AB00062F4A5 /* ConcernViewController.swift */,
 				18AA05921CC505B600BDCDF9 /* NextViewViewController.swift */,
+				18A5EBC31CCF1744009FB017 /* DownViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -923,6 +931,31 @@
 				189DA6CF1CCCA70F0004B76D /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		18A5EBB91CCF01EB009FB017 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				183178341CC7577F00D93D8A /* BeautyLiveViewController.swift */,
+			);
+			name = Live;
+			sourceTree = "<group>";
+		};
+		18A5EBBB1CCF01F8009FB017 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				183178321CC7576B00D93D8A /* BeautyVidViewController.swift */,
+				18A5EBBD1CCF023D009FB017 /* VideoViewController.swift */,
+			);
+			name = Video;
+			sourceTree = "<group>";
+		};
+		18A5EBBC1CCF01FB009FB017 /* Picture */ = {
+			isa = PBXGroup;
+			children = (
+				1863CD331CCA0D43000B4DCF /* BeautyPicViewController.swift */,
+			);
+			name = Picture;
 			sourceTree = "<group>";
 		};
 		18AA058C1CC504B600BDCDF9 /* Location */ = {
@@ -1235,6 +1268,7 @@
 				180767711CBF76770062F4A5 /* NSURLResponse+Haneke.swift in Sources */,
 				180767521CBF76770062F4A5 /* DisplayView.swift in Sources */,
 				180767591CBF76770062F4A5 /* ConstraintItem.swift in Sources */,
+				18A5EBC21CCF09E7009FB017 /* UserMassageViewController.swift in Sources */,
 				18A995CC1CC9C01000C4ACC0 /* SetViewController.swift in Sources */,
 				180767751CBF76770062F4A5 /* UIImageView+Haneke.swift in Sources */,
 				180767A01CBF76770062F4A5 /* PhotoBrowser+ZoomAnim.swift in Sources */,
@@ -1244,7 +1278,6 @@
 				180767721CBF76770062F4A5 /* String+Haneke.swift in Sources */,
 				18AA05911CC5052300BDCDF9 /* MassageViewController.swift in Sources */,
 				180767631CBF76770062F4A5 /* Cache.swift in Sources */,
-				18501EB31CCE17C200B6A614 /* RecommendTableViewCell.swift in Sources */,
 				189DA6DB1CCCA70F0004B76D /* UIImage+MultiFormat.m in Sources */,
 				189DA6DE1CCCA70F0004B76D /* UIImageView+WebCache.m in Sources */,
 				180767911CBF76770062F4A5 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
@@ -1316,8 +1349,10 @@
 				1807676A1CBF76770062F4A5 /* Fetcher.swift in Sources */,
 				180767881CBF76770062F4A5 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				180767541CBF76770062F4A5 /* FlexibleTableViewCell.swift in Sources */,
+				18A5EBC41CCF1744009FB017 /* DownViewController.swift in Sources */,
 				180767921CBF76770062F4A5 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				180767841CBF76770062F4A5 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
+				18A5EBC01CCF02EF009FB017 /* VideoPlayTableViewCell.swift in Sources */,
 				1807678F1CBF76770062F4A5 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				183178331CC7576B00D93D8A /* BeautyVidViewController.swift in Sources */,
 				1807675F1CBF76770062F4A5 /* SnapKit.swift in Sources */,
@@ -1331,6 +1366,7 @@
 				180767941CBF76770062F4A5 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				1807675C1CBF76770062F4A5 /* Debugging.swift in Sources */,
 				18A995CE1CC9C08300C4ACC0 /* MineMassageViewController.swift in Sources */,
+				18A5EBBE1CCF023D009FB017 /* VideoViewController.swift in Sources */,
 				180767731CBF76770062F4A5 /* UIButton+Haneke.swift in Sources */,
 				189DA6DD1CCCA70F0004B76D /* UIImageView+HighlightedWebCache.m in Sources */,
 				180767CA1CBF7C3D0062F4A5 /* PasswordViewController.swift in Sources */,

@@ -122,6 +122,7 @@ extension BeautyPicViewController : UICollectionViewDataSource,UICollectionViewD
         print(indexPath.row)
         let next = NextViewViewController()
         self.navigationController?.pushViewController(next, animated: true)
+        next.title = "美图"
        
         
     }

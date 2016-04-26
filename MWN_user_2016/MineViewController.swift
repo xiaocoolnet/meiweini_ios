@@ -179,7 +179,12 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     
     @IBAction func changeImage(sender: AnyObject) {
-        print("更换头像")
+        print("信息修改")
+        let userMassage = UserMassageViewController()
+        self.navigationController?.pushViewController(userMassage, animated: true)
+        userMassage.title = "信息修改"
+        
+        
     }
     
     @IBAction func GoBackLogin(sender: AnyObject) {

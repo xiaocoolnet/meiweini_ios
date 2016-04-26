@@ -35,19 +35,19 @@ class CommentTableViewCell: UITableViewCell {
         userImage.clipsToBounds = true
         userName.frame = CGRectMake(45, 10, 100, 20)
         userName.font = UIFont.systemFontOfSize(14)
-        userComment.frame = CGRectMake(45, 30, WIDTH/3*2, 50)
+        userComment.frame = CGRectMake(45, 30, WIDTH/5*4, 50)
         userComment.font = UIFont.systemFontOfSize(14)
         userComment.numberOfLines = 0
         userDate.frame = CGRectMake(45, 80, 50, 15)
         userDate.font = UIFont.systemFontOfSize(12)
         userDate.textColor = GREY
-        zanNum.frame = CGRectMake(WIDTH-100, 80, 30, 13)
+        zanNum.frame = CGRectMake(WIDTH-110, 80, 30, 13)
         zanNum.font = UIFont.systemFontOfSize(12)
         zanNum.textColor = GREY
         zanNum.textAlignment = .Right
-        zanBtn.frame = CGRectMake(WIDTH-70, 80, 15, 13)
+        zanBtn.frame = CGRectMake(WIDTH-75, 80, 15, 13)
         zanBtn.setImage(UIImage(named: "ic_xiaoxi-hui.png"), forState: .Normal)
-        comment.frame = CGRectMake(WIDTH-55, 80, 30, 13)
+        comment.frame = CGRectMake(WIDTH-60, 80, 30, 13)
         comment.font = UIFont.systemFontOfSize(12)
         comment.textColor = GREY
         comment.textAlignment = .Right

@@ -1,15 +1,15 @@
 //
-//  NextViewViewController.swift
+//  VideoViewController.swift
 //  MWN_user_2016
 //
-//  Created by apple on 16/4/18.
+//  Created by apple on 16/4/26.
 //  Copyright © 2016年 xiaocool. All rights reserved.
 //
 
 import UIKit
 
-class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-
+class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    
     var beautyTable = UITableView()
     let downView = UIView()
     
@@ -19,9 +19,9 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.tabBarController?.tabBar.hidden = true
-        self.title = "商品界面"
+        self.title = "视频"
         self.view.backgroundColor = RGREY
         
         let rightItem = UIBarButtonItem(image: UIImage(named: "ic_shanghu.png"), style: .Done, target: self, action: #selector(NextViewViewController.shareBtn))
@@ -32,12 +32,12 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
         beautyTable.dataSource = self
         beautyTable.registerClass(CommentTableViewCell.self, forCellReuseIdentifier: "comment")
         beautyTable.registerClass(PhotoalbumTableViewCell.self, forCellReuseIdentifier: "photoalbum")
-        beautyTable.registerClass(PhotoTableViewCell.self, forCellReuseIdentifier: "photo")
+        beautyTable.registerClass(VideoPlayTableViewCell.self, forCellReuseIdentifier: "video")
         beautyTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(beautyTable)
-
+        
         self.downViewSet()
-       
+        
         // Do any additional setup after loading the view.
     }
     func downViewSet() {
@@ -83,7 +83,7 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         
     }
-
+    
     func focusTheBeauty() {
         print("关注")
         
@@ -94,9 +94,6 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     func downLoadBeauty() {
         print("下载")
-        let down = DownViewController()
-        self.navigationController?.pushViewController(down, animated: true)
-        down.title = "下载"
         
     }
     func shareBtn() {
@@ -120,7 +117,7 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                return WIDTH
+                return WIDTH/3*2
             }else{
                 return 90
             }
@@ -176,7 +173,7 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                let cell = tableView.dequeueReusableCellWithIdentifier("photo")as!PhotoTableViewCell
+                let cell = tableView.dequeueReusableCellWithIdentifier("video")as!VideoPlayTableViewCell
                 cell.selectionStyle = .None
                 cell.photoImage.image = UIImage(named: "kb4.png")
                 cell.photoNum.text = "1/8"
@@ -186,9 +183,15 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
             }else{
                 let cell = tableView.dequeueReusableCellWithIdentifier("photoalbum")as!PhotoalbumTableViewCell
                 cell.selectionStyle = .None
-                cell.photoName.text = "美女相册"
+                cell.photoName.text = "美女视频"
                 cell.price.text = "$88.88"
                 cell.comment.text = "勇敢是，当你还未开始就已知道自己会输，可你依然要去做，而且无论如何都要把它坚持到底。"
+                let zanBtn = UIButton()
+                zanBtn.frame = CGRectMake(WIDTH-41, 54, 36, 33)
+                zanBtn.setImage(UIImage(named: "ic_shoucang-0.png"), forState: .Normal)
+                zanBtn.addTarget(self, action: #selector(VideoViewController.zanBtnNum), forControlEvents: .TouchUpInside)
+                cell.addSubview(zanBtn)
+                
                 return cell
                 
             }
@@ -220,7 +223,7 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 cell!.addSubview(collectionView)
                 collectionView.scrollEnabled = false
             }
-
+            
             return cell!
             
         }else{
@@ -245,8 +248,11 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
     }
     
+    func zanBtnNum() {
+        print("赞")
+    }
     // MARK: - UICollectionViewDataSource
-//    组数
+    //    组数
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -275,21 +281,21 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
