@@ -94,10 +94,14 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     func downLoadBeauty() {
         print("下载")
+        let down = DownViewController()
+        self.navigationController?.pushViewController(down, animated: true)
+        down.title = "下载"
+
         
     }
     func shareBtn() {
-        print("分享")
+        print("商家界面")
         
     }
     

@@ -45,13 +45,13 @@ class ModelTableViewCell: UITableViewCell {
         shareBtn.frame = CGRectMake(WIDTH-30, 5, 25, 25)
         shareBtn.setImage(UIImage(named: "ic_fengxiang-hui.png"), forState: .Normal)
         
-        zanBtn.frame = CGRectMake(WIDTH-160, 120, 25, 25)
+        zanBtn.frame = CGRectMake(WIDTH-125, 120, 25, 25)
         zanBtn.setImage(UIImage(named: "ic_shoucang-0.png"), forState: .Normal)
         
-        massageBtn.frame = CGRectMake(WIDTH-115, 120, 30, 25)
+        massageBtn.frame = CGRectMake(WIDTH-95, 120, 30, 25)
         massageBtn.setImage(UIImage(named: "ic_liangtian-fen.png"), forState: .Normal)
         
-        presentBtn.frame = CGRectMake(WIDTH-65, 120, 60, 25)
+        presentBtn.frame = CGRectMake(WIDTH-55, 120, 50, 25)
         presentBtn.backgroundColor = UIColor.orangeColor()
         
         self.addSubview(titleImage)

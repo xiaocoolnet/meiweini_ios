@@ -17,11 +17,7 @@ class VideoTableViewCell: UITableViewCell {
     var downBtn = UIButton()
     var downNumber = UILabel()
     
-    
-    
-    
-    
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -34,16 +30,18 @@ class VideoTableViewCell: UITableViewCell {
         }
         anchorImage.frame = CGRectMake(10, 10, WIDTH-20, 200)
         anchorName.frame = CGRectMake(10, 210, 150, 30)
-        anchorName.textAlignment = .Left
+        anchorName.font = UIFont.systemFontOfSize(13)
         anchorName.textColor = UIColor(red: 252/255.0, green: 114/255.0, blue: 98/255.0, alpha: 1.0)
-        zanBtn.frame = CGRectMake(WIDTH-150, 210, 30, 30)
-        zanBtn.setImage(UIImage(named: "ic_zuixingengxin.png"), forState: .Normal)
+        zanBtn.frame = CGRectMake(WIDTH-140, 212.5, 25, 25)
+        zanBtn.setImage(UIImage(named: "ic_shoucang.png"), forState: .Normal)
         zanNumber.frame = CGRectMake(WIDTH-120, 210, 40, 30)
         zanNumber.textColor = UIColor(red: 252/255.0, green: 114/255.0, blue: 98/255.0, alpha: 1.0)
-        downBtn.frame = CGRectMake(WIDTH-80, 210, 30, 30)
-        downBtn.setImage(UIImage(named: "ic_zuixingengxin.png"), forState: .Normal)
+        zanNumber.font = UIFont.systemFontOfSize(13)
+        downBtn.frame = CGRectMake(WIDTH-70, 212.5, 25, 25)
+        downBtn.setImage(UIImage(named: "ic_xiazai.png"), forState: .Normal)
         downNumber.frame = CGRectMake(WIDTH-50, 210, 40, 30)
         downNumber.textColor = UIColor(red: 252/255.0, green: 114/255.0, blue: 98/255.0, alpha: 1.0)
+        downNumber.font = UIFont.systemFontOfSize(13)
         
         self.addSubview(anchorImage)
         self.addSubview(anchorName)

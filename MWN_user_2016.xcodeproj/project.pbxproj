@@ -151,6 +151,9 @@
 		18A5EBC01CCF02EF009FB017 /* VideoPlayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBBF1CCF02EF009FB017 /* VideoPlayTableViewCell.swift */; };
 		18A5EBC21CCF09E7009FB017 /* UserMassageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBC11CCF09E7009FB017 /* UserMassageViewController.swift */; };
 		18A5EBC41CCF1744009FB017 /* DownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBC31CCF1744009FB017 /* DownViewController.swift */; };
+		18A5EBC61CCF4B32009FB017 /* CommodityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBC51CCF4B32009FB017 /* CommodityTableViewCell.swift */; };
+		18A5EBC81CCF4F00009FB017 /* PayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBC71CCF4F00009FB017 /* PayTableViewCell.swift */; };
+		18A5EBCA1CCF4F28009FB017 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBC91CCF4F28009FB017 /* MoreTableViewCell.swift */; };
 		18A995C81CC9BA2B00C4ACC0 /* MineOneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A995C71CC9BA2B00C4ACC0 /* MineOneTableViewCell.swift */; };
 		18A995CA1CC9BC3300C4ACC0 /* MineTwoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A995C91CC9BC3300C4ACC0 /* MineTwoTableViewCell.swift */; };
 		18A995CC1CC9C01000C4ACC0 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A995CB1CC9C01000C4ACC0 /* SetViewController.swift */; };
@@ -367,6 +370,9 @@
 		18A5EBBF1CCF02EF009FB017 /* VideoPlayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayTableViewCell.swift; sourceTree = "<group>"; };
 		18A5EBC11CCF09E7009FB017 /* UserMassageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMassageViewController.swift; sourceTree = "<group>"; };
 		18A5EBC31CCF1744009FB017 /* DownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownViewController.swift; sourceTree = "<group>"; };
+		18A5EBC51CCF4B32009FB017 /* CommodityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommodityTableViewCell.swift; sourceTree = "<group>"; };
+		18A5EBC71CCF4F00009FB017 /* PayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayTableViewCell.swift; sourceTree = "<group>"; };
+		18A5EBC91CCF4F28009FB017 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
 		18A995C71CC9BA2B00C4ACC0 /* MineOneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineOneTableViewCell.swift; sourceTree = "<group>"; };
 		18A995C91CC9BC3300C4ACC0 /* MineTwoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineTwoTableViewCell.swift; sourceTree = "<group>"; };
 		18A995CB1CC9C01000C4ACC0 /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
@@ -788,6 +794,9 @@
 				18501EAA1CCE06CC00B6A614 /* CommentTableViewCell.swift */,
 				18501EAE1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift */,
 				18501EB01CCE0DF200B6A614 /* PhotoTableViewCell.swift */,
+				18A5EBC51CCF4B32009FB017 /* CommodityTableViewCell.swift */,
+				18A5EBC71CCF4F00009FB017 /* PayTableViewCell.swift */,
+				18A5EBC91CCF4F28009FB017 /* MoreTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1279,6 +1288,7 @@
 				18AA05911CC5052300BDCDF9 /* MassageViewController.swift in Sources */,
 				180767631CBF76770062F4A5 /* Cache.swift in Sources */,
 				189DA6DB1CCCA70F0004B76D /* UIImage+MultiFormat.m in Sources */,
+				18A5EBCA1CCF4F28009FB017 /* MoreTableViewCell.swift in Sources */,
 				189DA6DE1CCCA70F0004B76D /* UIImageView+WebCache.m in Sources */,
 				180767911CBF76770062F4A5 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
 				180767CD1CBF89AA0062F4A5 /* CornerRadiusViewController.swift in Sources */,
@@ -1319,6 +1329,7 @@
 				183178371CC7592F00D93D8A /* VideoTableViewCell.swift in Sources */,
 				18D262861CC0799800485B13 /* VerificationViewController.swift in Sources */,
 				1807675A1CBF76770062F4A5 /* ConstraintMaker.swift in Sources */,
+				18A5EBC81CCF4F00009FB017 /* PayTableViewCell.swift in Sources */,
 				180767931CBF76770062F4A5 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				189DA6D01CCCA70F0004B76D /* MKAnnotationView+WebCache.m in Sources */,
 				180767691CBF76770062F4A5 /* Fetch.swift in Sources */,
@@ -1388,6 +1399,7 @@
 				1863CD341CCA0D43000B4DCF /* BeautyPicViewController.swift in Sources */,
 				180767601CBF76770062F4A5 /* SourceLocation.swift in Sources */,
 				180767A31CBF76770062F4A5 /* PhotoBrowser.swift in Sources */,
+				18A5EBC61CCF4B32009FB017 /* CommodityTableViewCell.swift in Sources */,
 				18501EB11CCE0DF200B6A614 /* PhotoTableViewCell.swift in Sources */,
 				1807677F1CBF76770062F4A5 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				180767811CBF76770062F4A5 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,

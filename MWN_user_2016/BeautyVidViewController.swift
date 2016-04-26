@@ -19,7 +19,7 @@ class BeautyVidViewController: UIViewController,UITableViewDelegate,UITableViewD
 
         // Do any additional setup after loading the view.
         
-        self.view.backgroundColor = RGREY
+        self.view.backgroundColor = UIColor.whiteColor()
         
         videoTable.frame = CGRectMake(0, 0, WIDTH, HEIGHT-154)
         videoTable.delegate = self

@@ -48,14 +48,13 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
         let focus = UIImageView()
         focus.frame = CGRectMake(10, 14, 18, 16)
         focus.image = UIImage(named: "ic_guanzhu.png")
-        let focusLab = UILabel()
-        focusLab.frame = CGRectMake(35, 12, 40, 20)
-        focusLab.text = "关注"
         let focusBtn = UIButton()
-        focusBtn.frame = CGRectMake(5, 2, 70, 40)
+        focusBtn.frame = CGRectMake(25, 2, 50, 40)
+        focusBtn.setTitle("关注", forState: .Normal)
+        focusBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        focusBtn.setTitle("", forState: .Highlighted)
         focusBtn.addTarget(self, action: #selector(NextViewViewController.focusTheBeauty), forControlEvents: .TouchUpInside)
         downView.addSubview(focus)
-        downView.addSubview(focusLab)
         downView.addSubview(focusBtn)
         
         let downBtn = UIButton()
@@ -69,15 +68,13 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
         let comment = UIImageView()
         comment.frame = CGRectMake(WIDTH-28, 14, 18, 16)
         comment.image = UIImage(named: "ic_pinglun.png")
-        let commentLab = UILabel()
-        commentLab.frame = CGRectMake(WIDTH-75, 12, 40, 20)
-        commentLab.text = "评论"
-        commentLab.textAlignment = .Right
         let commentBtn = UIButton()
-        commentBtn.frame = CGRectMake(WIDTH-75, 2, 70, 40)
+        commentBtn.frame = CGRectMake(WIDTH-75, 2, 50, 40)
+        commentBtn.setTitle("评论", forState: .Normal)
+        commentBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        commentBtn.setTitle("", forState: .Highlighted)
         commentBtn.addTarget(self, action: #selector(NextViewViewController.commentTheBeauty), forControlEvents: .TouchUpInside)
         downView.addSubview(comment)
-        downView.addSubview(commentLab)
         downView.addSubview(commentBtn)
         
         
@@ -100,7 +97,7 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
     }
     func shareBtn() {
-        print("分享")
+        print("商家界面")
         
     }
     

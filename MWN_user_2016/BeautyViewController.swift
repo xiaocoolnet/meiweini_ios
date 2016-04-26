@@ -31,7 +31,7 @@ class BeautyViewController: UIViewController {
         super.viewDidLoad()
         
         
-        self.view.backgroundColor = GREY
+        self.view.backgroundColor = RGREY
         
         oneView.title = "美图"
         twoView.title = "视频"
