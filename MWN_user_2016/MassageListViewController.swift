@@ -1,28 +1,22 @@
 //
-//  MineBusinessViewController.swift
+//  MassageListViewController.swift
 //  MWN_user_2016
 //
-//  Created by apple on 16/4/22.
+//  Created by apple on 16/4/27.
 //  Copyright © 2016年 xiaocool. All rights reserved.
 //
 
 import UIKit
 
-class MineBusinessViewController: UIViewController {
+class MassageListViewController: UIViewController {
 
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = false
-        self.tabBarController?.tabBar.hidden = true
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = "我的分销"
+        self.title = "消息内容"
         self.view.backgroundColor = RGREY
         
-
     }
 
     override func didReceiveMemoryWarning() {

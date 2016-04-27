@@ -177,6 +177,7 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 cell.selectionStyle = .None
                 cell.photoImage.image = UIImage(named: "kb4.png")
                 cell.photoNum.text = "1/8"
+                cell.zanBtn.addTarget(self, action: #selector(NextViewViewController.zanButton), forControlEvents: .TouchUpInside)
                 
                 return cell
                 
@@ -229,13 +230,28 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell.userDate.text = "4月25日"
             cell.zanNum.text = "235"
             cell.comment.text = "345"
+            cell.zanBtn.addTarget(self, action: #selector(NextViewViewController.zanGetUp), forControlEvents: .TouchUpInside)
+            cell.commentBtn.addTarget(self, action: #selector(NextViewViewController.commonGetUp), forControlEvents: .TouchUpInside)
             
             return cell
             
         }
         
     }
-    
+    func zanGetUp() {
+        print("增加赞")
+        
+    }
+    func commonGetUp() {
+        print("增加评论")
+        
+        
+    }
+    func zanButton() {
+        print("赞")
+        
+        
+    }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print(indexPath.row)
         

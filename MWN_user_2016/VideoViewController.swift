@@ -239,10 +239,21 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             cell.userDate.text = "4月25日"
             cell.zanNum.text = "235"
             cell.comment.text = "345"
+            cell.zanBtn.addTarget(self, action: #selector(VideoViewController.zanGetUp), forControlEvents: .TouchUpInside)
+            cell.commentBtn.addTarget(self, action: #selector(VideoViewController.commonGetUp), forControlEvents: .TouchUpInside)
             
             return cell
             
         }
+        
+    }
+    func zanGetUp() {
+        print("增加赞")
+        
+    }
+    func commonGetUp() {
+        print("增加评论")
+        
         
     }
     

@@ -45,14 +45,14 @@ class CommentTableViewCell: UITableViewCell {
         zanNum.font = UIFont.systemFontOfSize(12)
         zanNum.textColor = GREY
         zanNum.textAlignment = .Right
-        zanBtn.frame = CGRectMake(WIDTH-75, 80, 15, 13)
-        zanBtn.setImage(UIImage(named: "ic_xiaoxi-hui.png"), forState: .Normal)
+        zanBtn.frame = CGRectMake(WIDTH-75, 80, 18, 13)
+        zanBtn.setImage(UIImage(named: "ic_shoucang-hui.png"), forState: .Normal)
         comment.frame = CGRectMake(WIDTH-60, 80, 30, 13)
         comment.font = UIFont.systemFontOfSize(12)
         comment.textColor = GREY
         comment.textAlignment = .Right
         commentBtn.frame = CGRectMake(WIDTH-25, 80, 15, 13)
-        commentBtn.setImage(UIImage(named: "ic_shoucang-hui.png"), forState: .Normal)
+        commentBtn.setImage(UIImage(named: "ic_xiaoxi-hui.png"), forState: .Normal)
         
         self.addSubview(userImage)
         self.addSubview(userName)

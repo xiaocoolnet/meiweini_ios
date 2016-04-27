@@ -24,8 +24,8 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var redBtn = UIButton()
     
     var myTableView = UITableView()
-    let titArr:[String] = ["我的购买","我的分销","我的地址"]
-    let picArr:[String] = ["ic_goumai.png","ic_fenxiao.png","ic_dizhi.png"]
+    let titArr:[String] = ["我的购买","我的分销","我的账户","我的地址"]
+    let picArr:[String] = ["ic_goumai.png","ic_fenxiao.png","ic_wodeqiangui.png","ic_dizhi.png"]
     
     
     
@@ -73,7 +73,7 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         titleView.addSubview(concernBtn)
         titleView.addSubview(redBtn)
         
-        myTableView.frame = CGRectMake(0, 280, WIDTH, 200)
+        myTableView.frame = CGRectMake(0, 280, WIDTH, 260)
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.registerClass(MineOneTableViewCell.self, forCellReuseIdentifier: "one")
@@ -81,7 +81,7 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         myTableView.scrollEnabled = false
         self.view.addSubview(myTableView)
         
-        
+        myTableView.rowHeight = 60
         
     }
     
@@ -118,12 +118,7 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     //    }
     //
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 60
-        
+        return 4
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -143,11 +138,18 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             cell.titLab.text = titArr[1]
             
             return cell
-        }else{
-            let cell = tableView.dequeueReusableCellWithIdentifier("two")as!MineTwoTableViewCell
+        }else if indexPath.row == 2 {
+            
             cell.selectionStyle = .None
             cell.titImage.image = UIImage(named: picArr[2])
             cell.titLab.text = titArr[2]
+            
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCellWithIdentifier("two")as!MineTwoTableViewCell
+            cell.selectionStyle = .None
+            cell.titImage.image = UIImage(named: picArr[3])
+            cell.titLab.text = titArr[3]
             cell.address.text = "山东省烟台市"
             return cell
 
@@ -157,14 +159,20 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("我的\(indexPath.row)")
-        let viewOne = MineBuyViewController()
         if indexPath.row == 0 {
             
+            let viewOne = MineBuyViewController()
             self.navigationController?.pushViewController(viewOne, animated: true)
             
         }else if indexPath.row == 1 {
             
-            self.navigationController?.pushViewController(viewOne, animated: true)
+            let business = MineBusinessViewController()
+            self.navigationController?.pushViewController(business, animated: true)
+            
+        }else if indexPath.row == 2 {
+            
+            let account = MineAccountViewController()
+            self.navigationController?.pushViewController(account, animated: true)
             
         }else{
             let viewTwo = MineAddressViewController()

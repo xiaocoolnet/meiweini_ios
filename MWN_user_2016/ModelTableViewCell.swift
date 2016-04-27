@@ -45,7 +45,7 @@ class ModelTableViewCell: UITableViewCell {
         shareBtn.frame = CGRectMake(WIDTH-30, 5, 25, 25)
         shareBtn.setImage(UIImage(named: "ic_fengxiang-hui.png"), forState: .Normal)
         
-        zanBtn.frame = CGRectMake(WIDTH-125, 120, 25, 25)
+        zanBtn.frame = CGRectMake(WIDTH-123, 120, 28, 25)
         zanBtn.setImage(UIImage(named: "ic_shoucang-0.png"), forState: .Normal)
         
         massageBtn.frame = CGRectMake(WIDTH-95, 120, 30, 25)

@@ -172,10 +172,35 @@ class ConcernViewController: UIViewController,UITableViewDelegate,UITableViewDat
             cell.nameLab.text = "科比"
             cell.contactLab.text = "最后的王者，永不言弃，I believe I can flying"
             cell.locationLab.text = "烟台市"
+            cell.shareBtn.addTarget(self, action: #selector(ConcernViewController.shareTheBusiness), forControlEvents: .TouchUpInside)
+            cell.zanBtn.addTarget(self, action: #selector(ConcernViewController.zanTheBusiness), forControlEvents: .TouchUpInside)
+            cell.massageBtn.addTarget(self, action: #selector(ConcernViewController.massageTheBusiness), forControlEvents: .TouchUpInside)
+            cell.presentBtn.addTarget(self, action: #selector(ConcernViewController.presentTheBusiness), forControlEvents: .TouchUpInside)
+            
             //         cell.shareBtn.setImage(UIImage(named: ""), forState: .Normal)
             return cell
         }
 
+        
+    }
+    func shareTheBusiness() {
+        print("分享")
+        
+        
+    }
+    func zanTheBusiness() {
+        print("赞")
+        
+        
+    }
+    func massageTheBusiness() {
+        print("回复")
+        
+        
+    }
+    func presentTheBusiness() {
+        print("礼物")
+        
         
     }
     

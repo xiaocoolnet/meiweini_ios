@@ -39,8 +39,8 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate {
         
         self.navigationItem.rightBarButtonItem = rightBtn
         
-        userImage.frame = CGRectMake(WIDTH/2-60, 40, 100, 100)
-        userImage.layer.cornerRadius = 50
+        userImage.frame = CGRectMake(WIDTH/2-55, 50, 110, 110)
+        userImage.layer.cornerRadius = 55
         userImage.clipsToBounds = true
         userImage.setImage(UIImage(named: "kb3.png"), forState: .Normal)
         

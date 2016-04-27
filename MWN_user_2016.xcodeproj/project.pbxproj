@@ -167,6 +167,14 @@
 		18AA058E1CC504CE00BDCDF9 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA058D1CC504CE00BDCDF9 /* LocationViewController.swift */; };
 		18AA05911CC5052300BDCDF9 /* MassageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA05901CC5052300BDCDF9 /* MassageViewController.swift */; };
 		18AA05931CC505B600BDCDF9 /* NextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA05921CC505B600BDCDF9 /* NextViewViewController.swift */; };
+		18AED7731CD05332008764B5 /* MassageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED7721CD05332008764B5 /* MassageListViewController.swift */; };
+		18AED7751CD05EF2008764B5 /* MassageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED7741CD05EF2008764B5 /* MassageListTableViewCell.swift */; };
+		18AED77A1CD0666B008764B5 /* BuyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED7791CD0666B008764B5 /* BuyListTableViewCell.swift */; };
+		18AED77C1CD066A9008764B5 /* BuyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED77B1CD066A9008764B5 /* BuyListViewController.swift */; };
+		18AED7851CD09431008764B5 /* MassageKindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED7841CD09431008764B5 /* MassageKindViewController.swift */; };
+		18AED7871CD0AF51008764B5 /* ConcernListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED7861CD0AF51008764B5 /* ConcernListTableViewCell.swift */; };
+		18AED7891CD0AFCA008764B5 /* ConcernTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED7881CD0AFCA008764B5 /* ConcernTableViewCell.swift */; };
+		18AED78D1CD0B841008764B5 /* MineAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED78C1CD0B841008764B5 /* MineAccountViewController.swift */; };
 		18CFDDE91CC85ED700924F39 /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CFDDE81CC85ED700924F39 /* BusinessTableViewCell.swift */; };
 		18D262841CC0795A00485B13 /* PhoneVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D262831CC0795A00485B13 /* PhoneVerifyViewController.swift */; };
 		18D262861CC0799800485B13 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D262851CC0799800485B13 /* VerificationViewController.swift */; };
@@ -386,6 +394,14 @@
 		18AA058D1CC504CE00BDCDF9 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		18AA05901CC5052300BDCDF9 /* MassageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassageViewController.swift; sourceTree = "<group>"; };
 		18AA05921CC505B600BDCDF9 /* NextViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewViewController.swift; sourceTree = "<group>"; };
+		18AED7721CD05332008764B5 /* MassageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassageListViewController.swift; sourceTree = "<group>"; };
+		18AED7741CD05EF2008764B5 /* MassageListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassageListTableViewCell.swift; sourceTree = "<group>"; };
+		18AED7791CD0666B008764B5 /* BuyListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyListTableViewCell.swift; sourceTree = "<group>"; };
+		18AED77B1CD066A9008764B5 /* BuyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyListViewController.swift; sourceTree = "<group>"; };
+		18AED7841CD09431008764B5 /* MassageKindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassageKindViewController.swift; sourceTree = "<group>"; };
+		18AED7861CD0AF51008764B5 /* ConcernListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcernListTableViewCell.swift; sourceTree = "<group>"; };
+		18AED7881CD0AFCA008764B5 /* ConcernTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcernTableViewCell.swift; sourceTree = "<group>"; };
+		18AED78C1CD0B841008764B5 /* MineAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineAccountViewController.swift; sourceTree = "<group>"; };
 		18CFDDE81CC85ED700924F39 /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
 		18D262831CC0795A00485B13 /* PhoneVerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneVerifyViewController.swift; sourceTree = "<group>"; };
 		18D262851CC0799800485B13 /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
@@ -728,6 +744,10 @@
 			children = (
 				18A995C71CC9BA2B00C4ACC0 /* MineOneTableViewCell.swift */,
 				18A995C91CC9BC3300C4ACC0 /* MineTwoTableViewCell.swift */,
+				18AED7741CD05EF2008764B5 /* MassageListTableViewCell.swift */,
+				18AED7791CD0666B008764B5 /* BuyListTableViewCell.swift */,
+				18AED7881CD0AFCA008764B5 /* ConcernTableViewCell.swift */,
+				18AED7861CD0AF51008764B5 /* ConcernListTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -743,14 +763,15 @@
 			isa = PBXGroup;
 			children = (
 				180767BF1CBF7A720062F4A5 /* MineViewController.swift */,
-				18A5EBC11CCF09E7009FB017 /* UserMassageViewController.swift */,
+				18AED77D1CD08E61008764B5 /* UserMassage */,
 				18501EA51CCDBB4400B6A614 /* SetUp */,
-				18A995CD1CC9C08300C4ACC0 /* MineMassageViewController.swift */,
-				18A995CF1CC9C0C000C4ACC0 /* MineConcernViewController.swift */,
-				18A995D11CC9C0D500C4ACC0 /* MineRedViewController.swift */,
-				18A995D31CC9C0FF00C4ACC0 /* MineBuyViewController.swift */,
-				18A995D51CC9C11F00C4ACC0 /* MineBusinessViewController.swift */,
-				18A995D71CC9C13000C4ACC0 /* MineAddressViewController.swift */,
+				18AED7711CD0522F008764B5 /* Massage */,
+				18AED77E1CD08E8E008764B5 /* Conerrn */,
+				18AED77F1CD08E91008764B5 /* RedBog */,
+				18AED7761CD065F5008764B5 /* Buy */,
+				18AED78E1CD0B874008764B5 /* Account */,
+				18AED7801CD08EC8008764B5 /* Business */,
+				18AED7811CD08EDF008764B5 /* Address */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -789,8 +810,8 @@
 		180767B61CBF79930062F4A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				183178281CC71E2000D93D8A /* ModelTableViewCell.swift */,
 				18CFDDE81CC85ED700924F39 /* BusinessTableViewCell.swift */,
+				183178281CC71E2000D93D8A /* ModelTableViewCell.swift */,
 				18501EAA1CCE06CC00B6A614 /* CommentTableViewCell.swift */,
 				18501EAE1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift */,
 				18501EB01CCE0DF200B6A614 /* PhotoTableViewCell.swift */,
@@ -981,6 +1002,73 @@
 				18AA05901CC5052300BDCDF9 /* MassageViewController.swift */,
 			);
 			name = Massage;
+			sourceTree = "<group>";
+		};
+		18AED7711CD0522F008764B5 /* Massage */ = {
+			isa = PBXGroup;
+			children = (
+				18A995CD1CC9C08300C4ACC0 /* MineMassageViewController.swift */,
+				18AED7841CD09431008764B5 /* MassageKindViewController.swift */,
+				18AED7721CD05332008764B5 /* MassageListViewController.swift */,
+			);
+			name = Massage;
+			sourceTree = "<group>";
+		};
+		18AED7761CD065F5008764B5 /* Buy */ = {
+			isa = PBXGroup;
+			children = (
+				18A995D31CC9C0FF00C4ACC0 /* MineBuyViewController.swift */,
+				18AED77B1CD066A9008764B5 /* BuyListViewController.swift */,
+			);
+			name = Buy;
+			sourceTree = "<group>";
+		};
+		18AED77D1CD08E61008764B5 /* UserMassage */ = {
+			isa = PBXGroup;
+			children = (
+				18A5EBC11CCF09E7009FB017 /* UserMassageViewController.swift */,
+			);
+			name = UserMassage;
+			sourceTree = "<group>";
+		};
+		18AED77E1CD08E8E008764B5 /* Conerrn */ = {
+			isa = PBXGroup;
+			children = (
+				18A995CF1CC9C0C000C4ACC0 /* MineConcernViewController.swift */,
+			);
+			name = Conerrn;
+			sourceTree = "<group>";
+		};
+		18AED77F1CD08E91008764B5 /* RedBog */ = {
+			isa = PBXGroup;
+			children = (
+				18A995D11CC9C0D500C4ACC0 /* MineRedViewController.swift */,
+			);
+			name = RedBog;
+			sourceTree = "<group>";
+		};
+		18AED7801CD08EC8008764B5 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				18A995D51CC9C11F00C4ACC0 /* MineBusinessViewController.swift */,
+			);
+			name = Business;
+			sourceTree = "<group>";
+		};
+		18AED7811CD08EDF008764B5 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				18A995D71CC9C13000C4ACC0 /* MineAddressViewController.swift */,
+			);
+			name = Address;
+			sourceTree = "<group>";
+		};
+		18AED78E1CD0B874008764B5 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				18AED78C1CD0B841008764B5 /* MineAccountViewController.swift */,
+			);
+			name = Account;
 			sourceTree = "<group>";
 		};
 		1FF7A3081CBF69800048638F = {
@@ -1286,7 +1374,9 @@
 				189DA6D91CCCA70F0004B76D /* UIButton+WebCache.m in Sources */,
 				180767721CBF76770062F4A5 /* String+Haneke.swift in Sources */,
 				18AA05911CC5052300BDCDF9 /* MassageViewController.swift in Sources */,
+				18AED7871CD0AF51008764B5 /* ConcernListTableViewCell.swift in Sources */,
 				180767631CBF76770062F4A5 /* Cache.swift in Sources */,
+				18AED77C1CD066A9008764B5 /* BuyListViewController.swift in Sources */,
 				189DA6DB1CCCA70F0004B76D /* UIImage+MultiFormat.m in Sources */,
 				18A5EBCA1CCF4F28009FB017 /* MoreTableViewCell.swift in Sources */,
 				189DA6DE1CCCA70F0004B76D /* UIImageView+WebCache.m in Sources */,
@@ -1325,6 +1415,7 @@
 				1807674F1CBF76770062F4A5 /* RMDownloadIndicator.swift in Sources */,
 				189DA5591CCC59A10004B76D /* ChildrenViewController.swift in Sources */,
 				180767511CBF76770062F4A5 /* ConnectModel.m in Sources */,
+				18AED7731CD05332008764B5 /* MassageListViewController.swift in Sources */,
 				1807678E1CBF76770062F4A5 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
 				183178371CC7592F00D93D8A /* VideoTableViewCell.swift in Sources */,
 				18D262861CC0799800485B13 /* VerificationViewController.swift in Sources */,
@@ -1338,6 +1429,7 @@
 				180767C81CBF7AFA0062F4A5 /* RegisterViewController.swift in Sources */,
 				1807674C1CBF76770062F4A5 /* BrowserCellDelegate.swift in Sources */,
 				180767981CBF76770062F4A5 /* NirKxMenu.m in Sources */,
+				18AED7751CD05EF2008764B5 /* MassageListTableViewCell.swift in Sources */,
 				180767661CBF76770062F4A5 /* Data.swift in Sources */,
 				180767571CBF76770062F4A5 /* ConstraintAttributes.swift in Sources */,
 				180767A81CBF76770062F4A5 /* XKeyBoard.m in Sources */,
@@ -1347,6 +1439,7 @@
 				189DA6D81CCCA70F0004B76D /* SDWebImagePrefetcher.m in Sources */,
 				1892A4341CC5C76900AD7F52 /* ChildsViewController.swift in Sources */,
 				180767821CBF76770062F4A5 /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
+				18AED7851CD09431008764B5 /* MassageKindViewController.swift in Sources */,
 				180767681CBF76770062F4A5 /* DiskFetcher.swift in Sources */,
 				180767951CBF76770062F4A5 /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
 				180767A11CBF76770062F4A5 /* Layout.swift in Sources */,
@@ -1356,6 +1449,7 @@
 				189DA6A51CCCA5970004B76D /* RANCollectionViewCell.swift in Sources */,
 				1807677E1CBF76770062F4A5 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				180767651CBF76770062F4A5 /* CryptoSwiftMD5.swift in Sources */,
+				18AED78D1CD0B841008764B5 /* MineAccountViewController.swift in Sources */,
 				189DA5571CCC51650004B76D /* ChildsTableViewCell.swift in Sources */,
 				1807676A1CBF76770062F4A5 /* Fetcher.swift in Sources */,
 				180767881CBF76770062F4A5 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
@@ -1371,6 +1465,7 @@
 				1831782D1CC7546000D93D8A /* BeautyViewController.swift in Sources */,
 				1804BA111CC6606800854F60 /* SanFangViewController.swift in Sources */,
 				1807676C1CBF76770062F4A5 /* Haneke.swift in Sources */,
+				18AED77A1CD0666B008764B5 /* BuyListTableViewCell.swift in Sources */,
 				180767741CBF76770062F4A5 /* UIImage+Haneke.swift in Sources */,
 				180767C61CBF7ABF0062F4A5 /* MainViewController.swift in Sources */,
 				183178351CC7577F00D93D8A /* BeautyLiveViewController.swift in Sources */,
@@ -1406,6 +1501,7 @@
 				1FF7A3151CBF69800048638F /* AppDelegate.swift in Sources */,
 				1807674D1CBF76770062F4A5 /* PhotoBrowserCell.swift in Sources */,
 				180767891CBF76770062F4A5 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
+				18AED7891CD0AFCA008764B5 /* ConcernTableViewCell.swift in Sources */,
 				180767801CBF76770062F4A5 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
 				18FA286B1CC4C7B700B73CCC /* HeaderCollectionReusableView.swift in Sources */,
 				1807676B1CBF76770062F4A5 /* Format.swift in Sources */,

@@ -32,7 +32,7 @@ class SetViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         getTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(getTableView)
         getTableView.rowHeight = 50
-        
+        getTableView.scrollEnabled = false
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

@@ -56,6 +56,8 @@ class BeautyVidViewController: UIViewController,UITableViewDelegate,UITableViewD
         cell.anchorName.text = "科比 布莱恩特"
         cell.zanNumber.text = "2134"
         cell.downNumber.text = "2341"
+        cell.downBtn.addTarget(self, action: #selector(BeautyVidViewController.downLoadUp), forControlEvents: .TouchUpInside)
+        cell.zanBtn.addTarget(self, action: #selector(BeautyVidViewController.zanButtonUp), forControlEvents: .TouchUpInside)
        
         return cell
     }
@@ -67,7 +69,16 @@ class BeautyVidViewController: UIViewController,UITableViewDelegate,UITableViewD
         
         
     }
-
+    func zanButtonUp() {
+        print("赞")
+        
+        
+    }
+    func downLoadUp() {
+        print("下载")
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

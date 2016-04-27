@@ -96,6 +96,7 @@ class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 cell.payImage.image = UIImage(named: "ic_yinhangka.png")
                 cell.payStyle.text = "中国建设银行储蓄卡 尾号8888"
                 cell.paySmore.text = "已绑定银行卡直接支付"
+                cell.selector.addTarget(self, action: #selector(DownViewController.selectorStyle), forControlEvents: .TouchUpInside)
                 
                 return cell
                 
@@ -112,6 +113,18 @@ class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print(indexPath.row)
+        if indexPath.section == 1 {
+            if indexPath.row == 1 {
+                print("更多支付方式")
+                
+                
+            }
+        }
+        
+    }
+    func selectorStyle() {
+        print("选择支付方式")
+        
         
     }
     func payNowTheCommodity() {

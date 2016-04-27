@@ -1726,8 +1726,8 @@
                                         <exclude reference="keA-kJ-woX"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="60" y="456" width="280" height="50"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="60" y="465" width="280" height="50"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
@@ -1806,6 +1806,7 @@
                             <constraint firstItem="SUo-uN-FVw" firstAttribute="top" secondItem="Xjc-1p-4p0" secondAttribute="bottom" constant="78" id="EPD-jo-r2h"/>
                             <constraint firstItem="n0e-Nw-FTJ" firstAttribute="top" secondItem="oYA-mH-juN" secondAttribute="bottom" constant="-20" id="cEd-sP-VO4"/>
                             <constraint firstItem="n0e-Nw-FTJ" firstAttribute="leading" secondItem="g3b-vH-nUW" secondAttribute="leadingMargin" constant="-20" id="caW-7L-FMs"/>
+                            <constraint firstItem="SUo-uN-FVw" firstAttribute="top" secondItem="Xjc-1p-4p0" secondAttribute="bottom" constant="36" id="gAl-oX-we4"/>
                             <constraint firstItem="Xjc-1p-4p0" firstAttribute="centerX" secondItem="g3b-vH-nUW" secondAttribute="centerX" id="jUx-gk-Jfg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n0e-Nw-FTJ" secondAttribute="trailing" constant="-20" id="usn-j8-vza"/>
                         </constraints>
@@ -1815,16 +1816,20 @@
                                 <exclude reference="n0e-Nw-FTJ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="EPD-jo-r2h"/>
-                                <exclude reference="jUx-gk-Jfg"/>
                                 <exclude reference="cEd-sP-VO4"/>
                                 <exclude reference="caW-7L-FMs"/>
                                 <exclude reference="usn-j8-vza"/>
+                                <exclude reference="jUx-gk-Jfg"/>
+                                <exclude reference="EPD-jo-r2h"/>
+                                <exclude reference="gAl-oX-we4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Xjc-1p-4p0"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="gAl-oX-we4"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1832,11 +1837,11 @@
                                 <include reference="n0e-Nw-FTJ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="EPD-jo-r2h"/>
-                                <include reference="jUx-gk-Jfg"/>
                                 <include reference="cEd-sP-VO4"/>
                                 <include reference="caW-7L-FMs"/>
                                 <include reference="usn-j8-vza"/>
+                                <include reference="jUx-gk-Jfg"/>
+                                <include reference="EPD-jo-r2h"/>
                             </mask>
                         </variation>
                     </view>
@@ -1848,7 +1853,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ame-5N-Kaf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305" y="2538.75"/>
+            <point key="canvasLocation" x="1305" y="2538"/>
         </scene>
     </scenes>
     <resources>
