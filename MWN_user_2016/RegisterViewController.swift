@@ -21,6 +21,10 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
     
     var baomi = Bool()
     
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden=true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

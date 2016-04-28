@@ -30,7 +30,7 @@ class PhotoTableViewCell: UITableViewCell {
         backView.frame = CGRectMake(0, WIDTH-40, WIDTH, 40)
         backView.backgroundColor = UIColor.whiteColor()
         backView.alpha = 0.3
-        zanBtn.frame = CGRectMake(10, WIDTH-35, 36, 33)
+        zanBtn.frame = CGRectMake(10, WIDTH-35, 40, 33)
         zanBtn.setImage(UIImage(named: "ic_shoucang-0.png"), forState: .Normal)
         photoNum.frame = CGRectMake(WIDTH-50, WIDTH-30, 40, 20)
         photoNum.textAlignment = .Right

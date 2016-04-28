@@ -44,7 +44,6 @@ class BuyListViewController: UIViewController,UITableViewDelegate,UITableViewDat
         cell.busNum.text = "已售：12"
         cell.busImage.image = UIImage(named: "kb4.png")
         cell.busCommon.text = "和他相遇的瞬间，我的人生就改变了。所见所闻所感，目之所及全都开始变得多姿多彩起来，全世界，都开始发光发亮！"
-        cell.textLabel?.numberOfLines = 0
         cell.cancel.addTarget(self, action: #selector(BuyListViewController.cancalOrder), forControlEvents: .TouchUpInside)
         cell.pay.addTarget(self, action: #selector(BuyListViewController.payFor), forControlEvents: .TouchUpInside)
         

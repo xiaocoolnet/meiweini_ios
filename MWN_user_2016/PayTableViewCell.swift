@@ -31,7 +31,7 @@ class PayTableViewCell: UITableViewCell {
         paySmore.frame = CGRectMake(70, 45, 150, 15)
         paySmore.font = UIFont.systemFontOfSize(12)
         paySmore.textColor = UIColor(red: 165/255.0, green: 165/255.0, blue: 165/255.0, alpha: 1.0)
-        selector.frame = CGRectMake(WIDTH-50, 15, 50, 50)
+        selector.frame = CGRectMake(WIDTH-50, 17.5, 45, 45)
         selector.setImage(UIImage(named: "ic_xuanzhong.png"), forState: .Normal)
         
         self.addSubview(paySmore)

@@ -96,7 +96,6 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         print("消息")
         let view = MineMassageViewController()
         self.navigationController?.pushViewController(view, animated: true)
-        
     }
     
     func concernList() {
