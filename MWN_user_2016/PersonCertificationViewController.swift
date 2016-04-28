@@ -14,10 +14,17 @@ class PersonCertificationViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var phoneNum: UITextField!
     @IBOutlet weak var sheying: UIButton!
-    @IBOutlet weak var meizhuang: UIButton!
-    @IBOutlet weak var meija: UIButton!
-    @IBOutlet weak var meirong: UIButton!
-    @IBOutlet weak var more: UIButton!
+    var sheyingLab = UILabel()
+    var meizhuang = UIButton()
+    var meizhuangLab = UILabel()
+    var meija = UIButton()
+    var meijaiLab = UILabel()
+    var meirong = UIButton()
+    var meirongLab = UILabel()
+    var more = UIButton()
+    var moreLab = UILabel()
+    @IBOutlet weak var backGound: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +32,53 @@ class PersonCertificationViewController: UIViewController,UITextFieldDelegate {
         
         name.delegate = self
         phoneNum.delegate = self
+        
+        sheyingLab.frame = CGRectMake(84, 158, (WIDTH-140)/5, 21)
+        sheyingLab.font = UIFont.systemFontOfSize(13)
+        sheyingLab.textAlignment = .Center
+        sheyingLab.text = "摄影"
+        meizhuang.frame = CGRectMake(84+(WIDTH-140)/5, 162, 14, 14)
+        meizhuang.tag = 2
+        meizhuang.setImage(UIImage(named: "ic_xuanzhong-kong.png"), forState: .Normal)
+        meizhuang.addTarget(self, action: #selector(PersonCertificationViewController.selectorTheWork(_:)), forControlEvents: .TouchUpInside)
+        meizhuangLab.frame = CGRectMake(84+(WIDTH-140)/5+14, 158, (WIDTH-140)/5, 21)
+        meizhuangLab.font = UIFont.systemFontOfSize(13)
+        meizhuangLab.textAlignment = .Center
+        meizhuangLab.text = "美妆"
+        meija.frame = CGRectMake(84+(WIDTH-140)/5*2+14, 162, 14, 14)
+        meija.tag = 3
+        meija.setImage(UIImage(named: "ic_xuanzhong-kong.png"), forState: .Normal)
+        meija.addTarget(self, action: #selector(PersonCertificationViewController.selectorTheWork(_:)), forControlEvents: .TouchUpInside)
+        meijaiLab.frame = CGRectMake(84+(WIDTH-140)/5*2+28, 158, (WIDTH-140)/5, 21)
+        meijaiLab.font = UIFont.systemFontOfSize(13)
+        meijaiLab.textAlignment = .Center
+        meijaiLab.text = "美甲"
+        meirong.frame = CGRectMake(84+(WIDTH-140)/5*3+28, 162, 14, 14)
+        meirong.tag = 4
+        meirong.setImage(UIImage(named: "ic_xuanzhong-kong.png"), forState: .Normal)
+        meirong.addTarget(self, action: #selector(PersonCertificationViewController.selectorTheWork(_:)), forControlEvents: .TouchUpInside)
+        meirongLab.frame = CGRectMake(84+(WIDTH-140)/5*3+42, 158, (WIDTH-140)/5, 21)
+        meirongLab.font = UIFont.systemFontOfSize(13)
+        meirongLab.textAlignment = .Center
+        meirongLab.text = "美容"
+        more.frame = CGRectMake(WIDTH-(WIDTH-140)/5-14, 162, 14, 14)
+        more.tag = 5
+        more.setImage(UIImage(named: "ic_xuanzhong-kong.png"), forState: .Normal)
+        more.addTarget(self, action: #selector(PersonCertificationViewController.selectorTheWork(_:)), forControlEvents: .TouchUpInside)
+        moreLab.frame = CGRectMake(WIDTH-(WIDTH-140)/5, 158, (WIDTH-140)/5, 21)
+        moreLab.font = UIFont.systemFontOfSize(13)
+        moreLab.textAlignment = .Center
+        moreLab.text = "更多"
+        
+        backGound.addSubview(sheyingLab)
+        backGound.addSubview(meizhuang)
+        backGound.addSubview(meizhuangLab)
+        backGound.addSubview(meija)
+        backGound.addSubview(meijaiLab)
+        backGound.addSubview(meirong)
+        backGound.addSubview(meirongLab)
+        backGound.addSubview(moreLab)
+        backGound.addSubview(more)
         
         certification.setImage(UIImage(named: "lijitijiao_pressed.png"), forState: .Highlighted)
         
