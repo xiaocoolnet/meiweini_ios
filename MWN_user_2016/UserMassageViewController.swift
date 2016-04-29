@@ -43,6 +43,7 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate {
         userImage.layer.cornerRadius = 55
         userImage.clipsToBounds = true
         userImage.setImage(UIImage(named: "kb3.png"), forState: .Normal)
+        userImage.addTarget(self, action: #selector(UserMassageViewController.getUpUserImage), forControlEvents: .TouchUpInside)
         
         for i in 0...2 {
             let line = UILabel()
@@ -110,7 +111,10 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
+    func getUpUserImage() {
+        print("修改头像")
+        
+    }
     func cleanTheText() {
         print("清除")
         name.text = ""

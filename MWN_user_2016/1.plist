@@ -134,16 +134,6 @@
 	</dict>
 	<dict>
 		<key>h</key>
-		<integer>333</integer>
-		<key>img</key>
-		<string>http://s6.mogujie.cn/b7/bao/131008/c6olt_kqywuz2mkfbg2v3wgfjeg5sckzsew_293x487.jpg_200x999.jpg</string>
-		<key>price</key>
-		<string>¥189</string>
-		<key>w</key>
-		<integer>200</integer>
-	</dict>
-	<dict>
-		<key>h</key>
 		<integer>262</integer>
 		<key>img</key>
 		<string>http://s6.mogujie.cn/b7/bao/131010/papt9_kqywstcmkfbew6cugfjeg5sckzsew_360x470.jpg_200x999.jpg</string>

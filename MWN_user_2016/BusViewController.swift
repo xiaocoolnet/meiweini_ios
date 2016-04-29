@@ -46,6 +46,13 @@ class BusViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func personalMassage(sender: AnyObject) {
+        print("个人信息修改")
+        let userMassage = UserMassageViewController()
+        self.navigationController?.pushViewController(userMassage, animated: true)
+        userMassage.title = "信息修改"
+        
+    }
     func setUpView() {
         print("设置")
         let view = SetViewController()

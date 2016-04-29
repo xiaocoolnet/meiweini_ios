@@ -152,6 +152,9 @@ class MainViewController: UIViewController,UIScrollViewDelegate,UICollectionView
             scrollView.removeFromSuperview()
             pageControl.removeFromSuperview()
             
+            let view = UIView()
+            view.frame = CGRectMake(0, 0, WIDTH, WIDTH+30)
+            
             let header:HeaderCollectionReusableView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "header", forIndexPath: indexPath) as! HeaderCollectionReusableView
             header.backgroundColor = RGREY
              
@@ -160,35 +163,36 @@ class MainViewController: UIViewController,UIScrollViewDelegate,UICollectionView
             
             
             //五个模块按钮
-            meizhuang.frame = CGRectMake(0, -10, WIDTH/2, WIDTH/2*0.8)
-            meizhuang.setImage(UIImage(named: "img_meizhuang.png"), forState: .Normal)
+            meizhuang.frame = CGRectMake(10, 10, (WIDTH-30)/2, WIDTH*0.35+4)
+            meizhuang.setBackgroundImage(UIImage(named: "img_meizhuang.png"), forState: .Normal)
             meizhuang.addTarget(self, action: #selector(MainViewController.meizhuangViewGo), forControlEvents: .TouchUpInside)
-            header.addSubview(meizhuang)
+            view.addSubview(meizhuang)
             
             
-            meijia.frame = CGRectMake(0, WIDTH/2*0.8-50, WIDTH/2, WIDTH/2*0.9)
-            meijia.setImage(UIImage(named: "img_meijia.png"), forState: .Normal)
+            meijia.frame = CGRectMake(10, WIDTH*0.35+24, (WIDTH-30)/2, (WIDTH-10)*0.4)
+            meijia.setBackgroundImage(UIImage(named: "img_meijia.png"), forState: .Normal)
             meijia.addTarget(self, action: #selector(MainViewController.meijiaViewGo), forControlEvents: .TouchUpInside)
-            header.addSubview(meijia)
+            view.addSubview(meijia)
 
             
-            gengduo.frame = CGRectMake(0, WIDTH*0.8-60, WIDTH/2, WIDTH/4)
-            gengduo.setImage(UIImage(named: "img_gengduofuwu.png"), forState: .Normal)
+            gengduo.frame = CGRectMake(10, WIDTH*0.75+30, (WIDTH-30)/2, WIDTH*0.25)
+            gengduo.setBackgroundImage(UIImage(named: "img_gengduofuwu.png"), forState: .Normal)
             gengduo.addTarget(self, action: #selector(MainViewController.gengduoViewGo), forControlEvents: .TouchUpInside)
-            header.addSubview(gengduo)
+            view.addSubview(gengduo)
             
             
-            sheying.frame = CGRectMake(WIDTH/2, 10, WIDTH/2, WIDTH*0.45+10)
-            sheying.setImage(UIImage(named: "img_sheying.png"), forState: .Normal)
+            sheying.frame = CGRectMake(WIDTH/2+5, 10, (WIDTH-30)/2, (WIDTH+10)*0.6)
+            sheying.setBackgroundImage(UIImage(named: "img_sheying.png"), forState: .Normal)
             sheying.addTarget(self, action: #selector(MainViewController.sheyingViewGo), forControlEvents: .TouchUpInside)
-            header.addSubview(sheying)
+            view.addSubview(sheying)
             
             
-            meirong.frame = CGRectMake(WIDTH/2, WIDTH*0.46+15+5, WIDTH/2, WIDTH*0.34+10)
-            meirong.setImage(UIImage(named: "img_meirong.png"), forState: .Normal)
+            meirong.frame = CGRectMake(WIDTH/2+5, 10+sheying.bounds.height+10, (WIDTH-30)/2, (WIDTH+10)*0.4)
+            meirong.setBackgroundImage(UIImage(named: "img_meirong.png"), forState: .Normal)
             meirong.addTarget(self, action: #selector(MainViewController.meirongViewGo), forControlEvents: .TouchUpInside)
-            header.addSubview(meirong)
+            view.addSubview(meirong)
             
+            header.addSubview(view)
             header.more.addTarget(self, action: #selector(MainViewController.liveViewGo), forControlEvents: .TouchUpInside)
         }else{
             let header:HeaderCollectionReusableView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "header", forIndexPath: indexPath) as! HeaderCollectionReusableView
@@ -210,7 +214,7 @@ class MainViewController: UIViewController,UIScrollViewDelegate,UICollectionView
             return CGSizeMake(UIScreen.mainScreen().bounds.size.width, WIDTH/12*5+44)
         }
         if (section==2) {
-            return CGSizeMake(UIScreen.mainScreen().bounds.size.width, WIDTH*0.8+74)
+            return CGSizeMake(UIScreen.mainScreen().bounds.size.width, WIDTH+74)
         }
         return CGSizeMake(UIScreen.mainScreen().bounds.size.width, 44)
 

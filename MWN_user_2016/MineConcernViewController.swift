@@ -74,6 +74,8 @@ class MineConcernViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("关注商品")
+        let nextView = NextViewViewController()
+        self.navigationController?.pushViewController(nextView, animated: true)
         
         
     }
