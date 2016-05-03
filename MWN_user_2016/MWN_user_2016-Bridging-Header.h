@@ -12,3 +12,8 @@
 #import "BRPlaceholderTextView.h"
 #import "NirKxMenu.h"
 #import "UIImageView+WebCache.h"
+/** 拼音搜索 */
+#include "ZYPinYinSearch.h"
+
+/** 定位*/
+#include <CoreLocation/CLLocationManagerDelegate.h>

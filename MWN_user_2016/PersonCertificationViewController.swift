@@ -36,7 +36,7 @@ class PersonCertificationViewController: UIViewController,UITextFieldDelegate {
         sheyingLab.frame = CGRectMake(84, 158, (WIDTH-140)/5, 21)
         sheyingLab.font = UIFont.systemFontOfSize(13)
         sheyingLab.textAlignment = .Center
-        sheyingLab.text = "摄影"
+        sheyingLab.text = "摄影师"
         meizhuang.frame = CGRectMake(84+(WIDTH-140)/5, 162, 14, 14)
         meizhuang.tag = 2
         meizhuang.setImage(UIImage(named: "ic_xuanzhong-kong.png"), forState: .Normal)
@@ -44,7 +44,7 @@ class PersonCertificationViewController: UIViewController,UITextFieldDelegate {
         meizhuangLab.frame = CGRectMake(84+(WIDTH-140)/5+14, 158, (WIDTH-140)/5, 21)
         meizhuangLab.font = UIFont.systemFontOfSize(13)
         meizhuangLab.textAlignment = .Center
-        meizhuangLab.text = "美妆"
+        meizhuangLab.text = "模特"
         meija.frame = CGRectMake(84+(WIDTH-140)/5*2+14, 162, 14, 14)
         meija.tag = 3
         meija.setImage(UIImage(named: "ic_xuanzhong-kong.png"), forState: .Normal)
@@ -52,7 +52,7 @@ class PersonCertificationViewController: UIViewController,UITextFieldDelegate {
         meijaiLab.frame = CGRectMake(84+(WIDTH-140)/5*2+28, 158, (WIDTH-140)/5, 21)
         meijaiLab.font = UIFont.systemFontOfSize(13)
         meijaiLab.textAlignment = .Center
-        meijaiLab.text = "美甲"
+        meijaiLab.text = "化妆师"
         meirong.frame = CGRectMake(84+(WIDTH-140)/5*3+28, 162, 14, 14)
         meirong.tag = 4
         meirong.setImage(UIImage(named: "ic_xuanzhong-kong.png"), forState: .Normal)
@@ -60,7 +60,7 @@ class PersonCertificationViewController: UIViewController,UITextFieldDelegate {
         meirongLab.frame = CGRectMake(84+(WIDTH-140)/5*3+42, 158, (WIDTH-140)/5, 21)
         meirongLab.font = UIFont.systemFontOfSize(13)
         meirongLab.textAlignment = .Center
-        meirongLab.text = "美容"
+        meirongLab.text = "美甲师"
         more.frame = CGRectMake(WIDTH-(WIDTH-140)/5-14, 162, 14, 14)
         more.tag = 5
         more.setImage(UIImage(named: "ic_xuanzhong-kong.png"), forState: .Normal)

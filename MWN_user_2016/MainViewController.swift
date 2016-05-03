@@ -290,13 +290,13 @@ class MainViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         
     }
     
-    @IBAction func location(sender: AnyObject) {
-        print("定位")
-        let location = LocationViewController()
-        self.navigationController?.pushViewController(location, animated: true)
-        
-        
-    }
+//    @IBAction func location(sender: AnyObject) {
+//        print("定位")
+//        let location = LocationViewController()
+//        self.navigationController?.pushViewController(location, animated: true)
+//        
+//        
+//    }
 //四组分类
     func beautyViewGo() {
         print("beauty")

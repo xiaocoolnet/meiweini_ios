@@ -185,6 +185,22 @@
 		18AED78D1CD0B841008764B5 /* MineAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED78C1CD0B841008764B5 /* MineAccountViewController.swift */; };
 		18B807AC1CD19F7B00CB5E0E /* BusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B807AB1CD19F7B00CB5E0E /* BusViewController.swift */; };
 		18B807AE1CD1A33400CB5E0E /* CertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B807AD1CD1A33400CB5E0E /* CertificationViewController.swift */; };
+		18BE78961CD83FAF000C7BF9 /* LoadPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78951CD83FAF000C7BF9 /* LoadPicViewController.swift */; };
+		18BE78981CD84794000C7BF9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BE78971CD84794000C7BF9 /* MapKit.framework */; };
+		18BE789A1CD847A6000C7BF9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BE78991CD847A6000C7BF9 /* CoreLocation.framework */; };
+		18BE789C1CD8485B000C7BF9 /* SpecifyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BE789B1CD8485B000C7BF9 /* SpecifyArray.swift */; };
+		18BE789E1CD848B0000C7BF9 /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BE789D1CD848B0000C7BF9 /* citydict.plist */; };
+		18BE78A01CD84E2C000C7BF9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BE789F1CD84E2C000C7BF9 /* LocationManager.swift */; };
+		18BE78A21CD85259000C7BF9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78A11CD85259000C7BF9 /* TableViewCell.swift */; };
+		18BE78B51CD87927000C7BF9 /* ChineseInclude.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78A51CD87927000C7BF9 /* ChineseInclude.m */; };
+		18BE78B61CD87927000C7BF9 /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78A71CD87927000C7BF9 /* ChineseToPinyinResource.m */; };
+		18BE78B71CD87927000C7BF9 /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78A91CD87927000C7BF9 /* HanyuPinyinOutputFormat.m */; };
+		18BE78B81CD87927000C7BF9 /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78AB1CD87927000C7BF9 /* NSString+PinYin4Cocoa.m */; };
+		18BE78B91CD87927000C7BF9 /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78AD1CD87927000C7BF9 /* PinyinFormatter.m */; };
+		18BE78BA1CD87927000C7BF9 /* PinYinForObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78AF1CD87927000C7BF9 /* PinYinForObjc.m */; };
+		18BE78BB1CD87927000C7BF9 /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78B11CD87927000C7BF9 /* PinyinHelper.m */; };
+		18BE78BC1CD87927000C7BF9 /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18BE78B21CD87927000C7BF9 /* unicode_to_hanyu_pinyin.txt */; };
+		18BE78BD1CD87927000C7BF9 /* ZYPinYinSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78B41CD87927000C7BF9 /* ZYPinYinSearch.m */; };
 		18C12A421CD2EA2800014A69 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C12A411CD2EA2800014A69 /* OrderViewController.swift */; };
 		18C12A441CD2EA6900014A69 /* VisitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C12A431CD2EA6900014A69 /* VisitorViewController.swift */; };
 		18C12A461CD2EB8500014A69 /* ChengJiaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C12A451CD2EB8500014A69 /* ChengJiaoViewController.swift */; };
@@ -428,6 +444,30 @@
 		18AED78C1CD0B841008764B5 /* MineAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineAccountViewController.swift; sourceTree = "<group>"; };
 		18B807AB1CD19F7B00CB5E0E /* BusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusViewController.swift; sourceTree = "<group>"; };
 		18B807AD1CD1A33400CB5E0E /* CertificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CertificationViewController.swift; sourceTree = "<group>"; };
+		18BE78951CD83FAF000C7BF9 /* LoadPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadPicViewController.swift; sourceTree = "<group>"; };
+		18BE78971CD84794000C7BF9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		18BE78991CD847A6000C7BF9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		18BE789B1CD8485B000C7BF9 /* SpecifyArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecifyArray.swift; sourceTree = "<group>"; };
+		18BE789D1CD848B0000C7BF9 /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
+		18BE789F1CD84E2C000C7BF9 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		18BE78A11CD85259000C7BF9 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		18BE78A41CD87927000C7BF9 /* ChineseInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseInclude.h; sourceTree = "<group>"; };
+		18BE78A51CD87927000C7BF9 /* ChineseInclude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseInclude.m; sourceTree = "<group>"; };
+		18BE78A61CD87927000C7BF9 /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
+		18BE78A71CD87927000C7BF9 /* ChineseToPinyinResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyinResource.m; sourceTree = "<group>"; };
+		18BE78A81CD87927000C7BF9 /* HanyuPinyinOutputFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanyuPinyinOutputFormat.h; sourceTree = "<group>"; };
+		18BE78A91CD87927000C7BF9 /* HanyuPinyinOutputFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HanyuPinyinOutputFormat.m; sourceTree = "<group>"; };
+		18BE78AA1CD87927000C7BF9 /* NSString+PinYin4Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin4Cocoa.h"; sourceTree = "<group>"; };
+		18BE78AB1CD87927000C7BF9 /* NSString+PinYin4Cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin4Cocoa.m"; sourceTree = "<group>"; };
+		18BE78AC1CD87927000C7BF9 /* PinyinFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinFormatter.h; sourceTree = "<group>"; };
+		18BE78AD1CD87927000C7BF9 /* PinyinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinFormatter.m; sourceTree = "<group>"; };
+		18BE78AE1CD87927000C7BF9 /* PinYinForObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinYinForObjc.h; sourceTree = "<group>"; };
+		18BE78AF1CD87927000C7BF9 /* PinYinForObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinYinForObjc.m; sourceTree = "<group>"; };
+		18BE78B01CD87927000C7BF9 /* PinyinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinHelper.h; sourceTree = "<group>"; };
+		18BE78B11CD87927000C7BF9 /* PinyinHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinHelper.m; sourceTree = "<group>"; };
+		18BE78B21CD87927000C7BF9 /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
+		18BE78B31CD87927000C7BF9 /* ZYPinYinSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPinYinSearch.h; sourceTree = "<group>"; };
+		18BE78B41CD87927000C7BF9 /* ZYPinYinSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPinYinSearch.m; sourceTree = "<group>"; };
 		18C12A411CD2EA2800014A69 /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		18C12A431CD2EA6900014A69 /* VisitorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorViewController.swift; sourceTree = "<group>"; };
 		18C12A451CD2EB8500014A69 /* ChengJiaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChengJiaoViewController.swift; sourceTree = "<group>"; };
@@ -463,6 +503,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BE789A1CD847A6000C7BF9 /* CoreLocation.framework in Frameworks */,
+				18BE78981CD84794000C7BF9 /* MapKit.framework in Frameworks */,
 				0D6325DACE03027CC5C6833E /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -881,6 +923,7 @@
 				18FA28661CC487DA00B73CCC /* ChildCollectionViewCell.swift */,
 				18FA286A1CC4C7B700B73CCC /* HeaderCollectionReusableView.swift */,
 				189DA5561CCC51650004B76D /* ChildsTableViewCell.swift */,
+				18BE78A11CD85259000C7BF9 /* TableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -888,6 +931,8 @@
 		180767BA1CBF799D0062F4A5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18BE789B1CD8485B000C7BF9 /* SpecifyArray.swift */,
+				18BE789F1CD84E2C000C7BF9 /* LocationManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -978,6 +1023,7 @@
 			isa = PBXGroup;
 			children = (
 				183B95EE1CD1DD7400C74FC9 /* MineLoadViewController.swift */,
+				18BE78951CD83FAF000C7BF9 /* LoadPicViewController.swift */,
 			);
 			name = MineLoad;
 			sourceTree = "<group>";
@@ -1175,6 +1221,30 @@
 			name = Busiess;
 			sourceTree = "<group>";
 		};
+		18BE78A31CD87927000C7BF9 /* ZYPinYinSearchLib */ = {
+			isa = PBXGroup;
+			children = (
+				18BE78A41CD87927000C7BF9 /* ChineseInclude.h */,
+				18BE78A51CD87927000C7BF9 /* ChineseInclude.m */,
+				18BE78A61CD87927000C7BF9 /* ChineseToPinyinResource.h */,
+				18BE78A71CD87927000C7BF9 /* ChineseToPinyinResource.m */,
+				18BE78A81CD87927000C7BF9 /* HanyuPinyinOutputFormat.h */,
+				18BE78A91CD87927000C7BF9 /* HanyuPinyinOutputFormat.m */,
+				18BE78AA1CD87927000C7BF9 /* NSString+PinYin4Cocoa.h */,
+				18BE78AB1CD87927000C7BF9 /* NSString+PinYin4Cocoa.m */,
+				18BE78AC1CD87927000C7BF9 /* PinyinFormatter.h */,
+				18BE78AD1CD87927000C7BF9 /* PinyinFormatter.m */,
+				18BE78AE1CD87927000C7BF9 /* PinYinForObjc.h */,
+				18BE78AF1CD87927000C7BF9 /* PinYinForObjc.m */,
+				18BE78B01CD87927000C7BF9 /* PinyinHelper.h */,
+				18BE78B11CD87927000C7BF9 /* PinyinHelper.m */,
+				18BE78B21CD87927000C7BF9 /* unicode_to_hanyu_pinyin.txt */,
+				18BE78B31CD87927000C7BF9 /* ZYPinYinSearch.h */,
+				18BE78B41CD87927000C7BF9 /* ZYPinYinSearch.m */,
+			);
+			path = ZYPinYinSearchLib;
+			sourceTree = "<group>";
+		};
 		18C12A3C1CD2E9A900014A69 /* ChengJiao */ = {
 			isa = PBXGroup;
 			children = (
@@ -1234,12 +1304,14 @@
 				1FF7A3141CBF69800048638F /* AppDelegate.swift */,
 				1FF7A3161CBF69800048638F /* ViewController.swift */,
 				189DA6AE1CCCA70F0004B76D /* SDWebImage */,
+				18BE78A31CD87927000C7BF9 /* ZYPinYinSearchLib */,
 				1FF7A3181CBF69800048638F /* Main.storyboard */,
 				1FF7A31B1CBF69800048638F /* Assets.xcassets */,
 				1FF7A31D1CBF69800048638F /* LaunchScreen.storyboard */,
 				189DA6E21CCCBA0F0004B76D /* 1.plist */,
 				189DA6E31CCCBA0F0004B76D /* 2.plist */,
 				189DA6E41CCCBA0F0004B76D /* 3.plist */,
+				18BE789D1CD848B0000C7BF9 /* citydict.plist */,
 				1FF7A3201CBF69800048638F /* Info.plist */,
 				180767AF1CBF77F90062F4A5 /* MWN_user_2016-Bridging-Header.h */,
 				180767CB1CBF89810062F4A5 /* Tool */,
@@ -1268,6 +1340,8 @@
 		6765084A1D0DD68C2FA8CFDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18BE78991CD847A6000C7BF9 /* CoreLocation.framework */,
+				18BE78971CD84794000C7BF9 /* MapKit.framework */,
 				CF2A3E657106AAE12DEE6FC3 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -1390,10 +1464,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				189DA6E61CCCBA0F0004B76D /* 2.plist in Resources */,
+				18BE78BC1CD87927000C7BF9 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				1807679A1CBF76770062F4A5 /* pic.bundle in Resources */,
 				189DA6E71CCCBA0F0004B76D /* 3.plist in Resources */,
 				189DA6E51CCCBA0F0004B76D /* 1.plist in Resources */,
 				1FF7A31F1CBF69800048638F /* LaunchScreen.storyboard in Resources */,
+				18BE789E1CD848B0000C7BF9 /* citydict.plist in Resources */,
 				180767A61CBF76770062F4A5 /* ItemCell.xib in Resources */,
 				1FF7A31C1CBF69800048638F /* Assets.xcassets in Resources */,
 				1FF7A3431CBF69970048638F /* Podfile in Resources */,
@@ -1478,6 +1554,7 @@
 				18FA28671CC487DA00B73CCC /* ChildCollectionViewCell.swift in Sources */,
 				180767551CBF76770062F4A5 /* CFSnapKit.swift in Sources */,
 				18501EA91CCDBBCE00B6A614 /* ServiceViewController.swift in Sources */,
+				18BE78BB1CD87927000C7BF9 /* PinyinHelper.m in Sources */,
 				18D262841CC0795A00485B13 /* PhoneVerifyViewController.swift in Sources */,
 				1807676D1CBF76770062F4A5 /* Log.swift in Sources */,
 				1807677C1CBF76770062F4A5 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
@@ -1520,9 +1597,11 @@
 				180767781CBF76770062F4A5 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				189DA6D51CCCA70F0004B76D /* SDWebImageDownloader.m in Sources */,
 				18A995D61CC9C11F00C4ACC0 /* MineBusinessViewController.swift in Sources */,
+				18BE78BD1CD87927000C7BF9 /* ZYPinYinSearch.m in Sources */,
 				183B95F11CD1DD8000C74FC9 /* MineOrderViewController.swift in Sources */,
 				18501EAB1CCE06CC00B6A614 /* CommentTableViewCell.swift in Sources */,
 				1804BA0E1CC65FBD00854F60 /* MeijiaViewController.swift in Sources */,
+				18BE78B61CD87927000C7BF9 /* ChineseToPinyinResource.m in Sources */,
 				1807678B1CBF76770062F4A5 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				180767C01CBF7A720062F4A5 /* MineViewController.swift in Sources */,
 				1807677D1CBF76770062F4A5 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
@@ -1549,7 +1628,9 @@
 				18AA05931CC505B600BDCDF9 /* NextViewViewController.swift in Sources */,
 				180767A21CBF76770062F4A5 /* PhotoBrowser+Model.swift in Sources */,
 				180767A51CBF76770062F4A5 /* ItemCell.swift in Sources */,
+				18BE78B71CD87927000C7BF9 /* HanyuPinyinOutputFormat.m in Sources */,
 				1807674F1CBF76770062F4A5 /* RMDownloadIndicator.swift in Sources */,
+				18BE78A01CD84E2C000C7BF9 /* LocationManager.swift in Sources */,
 				189DA5591CCC59A10004B76D /* ChildrenViewController.swift in Sources */,
 				180767511CBF76770062F4A5 /* ConnectModel.m in Sources */,
 				18AED7731CD05332008764B5 /* MassageListViewController.swift in Sources */,
@@ -1582,6 +1663,7 @@
 				18AED7851CD09431008764B5 /* MassageKindViewController.swift in Sources */,
 				180767681CBF76770062F4A5 /* DiskFetcher.swift in Sources */,
 				180767951CBF76770062F4A5 /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
+				18BE78B91CD87927000C7BF9 /* PinyinFormatter.m in Sources */,
 				180767A11CBF76770062F4A5 /* Layout.swift in Sources */,
 				180767701CBF76770062F4A5 /* NSHTTPURLResponse+Haneke.swift in Sources */,
 				1807679E1CBF76770062F4A5 /* PhotoBrowser+Main.swift in Sources */,
@@ -1596,9 +1678,11 @@
 				180767541CBF76770062F4A5 /* FlexibleTableViewCell.swift in Sources */,
 				18A5EBC41CCF1744009FB017 /* DownViewController.swift in Sources */,
 				180767921CBF76770062F4A5 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
+				18BE78B81CD87927000C7BF9 /* NSString+PinYin4Cocoa.m in Sources */,
 				180767841CBF76770062F4A5 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				18A5EBC01CCF02EF009FB017 /* VideoPlayTableViewCell.swift in Sources */,
 				1807678F1CBF76770062F4A5 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
+				18BE78BA1CD87927000C7BF9 /* PinYinForObjc.m in Sources */,
 				183178331CC7576B00D93D8A /* BeautyVidViewController.swift in Sources */,
 				1807675F1CBF76770062F4A5 /* SnapKit.swift in Sources */,
 				180767871CBF76770062F4A5 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
@@ -1609,6 +1693,7 @@
 				18AED77A1CD0666B008764B5 /* BuyListTableViewCell.swift in Sources */,
 				180767741CBF76770062F4A5 /* UIImage+Haneke.swift in Sources */,
 				180767C61CBF7ABF0062F4A5 /* MainViewController.swift in Sources */,
+				18BE789C1CD8485B000C7BF9 /* SpecifyArray.swift in Sources */,
 				183178351CC7577F00D93D8A /* BeautyLiveViewController.swift in Sources */,
 				180767941CBF76770062F4A5 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				1807675C1CBF76770062F4A5 /* Debugging.swift in Sources */,
@@ -1616,6 +1701,7 @@
 				18A5EBBE1CCF023D009FB017 /* VideoViewController.swift in Sources */,
 				180767731CBF76770062F4A5 /* UIButton+Haneke.swift in Sources */,
 				189DA6DD1CCCA70F0004B76D /* UIImageView+HighlightedWebCache.m in Sources */,
+				18BE78961CD83FAF000C7BF9 /* LoadPicViewController.swift in Sources */,
 				180767CA1CBF7C3D0062F4A5 /* PasswordViewController.swift in Sources */,
 				18501EAF1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift in Sources */,
 				189DA6D41CCCA70F0004B76D /* SDWebImageDecoder.m in Sources */,
@@ -1642,6 +1728,7 @@
 				1807677F1CBF76770062F4A5 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				18C12A4A1CD2FA8A00014A69 /* DiamondTableViewCell.swift in Sources */,
 				180767811CBF76770062F4A5 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
+				18BE78A21CD85259000C7BF9 /* TableViewCell.swift in Sources */,
 				1FF7A3151CBF69800048638F /* AppDelegate.swift in Sources */,
 				1807674D1CBF76770062F4A5 /* PhotoBrowserCell.swift in Sources */,
 				180767891CBF76770062F4A5 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
@@ -1651,6 +1738,7 @@
 				1807676B1CBF76770062F4A5 /* Format.swift in Sources */,
 				180767561CBF76770062F4A5 /* Constraint.swift in Sources */,
 				180767581CBF76770062F4A5 /* ConstraintDescription.swift in Sources */,
+				18BE78B51CD87927000C7BF9 /* ChineseInclude.m in Sources */,
 				180767671CBF76770062F4A5 /* DiskCache.swift in Sources */,
 				180767C41CBF7AB00062F4A5 /* ConcernViewController.swift in Sources */,
 				180767961CBF76770062F4A5 /* NVActivityIndicatorShape.swift in Sources */,
