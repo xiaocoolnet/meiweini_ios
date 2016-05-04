@@ -130,6 +130,11 @@
 		18501EAF1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EAE1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift */; };
 		18501EB11CCE0DF200B6A614 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EB01CCE0DF200B6A614 /* PhotoTableViewCell.swift */; };
 		1863CD341CCA0D43000B4DCF /* BeautyPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863CD331CCA0D43000B4DCF /* BeautyPicViewController.swift */; };
+		1890C6071CD98E75009DF5C0 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890C6061CD98E75009DF5C0 /* Url.swift */; };
+		1890C6091CD993DA009DF5C0 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890C6081CD993DA009DF5C0 /* LoginModel.swift */; };
+		1890C60D1CD9945B009DF5C0 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890C60A1CD9945B009DF5C0 /* Http.swift */; };
+		1890C60E1CD9945B009DF5C0 /* Httpresult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890C60B1CD9945B009DF5C0 /* Httpresult.swift */; };
+		1890C60F1CD9945B009DF5C0 /* JSONJoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890C60C1CD9945B009DF5C0 /* JSONJoy.swift */; };
 		1892A4341CC5C76900AD7F52 /* ChildsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A4331CC5C76900AD7F52 /* ChildsViewController.swift */; };
 		189DA5571CCC51650004B76D /* ChildsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DA5561CCC51650004B76D /* ChildsTableViewCell.swift */; };
 		189DA5591CCC59A10004B76D /* ChildrenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DA5581CCC59A10004B76D /* ChildrenViewController.swift */; };
@@ -372,6 +377,11 @@
 		18501EAE1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoalbumTableViewCell.swift; sourceTree = "<group>"; };
 		18501EB01CCE0DF200B6A614 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		1863CD331CCA0D43000B4DCF /* BeautyPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyPicViewController.swift; sourceTree = "<group>"; };
+		1890C6061CD98E75009DF5C0 /* Url.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
+		1890C6081CD993DA009DF5C0 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		1890C60A1CD9945B009DF5C0 /* Http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
+		1890C60B1CD9945B009DF5C0 /* Httpresult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Httpresult.swift; sourceTree = "<group>"; };
+		1890C60C1CD9945B009DF5C0 /* JSONJoy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONJoy.swift; sourceTree = "<group>"; };
 		1892A4331CC5C76900AD7F52 /* ChildsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildsViewController.swift; sourceTree = "<group>"; };
 		189DA5561CCC51650004B76D /* ChildsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildsTableViewCell.swift; sourceTree = "<group>"; };
 		189DA5581CCC59A10004B76D /* ChildrenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildrenViewController.swift; sourceTree = "<group>"; };
@@ -961,6 +971,7 @@
 		180767BD1CBF79A30062F4A5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1890C6081CD993DA009DF5C0 /* LoginModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1044,6 +1055,17 @@
 				18501EA81CCDBBCE00B6A614 /* ServiceViewController.swift */,
 			);
 			name = SetUp;
+			sourceTree = "<group>";
+		};
+		1890C6051CD98E60009DF5C0 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				1890C6061CD98E75009DF5C0 /* Url.swift */,
+				1890C60A1CD9945B009DF5C0 /* Http.swift */,
+				1890C60B1CD9945B009DF5C0 /* Httpresult.swift */,
+				1890C60C1CD9945B009DF5C0 /* JSONJoy.swift */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 		1892A4321CC5C70300AD7F52 /* Beautiful */ = {
@@ -1303,6 +1325,7 @@
 				1807668D1CBF6E5D0062F4A5 /* Login and Register */,
 				1FF7A3141CBF69800048638F /* AppDelegate.swift */,
 				1FF7A3161CBF69800048638F /* ViewController.swift */,
+				1890C6051CD98E60009DF5C0 /* Tools */,
 				189DA6AE1CCCA70F0004B76D /* SDWebImage */,
 				18BE78A31CD87927000C7BF9 /* ZYPinYinSearchLib */,
 				1FF7A3181CBF69800048638F /* Main.storyboard */,
@@ -1561,6 +1584,7 @@
 				1807679D1CBF76770062F4A5 /* PhotoBrowser+Indicator.swift in Sources */,
 				180767641CBF76770062F4A5 /* CGSize+Swift.swift in Sources */,
 				180767991CBF76770062F4A5 /* PhotoBrowser+Common.swift in Sources */,
+				1890C60F1CD9945B009DF5C0 /* JSONJoy.swift in Sources */,
 				1807675D1CBF76770062F4A5 /* EdgeInsets.swift in Sources */,
 				180767A71CBF76770062F4A5 /* ShowImageView.swift in Sources */,
 				1807678C1CBF76770062F4A5 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
@@ -1631,6 +1655,7 @@
 				18BE78B71CD87927000C7BF9 /* HanyuPinyinOutputFormat.m in Sources */,
 				1807674F1CBF76770062F4A5 /* RMDownloadIndicator.swift in Sources */,
 				18BE78A01CD84E2C000C7BF9 /* LocationManager.swift in Sources */,
+				1890C6091CD993DA009DF5C0 /* LoginModel.swift in Sources */,
 				189DA5591CCC59A10004B76D /* ChildrenViewController.swift in Sources */,
 				180767511CBF76770062F4A5 /* ConnectModel.m in Sources */,
 				18AED7731CD05332008764B5 /* MassageListViewController.swift in Sources */,
@@ -1640,8 +1665,10 @@
 				1807675A1CBF76770062F4A5 /* ConstraintMaker.swift in Sources */,
 				18A5EBC81CCF4F00009FB017 /* PayTableViewCell.swift in Sources */,
 				183B95F91CD1EC8000C74FC9 /* MineBusTableViewCell.swift in Sources */,
+				1890C60D1CD9945B009DF5C0 /* Http.swift in Sources */,
 				180767931CBF76770062F4A5 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				189DA6D01CCCA70F0004B76D /* MKAnnotationView+WebCache.m in Sources */,
+				1890C60E1CD9945B009DF5C0 /* Httpresult.swift in Sources */,
 				180767691CBF76770062F4A5 /* Fetch.swift in Sources */,
 				180767851CBF76770062F4A5 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				1807675B1CBF76770062F4A5 /* ConstraintRelation.swift in Sources */,
@@ -1663,6 +1690,7 @@
 				18AED7851CD09431008764B5 /* MassageKindViewController.swift in Sources */,
 				180767681CBF76770062F4A5 /* DiskFetcher.swift in Sources */,
 				180767951CBF76770062F4A5 /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
+				1890C6071CD98E75009DF5C0 /* Url.swift in Sources */,
 				18BE78B91CD87927000C7BF9 /* PinyinFormatter.m in Sources */,
 				180767A11CBF76770062F4A5 /* Layout.swift in Sources */,
 				180767701CBF76770062F4A5 /* NSHTTPURLResponse+Haneke.swift in Sources */,

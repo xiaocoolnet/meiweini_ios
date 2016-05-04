@@ -12,6 +12,7 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
     @IBOutlet weak var backBtn: UIButton!
     
+    @IBOutlet weak var titPic: UIButton!
     @IBOutlet weak var titleView: UIView!
     
     let setBtn = UIButton()
@@ -41,6 +42,12 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         // Do any additional setup after loading the view.
         
         backBtn.layer.cornerRadius = 25
+        
+        let image = UIImageView()
+        
+        image.sd_setImageWithURL(NSURL(string: "http://mwn.xiaocool.net/uploads/avatar/xiaocool.png"), placeholderImage: UIImage(named: "kb3.png"))
+        
+        titPic.setImage(image.image, forState: .Normal)
         
         setBtn.frame = CGRectMake(WIDTH-45, 30, 30, 30)
         setBtn.setImage(UIImage(named: "ic_set.png"), forState: .Normal)

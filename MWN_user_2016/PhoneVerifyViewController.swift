@@ -13,6 +13,7 @@ class PhoneVerifyViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var phoneNum: UITextField!
     @IBOutlet weak var nextBtn: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,9 +31,31 @@ class PhoneVerifyViewController: UIViewController,UITextFieldDelegate {
     }
     @IBAction func nextWord(sender: AnyObject) {
         print("下一步")
-        
+        if (phoneNum.text!.isEmpty||phoneNum.text?.characters.count != 11)
+        {
+            let alerView:UIAlertView = UIAlertView()
+            alerView.title = "手机号输入错误"
+            alerView.message = "请重新输入"
+            alerView.addButtonWithTitle("确定")
+            alerView.cancelButtonIndex = 0
+            alerView.delegate = self
+            alerView.tag = 1
+            alerView.show()
+            
+        }else{
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            let next : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Verification")
+            let phone = self.phoneNum.text!
+            
+            next.setValue(phone, forKey: "phoneNum")
+            self.navigationController?.pushViewController(next, animated: true)
+            next.title = "获取验证码"
+            
+        }
+
         
     }
+    
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.hidden=false

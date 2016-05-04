@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import MBProgressHUD
 
 class RegisterViewController: UIViewController,UITextFieldDelegate {
 
@@ -18,11 +20,22 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var baomi1: UIButton!
     @IBOutlet weak var achieve: UIButton!
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    var timeNamal:NSTimer!
+    var timeNow:NSTimer!
+    var count:Int = 60
+//    var alerView0:UIAlertView!
+//    var alerView1:UIAlertView!
+//    var alerView2:UIAlertView!
+//    var alerView3:UIAlertView!
+//    var alerView4:UIAlertView!
     
     var baomi = Bool()
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.hidden=true
+        timeLabel.hidden = true
     }
     
     override func viewDidLoad() {
@@ -35,15 +48,10 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
         phoneNum.delegate = self
         phoneTrades.delegate = self
         password.delegate = self
+        password.secureTextEntry = true
         
         achieve.setBackgroundImage(UIImage(named: "dianjihuoqu_selected.png"), forState: .Highlighted)
         registerBtn.setBackgroundImage(UIImage(named: "zhuce_selected.png"), forState: .Highlighted)
-        
-//        registerBtn.layer.cornerRadius = 25
-//        userBtn.layer.borderColor = UIColor.whiteColor().CGColor
-//        userBtn.layer.borderWidth = 1
-//        tradesman.layer.borderColor = UIColor.whiteColor().CGColor
-//        tradesman.layer.borderWidth = 1
         
     }
     @IBAction func backLogin(sender: AnyObject) {
@@ -69,7 +77,30 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
     }
     @IBAction func testGetCode(sender: AnyObject) {
         print("获取验证码")
-        
+        if (phoneNum.text!.isEmpty||phoneNum.text?.characters.count != 11)
+        {
+            let alerView:UIAlertView = UIAlertView()
+            alerView.title = "手机号输入错误"
+            alerView.message = "请重新输入"
+            alerView.addButtonWithTitle("确定")
+            alerView.cancelButtonIndex = 0
+            alerView.delegate = self
+            alerView.tag = 1
+            alerView.show()
+            
+        }
+        else
+        {
+            let alerView:UIAlertView = UIAlertView()
+            alerView.title = "发送验证码到"
+            alerView.message = "\(phoneNum.text!)"
+            alerView.addButtonWithTitle("取消")
+            alerView.addButtonWithTitle("确定")
+            alerView.cancelButtonIndex = 0
+            alerView.delegate = self
+            alerView.tag = 0
+            alerView.show()
+        }
         
     }
     
@@ -77,9 +108,11 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
         print("保密")
         if baomi==true {
             baomi1.setImage(UIImage(named: "ic_zhengyan.png"), forState: .Normal)
+            password.secureTextEntry = false
             baomi = false
         }else{
             baomi1.setImage(UIImage(named: "ic_biyan.png"), forState: .Normal)
+            password.secureTextEntry = true
             baomi = true
         }
     }
@@ -87,8 +120,137 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
     @IBAction func registerUser(sender: AnyObject) {
         
         print("注册")
+        if PandKong()==true{
+            RegisterYanZheng()
+        }
+    }
+   
+    func RegisterYanZheng(){
+        let url = mwnUrl+"AppRegister"
+        let param = [
+            "phone":phoneNum.text!,
+            "code":phoneTrades.text!,
+            "password":password.text!,
+            "devicestate":"1"
+        ]
+        print(url)
+        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                print("request是")
+                print(request!)
+                print("====================")
+                let status = Httpresult(JSONDecoder(json!))
+                print(JSONDecoder(json!))
+                print("状态是")
+                print(status.status)
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.labelText = status.errorData
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 3)
+                }
+                if(status.status == "success"){
+                    let userid = NSUserDefaults.standardUserDefaults()
+                    userid.setValue(status.data?.id, forKey: "userid")
+                    let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                    let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView")
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+        }
+    }
+    func PandKong()->Bool{
+        if(phoneNum.text!.isEmpty){
+            let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            hud.mode = MBProgressHUDMode.Text
+            hud.labelText = "请输入手机号"
+            hud.margin = 10.0
+            hud.removeFromSuperViewOnHide = true
+            hud.hide(true, afterDelay: 1)
+            return false
+        }
+        if(phoneTrades.text!.isEmpty){
+            let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            hud.mode = MBProgressHUDMode.Text
+            hud.labelText = "请输入验证码"
+            hud.margin = 10.0
+            hud.removeFromSuperViewOnHide = true
+            hud.hide(true, afterDelay: 1)
+            return false
+        }
+        if(password.text!.isEmpty){
+            let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            hud.mode = MBProgressHUDMode.Text
+            hud.labelText = "请输入密码"
+            hud.margin = 10.0
+            hud.removeFromSuperViewOnHide = true
+            hud.hide(true, afterDelay: 1)
+            return false
+        }
+        return true
+    }
+    
+    
+
+    func timeDow()
+    {
+        let time1 = NSTimer.scheduledTimerWithTimeInterval(1.0, target:self, selector: #selector(RegisterViewController.updateTime), userInfo: nil, repeats: true)
+        timeNow = time1
+    }
+    
+    func showRepeatButton()
+    {
+        timeLabel.hidden=true
+        achieve.hidden = false
+        achieve.enabled = true
+    }
+    
+    func updateTime()
+    {
+        count -= 1
+        if (count <= 0)
+        {
+            count = 60
+            self.showRepeatButton()
+            timeNow.invalidate()
+        }
+        timeLabel.text = "\(count)S"
         
-        
+    }
+    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        if alertView.tag == 0
+        {
+            if buttonIndex == 1
+            {
+                self.senderMessage()
+                achieve.hidden = true
+                timeLabel.hidden = false
+                self.timeDow()
+            }
+        }
+        if alertView.tag == 1
+        {}
+        if alertView.tag == 2
+        {}
+    }
+    
+    func senderMessage()
+    {
+        let url = mwnUrl+"SendMobileCode"
+        let param = [
+            "phone":phoneNum.text!,
+            ]
+        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+            }
+        }
     }
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

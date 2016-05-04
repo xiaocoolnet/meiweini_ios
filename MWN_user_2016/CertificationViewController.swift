@@ -18,12 +18,7 @@ class CertificationViewController: UIViewController,UITableViewDelegate,UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//
-//        busRenTable.frame = CGRectMake(0, 10, WIDTH, 200)
-//        busRenTable.delegate = self
-//        busRenTable.dataSource = self
-//        busRenTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
+
         // Do any additional setup after loading the view.
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

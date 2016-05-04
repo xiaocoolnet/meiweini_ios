@@ -36,6 +36,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+//    func loginCheck(){
+//        
+//        let infoDictionary = NSBundle.mainBundle().infoDictionary
+//        let currentAppVersion = infoDictionary!["CFBundleShortVersionString"] as! String
+//        // 取出之前保存的版本号
+//        let userDefaults = NSUserDefaults.standardUserDefaults()
+//        let appVersion = userDefaults.stringForKey("appVersion")
+//        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        
+//        // 如果 appVersion 为 nil 说明是第一次启动；如果 appVersion 不等于 currentAppVersion 说明是更新了
+//        if appVersion == nil || appVersion != currentAppVersion {
+//            // 保存最新的版本号
+//            userDefaults.setValue(currentAppVersion, forKey: "appVersion")
+//            
+//            let guideViewController = storyboard.instantiateViewControllerWithIdentifier("scrollView") as! ScrollViewController
+//            self.window?.rootViewController = guideViewController
+//        }
+//            
+//            
+//        else{
+//            let userid = NSUserDefaults.standardUserDefaults()
+//            //let uid = userid.valueForKey("userid")
+//            var segueId = "MainView"
+//            if((userid.valueForKey("userid") == nil) || (userid.valueForKey("userid")?.length == 0 ))
+//            {
+//                segueId = "LoginView"
+//                self.window?.rootViewController = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier(segueId)
+//                
+//            }
+//            else{
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let tableBarController = storyboard.instantiateViewControllerWithIdentifier(segueId) as! UITabBarController
+//                let tableBarItem = tableBarController.tabBar.items![2]
+//                tableBarItem.badgeValue = "3"
+//                self.window?.rootViewController = tableBarController
+//                
+//            }
+//        }
+//    }
+
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
