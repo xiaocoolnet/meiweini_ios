@@ -8,4 +8,5 @@
 
 import Foundation
 var mwnUrl = "http://mwn.xiaocool.net/index.php?g=apps&m=index&a="
+var picUrl = "http://mwn.xiaocool.net/data/user_uploads/photo/"
         

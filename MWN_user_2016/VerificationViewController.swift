@@ -75,6 +75,7 @@ class VerificationViewController: UIViewController,UITextFieldDelegate {
             let code = verityField.text
             
             next.setValue(code, forKey: "code")
+            next.setValue(phoneNum, forKey: "phone")
             self.navigationController?.pushViewController(next, animated: true)
             next.title = "修改密码"
 

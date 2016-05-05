@@ -138,9 +138,7 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
             if(error != nil){
             }
             else{
-                print("request是")
-                print(request!)
-                print("====================")
+               
                 let status = Httpresult(JSONDecoder(json!))
                 print(JSONDecoder(json!))
                 print("状态是")
@@ -154,8 +152,7 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
                     hud.hide(true, afterDelay: 3)
                 }
                 if(status.status == "success"){
-                    let userid = NSUserDefaults.standardUserDefaults()
-                    userid.setValue(status.data?.id, forKey: "userid")
+                    
                     let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
                     let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView")
                     self.navigationController?.pushViewController(vc, animated: true)

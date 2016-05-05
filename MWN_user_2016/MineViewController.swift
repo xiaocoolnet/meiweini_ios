@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import MBProgressHUD
 
 class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -34,6 +36,38 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         titleView.backgroundColor = COLOR
         self.navigationController?.navigationBarHidden = true
         self.tabBarController?.tabBar.hidden = false
+        let userid = NSUserDefaults.standardUserDefaults()
+        let uid = userid.stringForKey("userid")
+        let url = mwnUrl+"getuserinfo"
+        let param = [
+            "userid":uid!
+        ]
+        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                
+                let status = LoginModel(JSONDecoder(json!))
+                print("状态是")
+                print(status.status)
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.labelText = status.errorData
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                }
+                if(status.status == "success"){
+                    print("Success")
+                    let username = NSUserDefaults.standardUserDefaults()
+                    username.setValue(status.data?.name, forKey: "username")
+                    let phoneNumber = NSUserDefaults.standardUserDefaults()
+                    phoneNumber.setValue(status.data?.phoneNumber, forKey: "phoneNumber")
+                }
+            }
+        }
+
     }
     
     override func viewDidLoad() {
@@ -197,8 +231,37 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let userMassage = UserMassageViewController()
         self.navigationController?.pushViewController(userMassage, animated: true)
         userMassage.title = "信息修改"
-        
-        
+        let userid = NSUserDefaults.standardUserDefaults()
+        let uid = userid.stringForKey("userid")
+        let url = mwnUrl+"getuserinfo"
+        let param = [
+            "userid":uid!
+        ]
+        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                
+                let status = LoginModel(JSONDecoder(json!))
+                print("状态是")
+                print(status.status)
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.labelText = status.errorData
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                }
+                if(status.status == "success"){
+                    print("Success")
+                    let username = NSUserDefaults.standardUserDefaults()
+                    username.setValue(status.data?.name, forKey: "username")
+                    let phoneNumber = NSUserDefaults.standardUserDefaults()
+                    phoneNumber.setValue(status.data?.phoneNumber, forKey: "phoneNumber")
+                }
+            }
+        }
     }
     
     @IBAction func GoBackLogin(sender: AnyObject) {
@@ -206,10 +269,7 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let alertController = UIAlertController(title: NSLocalizedString("", comment: "Warn"), message: NSLocalizedString("确认注销？", comment: "empty message"), preferredStyle: .Alert)
         let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
         let doneAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
-//            let userid = NSUserDefaults.standardUserDefaults()
-//            userid.setValue("", forKey: "userid")
-//            let defalutid = NSUserDefaults.standardUserDefaults()
-//            defalutid.setValue("", forKey: "cid")
+
             let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
             let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView") as! UINavigationController
             self.presentViewController(vc, animated: true, completion: nil)

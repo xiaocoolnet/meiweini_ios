@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import MBProgressHUD
 
 class UserMassageViewController: UIViewController,UITextFieldDelegate {
 
@@ -21,8 +23,6 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate {
     let phone = UILabel()
     var phoneNum = UITextField()
     var clean = UIButton()
-    
-    
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
@@ -53,6 +53,11 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate {
             self.view.addSubview(line)
             
         }
+        
+        let user = NSUserDefaults.standardUserDefaults()
+        let username = user.stringForKey("username")
+        let phoneNumber = user.stringForKey("phoneNumber")
+        
         userName.frame = CGRectMake(10, 230, 60, 30)
         userName.text = "昵称"
         sex.frame = CGRectMake(10, 300, 60, 30)
@@ -62,12 +67,12 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate {
         name.frame = CGRectMake(100, 230, WIDTH/2, 30)
         name.textAlignment = .Center
         name.textColor = UIColor(red: 174/255.0, green: 179/255.0, blue: 190/255.0, alpha: 1.0)
-        name.text = "风吹枫落"
+        name.text = username
         name.placeholder = "请输入昵称"
         phoneNum.frame = CGRectMake(100, 370, WIDTH/2, 30)
         phoneNum.textAlignment = .Center
         phoneNum.textColor = UIColor(red: 174/255.0, green: 179/255.0, blue: 190/255.0, alpha: 1.0)
-        phoneNum.text = "1327848437"
+        phoneNum.text = phoneNumber
         phoneNum.placeholder = "请输入手机号码"
         clean.frame = CGRectMake(WIDTH-40, 230, 30, 30)
         clean.setImage(UIImage(named: "ic_guangbi.png"), forState: .Normal)
@@ -100,7 +105,7 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate {
         name.delegate = self
         phoneNum.delegate = self
     }
-
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         print("触摸")
         phoneNum.resignFirstResponder()
@@ -111,8 +116,11 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+//    修改头像
     func getUpUserImage() {
         print("修改头像")
+        
+        
         
     }
     func cleanTheText() {
@@ -129,10 +137,53 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate {
         men.setImage(UIImage(named: "ic_xuanzhong-shi.png"), forState: .Normal)
         wemen.setImage(UIImage(named: "ic_xuanzhong-kong.png"), forState: .Normal)
     }
+    func PandKong()->Bool{
+        if(name.text!.isEmpty){
+            let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            hud.mode = MBProgressHUDMode.Text
+            hud.labelText = "请输入昵称"
+            hud.margin = 10.0
+            hud.removeFromSuperViewOnHide = true
+            hud.hide(true, afterDelay: 1)
+            return false
+        }
+        return true
+    }
+//    修改信息
     func saveThisMassage() {
         print("保存")
-        
-        
+        if self.PandKong() == true {
+            let user = NSUserDefaults.standardUserDefaults()
+            let uid = user.stringForKey("userid")
+            let url = mwnUrl+"savepersonalinfo"
+            let param = [
+                "userid":uid!,
+                "nicename":name.text!,
+                "city":"烟台市"
+            ]
+            Alamofire.request(.POST, url, parameters: param).response { request, response, json, error in
+                if(error != nil){
+                }
+                else{
+                    
+                    let status = LoginModel(JSONDecoder(json!))
+                    print("状态是")
+                    print(status.status)
+                    if(status.status == "error"){
+                        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                        hud.mode = MBProgressHUDMode.Text
+                        hud.labelText = status.errorData
+                        hud.margin = 10.0
+                        hud.removeFromSuperViewOnHide = true
+                        hud.hide(true, afterDelay: 1)
+                    }
+                    if(status.status == "success"){
+                        print("Success+1")
+                        self.navigationController?.popToRootViewControllerAnimated(true)
+                    }
+                }
+            }
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

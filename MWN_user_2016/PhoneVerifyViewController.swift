@@ -48,6 +48,7 @@ class PhoneVerifyViewController: UIViewController,UITextFieldDelegate {
             let phone = self.phoneNum.text!
             
             next.setValue(phone, forKey: "phoneNum")
+            
             self.navigationController?.pushViewController(next, animated: true)
             next.title = "获取验证码"
             

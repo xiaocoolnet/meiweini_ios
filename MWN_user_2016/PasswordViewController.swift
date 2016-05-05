@@ -12,7 +12,7 @@ import MBProgressHUD
 
 class PasswordViewController: UIViewController,UITextFieldDelegate {
 
-    @IBOutlet weak var phoneNum: UITextField!
+    @IBOutlet weak var phoneNum: UILabel!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var passwordAgain: UITextField!
     @IBOutlet weak var overBtn: UIButton!
@@ -20,6 +20,7 @@ class PasswordViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var baomi2: UIButton!
     
     var code:String?
+    var phone:String?
     
     var baomi = Bool()
     var baomiTwo = Bool()
@@ -30,7 +31,7 @@ class PasswordViewController: UIViewController,UITextFieldDelegate {
         baomi = true
         baomiTwo = true
         
-        phoneNum.delegate = self
+        phoneNum.text = phone
         password.delegate = self
         passwordAgain.delegate = self
         
@@ -94,9 +95,7 @@ class PasswordViewController: UIViewController,UITextFieldDelegate {
             if(error != nil){
             }
             else{
-                print("request是")
-                print(request!)
-                print("====================")
+               
                 let status = Httpresult(JSONDecoder(json!))
                 print("状态是")
                 print(status.status)
@@ -207,7 +206,6 @@ class PasswordViewController: UIViewController,UITextFieldDelegate {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         print("触摸")
-        phoneNum.resignFirstResponder()
         password.resignFirstResponder()
         passwordAgain.resignFirstResponder()
     }

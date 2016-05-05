@@ -67,13 +67,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
             if(error != nil){
             }
             else{
-                print("request是")
-                print(request!)
-                print("response是")
-                print(response!)
-                print("data是")
-                print(json!)
-                print("====================")
+               
                 let status = Httpresult(JSONDecoder(json!))
                 print("状态是")
                 print(status.status)
@@ -93,11 +87,9 @@ class ViewController: UIViewController,UITextFieldDelegate {
                     hud.hide(true, afterDelay: 1)
                     let userid = NSUserDefaults.standardUserDefaults()
                     userid.setValue(status.data?.id, forKey: "userid")
-                    let schoolid = NSUserDefaults.standardUserDefaults()
-                    schoolid.setValue(status.data?.schoolid, forKey: "schoolid")
-                    let classid = NSUserDefaults.standardUserDefaults()
-                    classid.setValue(status.data?.classid, forKey: "classid")
-                    self.GetUserInfo()
+                    
+//                    self.GetUserInfo()
+                    
                     let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
                     let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainView")
                     self.presentViewController(vc, animated: true, completion: nil)
@@ -105,39 +97,39 @@ class ViewController: UIViewController,UITextFieldDelegate {
             }
         }
     }
-    func GetUserInfo(){
-        let userid = NSUserDefaults.standardUserDefaults()
-        let uid = userid.stringForKey("userid")
-        let url = mwnUrl+"getuserinfo"
-        let param = [
-            "userid":uid!
-        ]
-        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
-            if(error != nil){
-            }
-            else{
-                print("request是")
-                print(request!)
-                print("====================")
-                let status = LoginModel(JSONDecoder(json!))
-                print("状态是")
-                print(status.status)
-                if(status.status == "error"){
-                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-                    hud.mode = MBProgressHUDMode.Text;
-                    hud.labelText = status.errorData
-                    hud.margin = 10.0
-                    hud.removeFromSuperViewOnHide = true
-                    hud.hide(true, afterDelay: 1)
-                }
-                if(status.status == "success"){
-                    print("Success")
-                    let username = NSUserDefaults.standardUserDefaults()
-                    username.setValue(status.data?.name, forKey: "username")
-                }
-            }
-        }
-    }
+//    func GetUserInfo(){
+//        let userid = NSUserDefaults.standardUserDefaults()
+//        let uid = userid.stringForKey("userid")
+//        let url = mwnUrl+"getuserinfo"
+//        let param = [
+//            "userid":uid!
+//        ]
+//        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+//            if(error != nil){
+//            }
+//            else{
+//                
+//                let status = LoginModel(JSONDecoder(json!))
+//                print("状态是")
+//                print(status.status)
+//                if(status.status == "error"){
+//                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+//                    hud.mode = MBProgressHUDMode.Text;
+//                    hud.labelText = status.errorData
+//                    hud.margin = 10.0
+//                    hud.removeFromSuperViewOnHide = true
+//                    hud.hide(true, afterDelay: 1)
+//                }
+//                if(status.status == "success"){
+//                    print("Success")
+//                    let username = NSUserDefaults.standardUserDefaults()
+//                    username.setValue(status.data?.name, forKey: "username")
+//                    let phoneNumber = NSUserDefaults.standardUserDefaults()
+//                    phoneNumber.setValue(status.data?.phoneNumber, forKey: "phoneNumber")
+//                }
+//            }
+//        }
+//    }
 
     @IBAction func qqLogin(sender: AnyObject) {
         print("QQ登录")
