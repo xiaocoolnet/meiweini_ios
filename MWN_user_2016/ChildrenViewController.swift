@@ -46,8 +46,8 @@ class ChildrenViewController: UIViewController,UITableViewDelegate,UITableViewDa
         cell.titleName.text = "科比\(indexPath.row)"
         cell.contact.text = "无论多么艰难，都要继续向前，因为只有你放弃的那一刻，你才输了。"
         cell.sold.text = "已售31"
-        cell.price.text = "$29.00"
-        cell.priceOld.text = "$39.00"
+        cell.price.text = "¥29.00"
+        cell.priceOld.text = "¥39.00"
         
         
         return cell

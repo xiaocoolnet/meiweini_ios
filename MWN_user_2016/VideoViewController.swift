@@ -188,7 +188,7 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 let cell = tableView.dequeueReusableCellWithIdentifier("photoalbum")as!PhotoalbumTableViewCell
                 cell.selectionStyle = .None
                 cell.photoName.text = "美女视频"
-                cell.price.text = "$88.88"
+                cell.price.text = "¥88.88"
                 cell.comment.text = "勇敢是，当你还未开始就已知道自己会输，可你依然要去做，而且无论如何都要把它坚持到底。"
                 let zanBtn = UIButton()
                 zanBtn.frame = CGRectMake(WIDTH-41, 54, 36, 33)

@@ -40,7 +40,7 @@ class BuyListViewController: UIViewController,UITableViewDelegate,UITableViewDat
         cell.busName.text = "四月是你的谎言"
         cell.staly.text = "进行中"
         cell.dateLab.text = "2016-04-28 17:30"
-        cell.price.text = "$88.88"
+        cell.price.text = "¥88.88"
         cell.busNum.text = "已售：12"
         cell.busImage.image = UIImage(named: "kb4.png")
         cell.busCommon.text = "和他相遇的瞬间，我的人生就改变了。所见所闻所感，目之所及全都开始变得多姿多彩起来，全世界，都开始发光发亮！"

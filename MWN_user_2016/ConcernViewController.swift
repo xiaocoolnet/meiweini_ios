@@ -157,7 +157,7 @@ class ConcernViewController: UIViewController,UITableViewDelegate,UITableViewDat
             cell.titleImage.image = UIImage(named: "kb2.png")
             cell.nameLab.text = "科比"
             cell.contactLab.text = "最后的王者，永不言弃，I believe I can flying"
-            cell.priceLab.text = "$299"
+            cell.priceLab.text = "¥299"
             cell.muchLab.text = "月销2312笔"
             cell.moreBtn.addTarget(self, action: #selector(ConcernViewController.nextView), forControlEvents: .TouchUpInside)
             //         cell.shareBtn.setImage(UIImage(named: ""), forState: .Normal)

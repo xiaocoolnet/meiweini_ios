@@ -42,7 +42,7 @@ class BeautyViewController: UIViewController {
         options.menuHeight = 40
         options.menuDisplayMode = .SegmentedControl
         //options.selectedBackgroundColor = UIColor(red: 1, green: 112/255.0, blue: 92/255.0, alpha: 1.0)
-        //options.selectedTextColor = UIColor.blackColor()
+        //options.selectedTextColor = UIColor.orangeColor()
         options.menuItemMode = .Underline(height: 3, color: COLOR, horizontalPadding: 0, verticalPadding: 0)
         let pagingMenuController = PagingMenuController(viewControllers: viewControllers, options: options)
         pagingMenuController.view.frame.origin.y += 0

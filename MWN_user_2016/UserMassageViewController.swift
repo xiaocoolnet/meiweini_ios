@@ -10,9 +10,11 @@ import UIKit
 import Alamofire
 import MBProgressHUD
 
-class UserMassageViewController: UIViewController,UITextFieldDelegate {
+class UserMassageViewController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     var userImage = UIButton()
+    var userImageView = UIImageView()
+    
     let userName = UILabel()
     var name = UITextField()
     var wemen = UIButton()
@@ -23,6 +25,8 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate {
     let phone = UILabel()
     var phoneNum = UITextField()
     var clean = UIButton()
+    
+    let user = NSUserDefaults.standardUserDefaults()
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
@@ -39,11 +43,16 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate {
         
         self.navigationItem.rightBarButtonItem = rightBtn
         
+        userImageView.frame = CGRectMake(WIDTH/2-55, 50, 110, 110)
+        userImageView.layer.cornerRadius = 55
+        userImageView.clipsToBounds = true
+        userImageView.image = UIImage(named: "kb3.png")
+        
         userImage.frame = CGRectMake(WIDTH/2-55, 50, 110, 110)
         userImage.layer.cornerRadius = 55
         userImage.clipsToBounds = true
-        userImage.setImage(UIImage(named: "kb3.png"), forState: .Normal)
-        userImage.addTarget(self, action: #selector(UserMassageViewController.getUpUserImage), forControlEvents: .TouchUpInside)
+//        userImage.setImage(UIImage(named: "kb3.png"), forState: .Normal)
+        userImage.addTarget(self, action: #selector(UserMassageViewController.addPicture), forControlEvents: .TouchUpInside)
         
         for i in 0...2 {
             let line = UILabel()
@@ -98,6 +107,7 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate {
         self.view.addSubview(sex)
         self.view.addSubview(phone)
         self.view.addSubview(userName)
+        self.view.addSubview(userImageView)
         self.view.addSubview(userImage)
         self.view.addSubview(men)
         self.view.addSubview(wemen)
@@ -116,13 +126,63 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-//    修改头像
-    func getUpUserImage() {
-        print("修改头像")
-        
-        
+
+    //    添加图片
+    func addPicture(){
+         print("修改头像")
+        let picker = UIImagePickerController()
+        picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        picker.delegate = self
+        self.presentViewController(picker, animated: true, completion: nil)
+    }
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        var image = UIImage()
+        image = (info[UIImagePickerControllerOriginalImage] as? UIImage)!
+        userImageView.image = image
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        self.saveImage(image, newSize: CGSize(width: 256, height: 256), percent: 0.5, imageName: "currentImage.png")
         
     }
+    //保存图片至沙盒
+    func saveImage(currentImage: UIImage, newSize: CGSize, percent: CGFloat, imageName: String){
+        //压缩图片尺寸
+        UIGraphicsBeginImageContext(newSize)
+        currentImage.drawInRect(CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        //高保真压缩图片质量
+        //UIImageJPEGRepresentation此方法可将图片压缩，但是图片质量基本不变，第二个参数即图片质量参数。
+        let imageData:NSData = UIImagePNGRepresentation(newImage)!
+        //        上传修改
+        self.updateHeadImg(imageData)
+    }
+    //    修改头像
+    func updateHeadImg(file:NSData){
+        let userid = user.valueForKey("userid") as? String
+        let RanNumber = String(arc4random_uniform(1000) + 1000)
+        print(userid)
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
+            ConnectModel.uploadWithImageName("2\(userid!)\(RanNumber)", imageData:file, URL: "uploadavatar", finish: { (data) -> Void in
+                print("返回值")
+                print(data)
+                let httpresult = Httpresult(JSONDecoder(data!))
+                print("状态是")
+                print(httpresult.status)
+                if(httpresult.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text
+                    hud.labelText = httpresult.errorData
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                }
+                if(httpresult.status == "success"){
+                    print("Success")
+                }
+            })}
+    }
+
     func cleanTheText() {
         print("清除")
         name.text = ""

@@ -85,7 +85,7 @@ class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             cell.commodity.image = UIImage(named: "kb1.png")
             cell.bus.text = "阿里巴巴"
             cell.RAM.text = "(大小 36M)"
-            cell.price.text = "$88.88"
+            cell.price.text = "¥88.88"
             
             return cell
             
