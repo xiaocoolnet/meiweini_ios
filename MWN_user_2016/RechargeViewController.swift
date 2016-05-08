@@ -1,27 +1,27 @@
 //
-//  OneViewController.swift
+//  RechargeViewController.swift
 //  MWN_user_2016
 //
-//  Created by apple on 16/4/29.
+//  Created by apple on 16/5/8.
 //  Copyright © 2016年 xiaocool. All rights reserved.
 //
 
 import UIKit
 
-class OneViewController: UIViewController,UITextFieldDelegate {
-
+class RechargeViewController: UIViewController,UITextFieldDelegate {
+    
     let nextBot = UIButton()
     let bankname = UILabel()
-    let arr:[String] = ["银行卡","充值金额"]
+    let arr:[String] = ["充值金额","0钻石（兑换比例1:20）"]
     let money = UITextField()
     let jiantou = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
-        self.title = "账户充值"
+        self.title = "钻石充值"
         
         self.view.backgroundColor = RGREY
         
@@ -30,30 +30,19 @@ class OneViewController: UIViewController,UITextFieldDelegate {
             backLab.backgroundColor = UIColor.whiteColor()
             self.view.addSubview(backLab)
             
-            let bankName = UILabel(frame: CGRectMake(10, 25+CGFloat(i)*41, 70, 20))
+            let bankName = UILabel(frame: CGRectMake(10, 25+CGFloat(i)*41, 200, 20))
             bankName.text = arr[i]
             bankName.font = UIFont.systemFontOfSize(16)
             self.view.addSubview(bankName)
-
+            
         }
-        bankname.frame = CGRectMake(WIDTH/2, 25, WIDTH/2-40, 20)
-        bankname.font = UIFont.systemFontOfSize(16)
-        bankname.textAlignment = .Right
-        bankname.text = "建设银行储蓄卡(0033)"
-        self.view.addSubview(bankname)
         
-        jiantou.frame = CGRectMake(WIDTH-35, 25, 25, 20)
-        jiantou.backgroundColor = UIColor.orangeColor()
-        jiantou.addTarget(self, action: #selector(OneViewController.selectorBankCard), forControlEvents: .TouchUpInside)
-        self.view.addSubview(jiantou)
-        
-        money.frame = CGRectMake(WIDTH-150, 61, 140, 30)
+        money.frame = CGRectMake(85, 20, 200, 30)
         money.font = UIFont.systemFontOfSize(16)
-        money.placeholder = "输入金额"
-        money.textAlignment = .Right
+        money.placeholder = "当前余额99.99元"
         self.view.addSubview(money)
         money.delegate = self
-    
+        
         nextBot.frame = CGRectMake(20, 111, WIDTH-40, 44)
         nextBot.setBackgroundImage(UIImage(named: "xiaoyibu_pressed.png"), forState: .Normal)
         nextBot.setBackgroundImage(UIImage(named: "xiaoyibu_selected.png"), forState: .Highlighted)
@@ -61,7 +50,7 @@ class OneViewController: UIViewController,UITextFieldDelegate {
         
         self.view.addSubview(nextBot)
     }
-
+    
     func getHaveMoney() {
         print("充值")
         self.view.endEditing(true)

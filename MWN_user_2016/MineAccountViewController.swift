@@ -68,7 +68,7 @@ class MineAccountViewController: UIViewController,UITableViewDelegate,UITableVie
         if indexPath.section == 0 {
             cell.money.text = "00.00"
             cell.withdraw.setTitle(btnTit[4], forState: .Normal)
-            cell.withdraw.addTarget(self, action: #selector(MineAccountViewController.nextView), forControlEvents: .TouchUpInside)
+            cell.withdraw.addTarget(self, action: #selector(MineAccountViewController.withDrawMoney), forControlEvents: .TouchUpInside)
             
         }else if indexPath.section == 1 {
             cell.money.text = "3张"
@@ -81,7 +81,7 @@ class MineAccountViewController: UIViewController,UITableViewDelegate,UITableVie
             cell.title.text = titArr[indexPath.section]
             cell.titPic.image = UIImage(named: titArr[indexPath.section])
             cell.recharge.setTitle(btnTit[indexPath.section], forState: .Normal)
-            cell.recharge.addTarget(self, action: #selector(MineAccountViewController.nextView), forControlEvents: .TouchUpInside)
+            cell.recharge.addTarget(self, action: #selector(MineAccountViewController.damindRecharge), forControlEvents: .TouchUpInside)
             return cell
         }else{
             cell.money.text = "23"
@@ -93,10 +93,22 @@ class MineAccountViewController: UIViewController,UITableViewDelegate,UITableVie
         
     }
     func nextView() {
-        print("下一页")
+        print("充值")
         let next = OneViewController()
         self.navigationController?.pushViewController(next, animated: true)
-        next.title = "充值"
+        
+        
+    }
+    func withDrawMoney() {
+        print("提现")
+        let next = WithdrawViewController()
+        self.navigationController?.pushViewController(next, animated: true)
+        
+    }
+    func damindRecharge() {
+        print("钻石充值")
+        let next = RechargeViewController()
+        self.navigationController?.pushViewController(next, animated: true)
         
     }
     func accountTheView() {

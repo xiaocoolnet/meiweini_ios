@@ -167,6 +167,11 @@
 		18A5EBC61CCF4B32009FB017 /* CommodityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBC51CCF4B32009FB017 /* CommodityTableViewCell.swift */; };
 		18A5EBC81CCF4F00009FB017 /* PayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBC71CCF4F00009FB017 /* PayTableViewCell.swift */; };
 		18A5EBCA1CCF4F28009FB017 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBC91CCF4F28009FB017 /* MoreTableViewCell.swift */; };
+		18A7917E1CDF25BC0029B307 /* MineLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7917D1CDF25BC0029B307 /* MineLiveViewController.swift */; };
+		18A791801CDF26060029B307 /* MineArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7917F1CDF26060029B307 /* MineArticleViewController.swift */; };
+		18A791821CDF2A390029B307 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A791811CDF2A390029B307 /* ProcessViewController.swift */; };
+		18A791841CDF394F0029B307 /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A791831CDF394F0029B307 /* WithdrawViewController.swift */; };
+		18A791861CDF3CD70029B307 /* RechargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A791851CDF3CD70029B307 /* RechargeViewController.swift */; };
 		18A995C81CC9BA2B00C4ACC0 /* MineOneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A995C71CC9BA2B00C4ACC0 /* MineOneTableViewCell.swift */; };
 		18A995CA1CC9BC3300C4ACC0 /* MineTwoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A995C91CC9BC3300C4ACC0 /* MineTwoTableViewCell.swift */; };
 		18A995CC1CC9C01000C4ACC0 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A995CB1CC9C01000C4ACC0 /* SetViewController.swift */; };
@@ -431,6 +436,11 @@
 		18A5EBC51CCF4B32009FB017 /* CommodityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommodityTableViewCell.swift; sourceTree = "<group>"; };
 		18A5EBC71CCF4F00009FB017 /* PayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayTableViewCell.swift; sourceTree = "<group>"; };
 		18A5EBC91CCF4F28009FB017 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
+		18A7917D1CDF25BC0029B307 /* MineLiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineLiveViewController.swift; sourceTree = "<group>"; };
+		18A7917F1CDF26060029B307 /* MineArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineArticleViewController.swift; sourceTree = "<group>"; };
+		18A791811CDF2A390029B307 /* ProcessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
+		18A791831CDF394F0029B307 /* WithdrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithdrawViewController.swift; sourceTree = "<group>"; };
+		18A791851CDF3CD70029B307 /* RechargeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RechargeViewController.swift; sourceTree = "<group>"; };
 		18A995C71CC9BA2B00C4ACC0 /* MineOneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineOneTableViewCell.swift; sourceTree = "<group>"; };
 		18A995C91CC9BC3300C4ACC0 /* MineTwoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineTwoTableViewCell.swift; sourceTree = "<group>"; };
 		18A995CB1CC9C01000C4ACC0 /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
@@ -1026,6 +1036,7 @@
 			isa = PBXGroup;
 			children = (
 				183B95F01CD1DD8000C74FC9 /* MineOrderViewController.swift */,
+				18A791811CDF2A390029B307 /* ProcessViewController.swift */,
 			);
 			name = MineOrder;
 			sourceTree = "<group>";
@@ -1142,6 +1153,22 @@
 			name = Picture;
 			sourceTree = "<group>";
 		};
+		18A7917B1CDF25820029B307 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				18A7917F1CDF26060029B307 /* MineArticleViewController.swift */,
+			);
+			name = Article;
+			sourceTree = "<group>";
+		};
+		18A7917C1CDF258A0029B307 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				18A7917D1CDF25BC0029B307 /* MineLiveViewController.swift */,
+			);
+			name = Live;
+			sourceTree = "<group>";
+		};
 		18AA058C1CC504B600BDCDF9 /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -1222,6 +1249,8 @@
 			children = (
 				18AED78C1CD0B841008764B5 /* MineAccountViewController.swift */,
 				18C12A4B1CD301B000014A69 /* OneViewController.swift */,
+				18A791831CDF394F0029B307 /* WithdrawViewController.swift */,
+				18A791851CDF3CD70029B307 /* RechargeViewController.swift */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -1237,6 +1266,8 @@
 				183B95EA1CD1DCAC00C74FC9 /* MineLoad */,
 				183B95E91CD1DCAA00C74FC9 /* MineOrder */,
 				183B95E81CD1DCA900C74FC9 /* MineFine */,
+				18A7917C1CDF258A0029B307 /* Live */,
+				18A7917B1CDF25820029B307 /* Article */,
 				183B95E71CD1DCA700C74FC9 /* MineMoney */,
 				183B95E51CD1DC8300C74FC9 /* MineMore */,
 			);
@@ -1576,6 +1607,7 @@
 				1807678D1CBF76770062F4A5 /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				18FA28671CC487DA00B73CCC /* ChildCollectionViewCell.swift in Sources */,
 				180767551CBF76770062F4A5 /* CFSnapKit.swift in Sources */,
+				18A7917E1CDF25BC0029B307 /* MineLiveViewController.swift in Sources */,
 				18501EA91CCDBBCE00B6A614 /* ServiceViewController.swift in Sources */,
 				18BE78BB1CD87927000C7BF9 /* PinyinHelper.m in Sources */,
 				18D262841CC0795A00485B13 /* PhoneVerifyViewController.swift in Sources */,
@@ -1637,6 +1669,7 @@
 				1807675E1CBF76770062F4A5 /* LayoutConstraint.swift in Sources */,
 				180767971CBF76770062F4A5 /* NVActivityIndicatorView.swift in Sources */,
 				180767761CBF76770062F4A5 /* UIView+Haneke.swift in Sources */,
+				18A791801CDF26060029B307 /* MineArticleViewController.swift in Sources */,
 				180767861CBF76770062F4A5 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				1807674E1CBF76770062F4A5 /* PhotoBrowserView.swift in Sources */,
 				189DA6DC1CCCA70F0004B76D /* UIImage+WebP.m in Sources */,
@@ -1670,6 +1703,7 @@
 				189DA6D01CCCA70F0004B76D /* MKAnnotationView+WebCache.m in Sources */,
 				1890C60E1CD9945B009DF5C0 /* Httpresult.swift in Sources */,
 				180767691CBF76770062F4A5 /* Fetch.swift in Sources */,
+				18A791861CDF3CD70029B307 /* RechargeViewController.swift in Sources */,
 				180767851CBF76770062F4A5 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				1807675B1CBF76770062F4A5 /* ConstraintRelation.swift in Sources */,
 				180767C81CBF7AFA0062F4A5 /* RegisterViewController.swift in Sources */,
@@ -1682,6 +1716,7 @@
 				180767A81CBF76770062F4A5 /* XKeyBoard.m in Sources */,
 				18C12A461CD2EB8500014A69 /* ChengJiaoViewController.swift in Sources */,
 				180767831CBF76770062F4A5 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
+				18A791841CDF394F0029B307 /* WithdrawViewController.swift in Sources */,
 				189DA6DA1CCCA70F0004B76D /* UIImage+GIF.m in Sources */,
 				18AA058B1CC5037600BDCDF9 /* BeautyGrilViewController.swift in Sources */,
 				189DA6D81CCCA70F0004B76D /* SDWebImagePrefetcher.m in Sources */,
@@ -1697,6 +1732,7 @@
 				1807679E1CBF76770062F4A5 /* PhotoBrowser+Main.swift in Sources */,
 				183178291CC71E2000D93D8A /* ModelTableViewCell.swift in Sources */,
 				189DA6A51CCCA5970004B76D /* RANCollectionViewCell.swift in Sources */,
+				18A791821CDF2A390029B307 /* ProcessViewController.swift in Sources */,
 				1807677E1CBF76770062F4A5 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				180767651CBF76770062F4A5 /* CryptoSwiftMD5.swift in Sources */,
 				18AED78D1CD0B841008764B5 /* MineAccountViewController.swift in Sources */,
