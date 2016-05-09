@@ -63,17 +63,19 @@ class MineAccountViewController: UIViewController,UITableViewDelegate,UITableVie
         cell.title.text = titArr[indexPath.section]
         cell.titPic.image = UIImage(named: titArr[indexPath.section])
         cell.recharge.setTitle(btnTit[indexPath.section], forState: .Normal)
-        cell.recharge.addTarget(self, action: #selector(MineAccountViewController.nextView), forControlEvents: .TouchUpInside)
+        
         
         if indexPath.section == 0 {
             cell.money.text = "00.00"
             cell.withdraw.setTitle(btnTit[4], forState: .Normal)
             cell.withdraw.addTarget(self, action: #selector(MineAccountViewController.withDrawMoney), forControlEvents: .TouchUpInside)
+            cell.recharge.addTarget(self, action: #selector(MineAccountViewController.nextView), forControlEvents: .TouchUpInside)
             
         }else if indexPath.section == 1 {
             cell.money.text = "3张"
             cell.withdraw.setTitle(btnTit[5], forState: .Normal)
             cell.withdraw.addTarget(self, action: #selector(MineAccountViewController.nextView), forControlEvents: .TouchUpInside)
+            cell.recharge.addTarget(self, action: #selector(MineAccountViewController.addBankCard), forControlEvents: .TouchUpInside)
         }else if indexPath.section == 2 {
             let cell = tableView.dequeueReusableCellWithIdentifier("diamond")as!DiamondTableViewCell
             cell.selectionStyle = .None
@@ -87,6 +89,7 @@ class MineAccountViewController: UIViewController,UITableViewDelegate,UITableVie
             cell.money.text = "23"
             cell.withdraw.setTitle(btnTit[6], forState: .Normal)
             cell.withdraw.addTarget(self, action: #selector(MineAccountViewController.nextView), forControlEvents: .TouchUpInside)
+            cell.recharge.addTarget(self, action: #selector(MineAccountViewController.nextView), forControlEvents: .TouchUpInside)
         }
         
         return cell
@@ -108,6 +111,12 @@ class MineAccountViewController: UIViewController,UITableViewDelegate,UITableVie
     func damindRecharge() {
         print("钻石充值")
         let next = RechargeViewController()
+        self.navigationController?.pushViewController(next, animated: true)
+        
+    }
+    func addBankCard() {
+        print("添加银行卡")
+        let next = BankCardViewController()
         self.navigationController?.pushViewController(next, animated: true)
         
     }

@@ -59,7 +59,7 @@ class ProcessViewController: UIViewController,UITableViewDelegate,UITableViewDat
         cell.busImage.image = UIImage(named: "kb4.png")
         cell.busCommon.text = "尽管命运跟我们开了玩笑，尽管现实无法改变，我拥抱这命运，接受这现实，并仍旧喜欢着你。"
         cell.edit.setTitle("进行中", forState: .Normal)
-        cell.edit.addTarget(self, action: #selector(MineBusViewController.editingTheBusiness), forControlEvents: .TouchUpInside)
+        cell.edit.addTarget(self, action: #selector(ProcessViewController.editingTheBusiness), forControlEvents: .TouchUpInside)
         
         return cell
         
@@ -72,7 +72,7 @@ class ProcessViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     
     func editingTheBusiness() {
-        print("编辑")
+        print("进行中")
         
         
     }

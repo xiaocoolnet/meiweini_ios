@@ -9,44 +9,75 @@
 import UIKit
 import PagingMenuController
 
-class MineLoadViewController: UIViewController {
+class MineLoadViewController: UIViewController,UITextViewDelegate,UITextFieldDelegate {
 
-    let oneView = LoadPicViewController()
-    let twoView = LoadPicViewController()
-    let threeView = LoadPicViewController()
+    @IBOutlet weak var textViewText: UITextView!
+    @IBOutlet weak var update: UIBarButtonItem!
+    let placeHolder = UILabel()
     
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var muchField: UITextField!
+    @IBOutlet weak var clear: UISwitch!
     
-    var nameArr:[String] = ["美女","视频","直播"]
-
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
+        update.enabled = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        oneView.title = nameArr[0]
-        twoView.title = nameArr[1]
-        threeView.title = nameArr[2]
+        self.view.backgroundColor = RGREY
         
-        let viewControllers = [oneView,twoView,threeView]
-        let options = PagingMenuOptions()
-        options.menuItemMargin = 5
-        options.menuHeight = 40
+        placeHolder.frame = CGRectMake(5, 6, 150, 20)
+        placeHolder.textColor = GREY
+        placeHolder.font = UIFont.systemFontOfSize(14)
+        placeHolder.text = "快来描述一下吧..."
+        textViewText.addSubview(placeHolder)
         
-        options.menuDisplayMode = .SegmentedControl
-        //options.menuDisplayMode = .Infinite(widthMode: .Fixed(width: WIDTH/4))
-        //options.selectedBackgroundColor = UIColor(red: 1, green: 112/255.0, blue: 92/255.0, alpha: 1.0)
-        //options.selectedTextColor = UIColor.blackColor()
-        options.menuItemMode = .Underline(height: 3, color: UIColor(red: 1, green: 95/255.0, blue: 73/255.0, alpha: 1.0), horizontalPadding: 0, verticalPadding: 0)
-        let pagingMenuController = PagingMenuController(viewControllers: viewControllers, options: options)
-        pagingMenuController.view.frame.origin.y += 0
-        pagingMenuController.view.frame.size.height -= 0
-        addChildViewController(pagingMenuController)
-        view.addSubview(pagingMenuController.view)
-        pagingMenuController.didMoveToParentViewController(self)
-
+        textViewText.delegate = self
+        nameField.delegate = self
+        muchField.delegate = self
+        
+        clear.onTintColor = COLOR
+        
         // Do any additional setup after loading the view.
+    }
+
+    @IBAction func addPicture(sender: AnyObject) {
+        print("添加图片")
+        
+        
+    }
+    @IBAction func clearAllPicture(sender: AnyObject) {
+        
+        if clear.on == false {
+            print("清理图片")
+        }else{
+            print("没有什么")
+        }
+    }
+    func textViewDidBeginEditing(textView: UITextView) {
+        placeHolder.hidden = true
+        update.enabled = true
+    }
+    @IBAction func upDate(sender: AnyObject) {
+        print("上传")
+        nameField.resignFirstResponder()
+        muchField.resignFirstResponder()
+        textViewText.resignFirstResponder()
+        
+        
+    }
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        nameField.resignFirstResponder()
+        muchField.resignFirstResponder()
+        textViewText.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
     override func didReceiveMemoryWarning() {

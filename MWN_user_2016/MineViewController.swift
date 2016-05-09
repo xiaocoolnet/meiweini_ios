@@ -231,6 +231,7 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let userMassage = UserMassageViewController()
         self.navigationController?.pushViewController(userMassage, animated: true)
         userMassage.title = "信息修改"
+        
         let userid = NSUserDefaults.standardUserDefaults()
         let uid = userid.stringForKey("userid")
         let url = mwnUrl+"getuserinfo"

@@ -97,39 +97,37 @@ class ViewController: UIViewController,UITextFieldDelegate {
             }
         }
     }
-//    func GetUserInfo(){
-//        let userid = NSUserDefaults.standardUserDefaults()
-//        let uid = userid.stringForKey("userid")
-//        let url = mwnUrl+"getuserinfo"
-//        let param = [
-//            "userid":uid!
-//        ]
-//        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
-//            if(error != nil){
-//            }
-//            else{
-//                
-//                let status = LoginModel(JSONDecoder(json!))
-//                print("状态是")
-//                print(status.status)
-//                if(status.status == "error"){
-//                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-//                    hud.mode = MBProgressHUDMode.Text;
-//                    hud.labelText = status.errorData
-//                    hud.margin = 10.0
-//                    hud.removeFromSuperViewOnHide = true
-//                    hud.hide(true, afterDelay: 1)
-//                }
-//                if(status.status == "success"){
-//                    print("Success")
-//                    let username = NSUserDefaults.standardUserDefaults()
-//                    username.setValue(status.data?.name, forKey: "username")
-//                    let phoneNumber = NSUserDefaults.standardUserDefaults()
-//                    phoneNumber.setValue(status.data?.phoneNumber, forKey: "phoneNumber")
-//                }
-//            }
-//        }
-//    }
+    func GetUserInfo(){
+        let userid = NSUserDefaults.standardUserDefaults()
+        let uid = userid.stringForKey("userid")
+        let url = mwnUrl+"getuserinfo"
+        let param = [
+            "userid":uid!
+        ]
+        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                
+                let status = LoginModel(JSONDecoder(json!))
+                print("状态是")
+                print(status.status)
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.labelText = status.errorData
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                }
+                if(status.status == "success"){
+                    print("Success")
+                    let phoneNumber = NSUserDefaults.standardUserDefaults()
+                    phoneNumber.setValue(status.data?.phoneNumber, forKey: "phoneNumber")
+                }
+            }
+        }
+    }
 
     @IBAction func qqLogin(sender: AnyObject) {
         print("QQ登录")
@@ -159,7 +157,6 @@ class ViewController: UIViewController,UITextFieldDelegate {
         print("触摸")
         phoneNum.resignFirstResponder()
         password.resignFirstResponder()
-        self.view.endEditing(true)
 
     }
 

@@ -172,6 +172,11 @@
 		18A791821CDF2A390029B307 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A791811CDF2A390029B307 /* ProcessViewController.swift */; };
 		18A791841CDF394F0029B307 /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A791831CDF394F0029B307 /* WithdrawViewController.swift */; };
 		18A791861CDF3CD70029B307 /* RechargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A791851CDF3CD70029B307 /* RechargeViewController.swift */; };
+		18A8314D1CE028AF00189F21 /* DiamondPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8314C1CE028AF00189F21 /* DiamondPayViewController.swift */; };
+		18A8314F1CE0315900189F21 /* BankCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8314E1CE0315900189F21 /* BankCardViewController.swift */; };
+		18A831511CE036E100189F21 /* TestPhoneNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A831501CE036E100189F21 /* TestPhoneNumViewController.swift */; };
+		18A831531CE05DAB00189F21 /* BankCardMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A831521CE05DAB00189F21 /* BankCardMessageViewController.swift */; };
+		18A831551CE08B6A00189F21 /* PayStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A831541CE08B6A00189F21 /* PayStyleTableViewCell.swift */; };
 		18A995C81CC9BA2B00C4ACC0 /* MineOneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A995C71CC9BA2B00C4ACC0 /* MineOneTableViewCell.swift */; };
 		18A995CA1CC9BC3300C4ACC0 /* MineTwoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A995C91CC9BC3300C4ACC0 /* MineTwoTableViewCell.swift */; };
 		18A995CC1CC9C01000C4ACC0 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A995CB1CC9C01000C4ACC0 /* SetViewController.swift */; };
@@ -441,6 +446,11 @@
 		18A791811CDF2A390029B307 /* ProcessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
 		18A791831CDF394F0029B307 /* WithdrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithdrawViewController.swift; sourceTree = "<group>"; };
 		18A791851CDF3CD70029B307 /* RechargeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RechargeViewController.swift; sourceTree = "<group>"; };
+		18A8314C1CE028AF00189F21 /* DiamondPayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiamondPayViewController.swift; sourceTree = "<group>"; };
+		18A8314E1CE0315900189F21 /* BankCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankCardViewController.swift; sourceTree = "<group>"; };
+		18A831501CE036E100189F21 /* TestPhoneNumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPhoneNumViewController.swift; sourceTree = "<group>"; };
+		18A831521CE05DAB00189F21 /* BankCardMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankCardMessageViewController.swift; sourceTree = "<group>"; };
+		18A831541CE08B6A00189F21 /* PayStyleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayStyleTableViewCell.swift; sourceTree = "<group>"; };
 		18A995C71CC9BA2B00C4ACC0 /* MineOneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineOneTableViewCell.swift; sourceTree = "<group>"; };
 		18A995C91CC9BC3300C4ACC0 /* MineTwoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineTwoTableViewCell.swift; sourceTree = "<group>"; };
 		18A995CB1CC9C01000C4ACC0 /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
@@ -846,6 +856,7 @@
 				183B95F81CD1EC8000C74FC9 /* MineBusTableViewCell.swift */,
 				18C12A471CD2F05300014A69 /* AccountTableViewCell.swift */,
 				18C12A491CD2FA8A00014A69 /* DiamondTableViewCell.swift */,
+				18A831541CE08B6A00189F21 /* PayStyleTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1250,7 +1261,11 @@
 				18AED78C1CD0B841008764B5 /* MineAccountViewController.swift */,
 				18C12A4B1CD301B000014A69 /* OneViewController.swift */,
 				18A791831CDF394F0029B307 /* WithdrawViewController.swift */,
+				18A8314E1CE0315900189F21 /* BankCardViewController.swift */,
+				18A831501CE036E100189F21 /* TestPhoneNumViewController.swift */,
+				18A831521CE05DAB00189F21 /* BankCardMessageViewController.swift */,
 				18A791851CDF3CD70029B307 /* RechargeViewController.swift */,
+				18A8314C1CE028AF00189F21 /* DiamondPayViewController.swift */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -1624,6 +1639,7 @@
 				180767621CBF76770062F4A5 /* ViewController+SnapKit.swift in Sources */,
 				1807678A1CBF76770062F4A5 /* NVActivityIndicatorAnimationBlank.swift in Sources */,
 				189DA6D31CCCA70F0004B76D /* SDWebImageCompat.m in Sources */,
+				18A831531CE05DAB00189F21 /* BankCardMessageViewController.swift in Sources */,
 				1807676E1CBF76770062F4A5 /* NetworkFetcher.swift in Sources */,
 				180767711CBF76770062F4A5 /* NSURLResponse+Haneke.swift in Sources */,
 				183B95EF1CD1DD7400C74FC9 /* MineLoadViewController.swift in Sources */,
@@ -1634,11 +1650,13 @@
 				18A5EBC21CCF09E7009FB017 /* UserMassageViewController.swift in Sources */,
 				18A995CC1CC9C01000C4ACC0 /* SetViewController.swift in Sources */,
 				180767751CBF76770062F4A5 /* UIImageView+Haneke.swift in Sources */,
+				18A8314D1CE028AF00189F21 /* DiamondPayViewController.swift in Sources */,
 				180767A01CBF76770062F4A5 /* PhotoBrowser+ZoomAnim.swift in Sources */,
 				183178391CC765A100D93D8A /* LiveTableViewCell.swift in Sources */,
 				189DA6D21CCCA70F0004B76D /* SDImageCache.m in Sources */,
 				189DA6D91CCCA70F0004B76D /* UIButton+WebCache.m in Sources */,
 				180767721CBF76770062F4A5 /* String+Haneke.swift in Sources */,
+				18A831511CE036E100189F21 /* TestPhoneNumViewController.swift in Sources */,
 				18AA05911CC5052300BDCDF9 /* MassageViewController.swift in Sources */,
 				18AED7871CD0AF51008764B5 /* ConcernListTableViewCell.swift in Sources */,
 				180767631CBF76770062F4A5 /* Cache.swift in Sources */,
@@ -1697,6 +1715,7 @@
 				18D262861CC0799800485B13 /* VerificationViewController.swift in Sources */,
 				1807675A1CBF76770062F4A5 /* ConstraintMaker.swift in Sources */,
 				18A5EBC81CCF4F00009FB017 /* PayTableViewCell.swift in Sources */,
+				18A8314F1CE0315900189F21 /* BankCardViewController.swift in Sources */,
 				183B95F91CD1EC8000C74FC9 /* MineBusTableViewCell.swift in Sources */,
 				1890C60D1CD9945B009DF5C0 /* Http.swift in Sources */,
 				180767931CBF76770062F4A5 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
@@ -1808,6 +1827,7 @@
 				180767961CBF76770062F4A5 /* NVActivityIndicatorShape.swift in Sources */,
 				189DA6D61CCCA70F0004B76D /* SDWebImageDownloaderOperation.m in Sources */,
 				1807679C1CBF76770062F4A5 /* PhotoBrowser+HUD.swift in Sources */,
+				18A831551CE08B6A00189F21 /* PayStyleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

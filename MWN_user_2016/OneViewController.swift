@@ -64,7 +64,7 @@ class OneViewController: UIViewController,UITextFieldDelegate {
 
     func getHaveMoney() {
         print("充值")
-        self.view.endEditing(true)
+        money.resignFirstResponder()
         
         
     }

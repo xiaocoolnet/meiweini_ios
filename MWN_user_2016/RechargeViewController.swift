@@ -46,14 +46,16 @@ class RechargeViewController: UIViewController,UITextFieldDelegate {
         nextBot.frame = CGRectMake(20, 111, WIDTH-40, 44)
         nextBot.setBackgroundImage(UIImage(named: "xiaoyibu_pressed.png"), forState: .Normal)
         nextBot.setBackgroundImage(UIImage(named: "xiaoyibu_selected.png"), forState: .Highlighted)
-        nextBot.addTarget(self, action: #selector(OneViewController.getHaveMoney), forControlEvents: .TouchUpInside)
+        nextBot.addTarget(self, action: #selector(RechargeViewController.getHaveMoney), forControlEvents: .TouchUpInside)
         
         self.view.addSubview(nextBot)
     }
     
     func getHaveMoney() {
-        print("充值")
-        self.view.endEditing(true)
+        print("下一步")
+        money.resignFirstResponder()
+        let next = DiamondPayViewController()
+        self.navigationController?.pushViewController(next, animated: true)
         
         
     }
