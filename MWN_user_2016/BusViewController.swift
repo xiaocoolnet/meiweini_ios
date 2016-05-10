@@ -12,10 +12,8 @@ class BusViewController: UIViewController {
     @IBOutlet weak var busName: UILabel!
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var star: UILabel!
-    @IBOutlet weak var chengJiao: UIButton!
-    @IBOutlet weak var fangKe: UIButton!
-    @IBOutlet weak var dingDan: UIButton!
-
+    let dataArr:[String] = ["今日成交00.00元","今日访客888","今日订单888"]
+    
     @IBOutlet weak var titleView: UIView!
     let setBtn = UIButton()
     var massageBtn = UIButton()
@@ -28,7 +26,21 @@ class BusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        for i in 0...2 {
+            let backLab = UILabel(frame: CGRectMake(((WIDTH-2)/3+1)*CGFloat(i), 196, (WIDTH-2)/3, 44))
+            backLab.backgroundColor = UIColor.grayColor()
+            backLab.alpha = 0.35
+            titleView.addSubview(backLab)
+            
+            let dataLab = UILabel(frame: CGRectMake(((WIDTH-2)/3+1)*CGFloat(i), 196, (WIDTH-2)/3, 44))
+            dataLab.backgroundColor = UIColor.clearColor()
+            dataLab.font = UIFont.systemFontOfSize(14)
+            dataLab.textAlignment = .Center
+            dataLab.textColor = UIColor.whiteColor()
+            dataLab.text = dataArr[i]
+            titleView.addSubview(dataLab)
+            
+        }
         
         
         setBtn.frame = CGRectMake(WIDTH-45, 30, 30, 30)
@@ -65,21 +77,6 @@ class BusViewController: UIViewController {
         let view = MineMassageViewController()
         self.navigationController?.pushViewController(view, animated: true)
         
-        
-    }
-    @IBAction func todayChengJiao(sender: AnyObject) {
-        print("今日成交")
-        
-    }
-    
-    @IBAction func todayFangKe(sender: AnyObject) {
-        print("今日访客")
-        
-        
-    }
-    
-    @IBAction func todayDingDan(sender: AnyObject) {
-        print("今日订单")
         
     }
     

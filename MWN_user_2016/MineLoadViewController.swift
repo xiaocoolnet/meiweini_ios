@@ -66,6 +66,8 @@ class MineLoadViewController: UIViewController,UITextViewDelegate,UITextFieldDel
         nameField.resignFirstResponder()
         muchField.resignFirstResponder()
         textViewText.resignFirstResponder()
+        update.enabled = false
+        placeHolder.hidden = false
         
         
     }

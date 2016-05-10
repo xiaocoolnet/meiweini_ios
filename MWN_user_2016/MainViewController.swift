@@ -284,9 +284,12 @@ class MainViewController: UIViewController,UIScrollViewDelegate,UICollectionView
     
     @IBAction func massage(sender: AnyObject) {
         print("消息")
-        let massage = MassageViewController()
-        self.navigationController?.pushViewController(massage, animated: true)
+//        let massage = MassageViewController()
+//        self.navigationController?.pushViewController(massage, animated: true)
+        let view = MineMassageViewController()
+        self.navigationController?.pushViewController(view, animated: true)
         
+
         
     }
     

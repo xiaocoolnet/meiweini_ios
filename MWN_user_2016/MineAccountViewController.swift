@@ -25,7 +25,7 @@ class MineAccountViewController: UIViewController,UITableViewDelegate,UITableVie
         self.title = "我的账户"
         self.view.backgroundColor = RGREY
         
-        let rightBtn = UIBarButtonItem(image: UIImage(named: "菜单.png"), style: .Done, target: self, action: #selector(MineAccountViewController.accountTheView))
+        let rightBtn = UIBarButtonItem(title: "交易记录", style: .Done, target: self, action: #selector(MineAccountViewController.accountTheView))
         
         self.navigationItem.rightBarButtonItem = rightBtn
         
@@ -74,7 +74,7 @@ class MineAccountViewController: UIViewController,UITableViewDelegate,UITableVie
         }else if indexPath.section == 1 {
             cell.money.text = "3张"
             cell.withdraw.setTitle(btnTit[5], forState: .Normal)
-            cell.withdraw.addTarget(self, action: #selector(MineAccountViewController.nextView), forControlEvents: .TouchUpInside)
+            cell.withdraw.addTarget(self, action: #selector(MineAccountViewController.detailsTheCard), forControlEvents: .TouchUpInside)
             cell.recharge.addTarget(self, action: #selector(MineAccountViewController.addBankCard), forControlEvents: .TouchUpInside)
         }else if indexPath.section == 2 {
             let cell = tableView.dequeueReusableCellWithIdentifier("diamond")as!DiamondTableViewCell
@@ -88,8 +88,8 @@ class MineAccountViewController: UIViewController,UITableViewDelegate,UITableVie
         }else{
             cell.money.text = "23"
             cell.withdraw.setTitle(btnTit[6], forState: .Normal)
-            cell.withdraw.addTarget(self, action: #selector(MineAccountViewController.nextView), forControlEvents: .TouchUpInside)
-            cell.recharge.addTarget(self, action: #selector(MineAccountViewController.nextView), forControlEvents: .TouchUpInside)
+            cell.withdraw.addTarget(self, action: #selector(MineAccountViewController.giftGive), forControlEvents: .TouchUpInside)
+            cell.recharge.addTarget(self, action: #selector(MineAccountViewController.getPresent), forControlEvents: .TouchUpInside)
         }
         
         return cell
@@ -119,6 +119,27 @@ class MineAccountViewController: UIViewController,UITableViewDelegate,UITableVie
         let next = BankCardViewController()
         self.navigationController?.pushViewController(next, animated: true)
         
+    }
+    func detailsTheCard() {
+        print("解绑")
+        let next = DetailsViewController()
+        self.navigationController?.pushViewController(next, animated: true)
+        
+        
+    }
+    func getPresent() {
+        print("收到的礼物")
+        let next = GetPresentsViewController()
+        self.navigationController?.pushViewController(next, animated: true)
+        
+
+    }
+    func giftGive() {
+        print("送出的礼物")
+        let next = GiftsViewController()
+        self.navigationController?.pushViewController(next, animated: true)
+        
+
     }
     func accountTheView() {
         print("列表")
