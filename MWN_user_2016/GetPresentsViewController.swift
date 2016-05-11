@@ -39,10 +39,21 @@ class GetPresentsViewController: UIViewController,UITableViewDelegate,UITableVie
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)as!GiftsTableViewCell
         cell.selectionStyle = .None
-        
+        cell.titName.text = "999朵玫瑰"
+        cell.titLab.text = "江南飘雪"
+        cell.timeLab.text = "于2016-05-14 13:50赠送"
+        cell.gifts.setTitle("回赠TA礼物", forState: .Normal)
+        cell.gifts.addTarget(self, action: #selector(GetPresentsViewController.gaveSomeGifts), forControlEvents: .TouchUpInside)
         return cell
         
     }
+    
+    func gaveSomeGifts() {
+        print("回赠")
+        
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -1,21 +1,19 @@
 //
-//  GiftsTableViewCell.swift
+//  MineBusinessTableViewCell.swift
 //  MWN_user_2016
 //
-//  Created by apple on 16/5/10.
+//  Created by apple on 16/5/11.
 //  Copyright © 2016年 xiaocool. All rights reserved.
 //
 
 import UIKit
 
-class GiftsTableViewCell: UITableViewCell {
+class MineBusinessTableViewCell: UITableViewCell {
 
     let line = UILabel()
     let titImage = UIImageView()
-    let titName = UILabel()
     let titLab = UILabel()
     let timeLab = UILabel()
-    let gifts = UIButton()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,33 +25,23 @@ class GiftsTableViewCell: UITableViewCell {
         for view in self.contentView.subviews {
             view.removeFromSuperview()
         }
-        line.frame = CGRectMake(120, 10, 1, 100)
+        line.frame = CGRectMake(80, 10, 1, 60)
         line.backgroundColor = RGREY
         self.addSubview(line)
         
-        titImage.frame = CGRectMake(30, 23, 60, 60)
-        titImage.image = UIImage(named: "ic_liwu-1.png")
-        titName.frame = CGRectMake(25, 83, 70, 20)
-        titName.font = UIFont.systemFontOfSize(13)
-        titName.textAlignment = .Center
-        titName.alpha = 0.8
-        titLab.frame = CGRectMake(133, 10, WIDTH/2, 25)
+        titImage.frame = CGRectMake(20, 20, 40, 40)
+        titLab.frame = CGRectMake(90, 10, WIDTH-102, 40)
         titLab.font = UIFont.systemFontOfSize(16)
-        timeLab.frame = CGRectMake(133, 40, WIDTH/2+50, 20)
-        timeLab.font = UIFont.systemFontOfSize(14)
+        titLab.numberOfLines = 0
+        timeLab.frame = CGRectMake(WIDTH-150, 53, 138, 17)
+        timeLab.font = UIFont.systemFontOfSize(13)
         timeLab.alpha = 0.8
-        gifts.frame = CGRectMake(WIDTH-100, 93, 90, 17)
-        gifts.setTitle("", forState: .Highlighted)
-        gifts.titleLabel?.font = UIFont.systemFontOfSize(14)
-//        gifts.titleLabel?.textAlignment = .Right
-        gifts.setTitleColor(UIColor.grayColor(), forState: .Normal)
+        timeLab.textAlignment = .Right
         
         self.addSubview(titImage)
-        self.addSubview(titName)
         self.addSubview(titLab)
         self.addSubview(timeLab)
-        self.addSubview(gifts)
-        
+
     }
     
     required init?(coder aDecoder: NSCoder) {

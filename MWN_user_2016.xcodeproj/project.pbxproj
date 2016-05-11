@@ -110,6 +110,7 @@
 		180767C81CBF7AFA0062F4A5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180767C71CBF7AFA0062F4A5 /* RegisterViewController.swift */; };
 		180767CA1CBF7C3D0062F4A5 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180767C91CBF7C3D0062F4A5 /* PasswordViewController.swift */; };
 		180767CD1CBF89AA0062F4A5 /* CornerRadiusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180767CC1CBF89AA0062F4A5 /* CornerRadiusViewController.swift */; };
+		1814FBBA1CE3625200F790D9 /* MineBusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814FBB91CE3625200F790D9 /* MineBusinessTableViewCell.swift */; };
 		183178291CC71E2000D93D8A /* ModelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183178281CC71E2000D93D8A /* ModelTableViewCell.swift */; };
 		1831782D1CC7546000D93D8A /* BeautyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831782C1CC7546000D93D8A /* BeautyViewController.swift */; };
 		183178331CC7576B00D93D8A /* BeautyVidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183178321CC7576B00D93D8A /* BeautyVidViewController.swift */; };
@@ -377,6 +378,7 @@
 		180767C71CBF7AFA0062F4A5 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		180767C91CBF7C3D0062F4A5 /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		180767CC1CBF89AA0062F4A5 /* CornerRadiusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusViewController.swift; sourceTree = "<group>"; };
+		1814FBB91CE3625200F790D9 /* MineBusinessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineBusinessTableViewCell.swift; sourceTree = "<group>"; };
 		183178281CC71E2000D93D8A /* ModelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTableViewCell.swift; sourceTree = "<group>"; };
 		1831782C1CC7546000D93D8A /* BeautyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyViewController.swift; sourceTree = "<group>"; };
 		183178321CC7576B00D93D8A /* BeautyVidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyVidViewController.swift; sourceTree = "<group>"; };
@@ -882,6 +884,7 @@
 				189B72621CE2D5F400713AFE /* ArticleTableViewCell.swift */,
 				189B72641CE2FE0700713AFE /* FineTableViewCell.swift */,
 				189F170D1CE31C7400C3DC5F /* TransationTableViewCell.swift */,
+				1814FBB91CE3625200F790D9 /* MineBusinessTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1711,6 +1714,7 @@
 				189DA6DB1CCCA70F0004B76D /* UIImage+MultiFormat.m in Sources */,
 				18A5EBCA1CCF4F28009FB017 /* MoreTableViewCell.swift in Sources */,
 				189DA6DE1CCCA70F0004B76D /* UIImageView+WebCache.m in Sources */,
+				1814FBBA1CE3625200F790D9 /* MineBusinessTableViewCell.swift in Sources */,
 				180767911CBF76770062F4A5 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
 				180767CD1CBF89AA0062F4A5 /* CornerRadiusViewController.swift in Sources */,
 				180767611CBF76770062F4A5 /* View+SnapKit.swift in Sources */,
