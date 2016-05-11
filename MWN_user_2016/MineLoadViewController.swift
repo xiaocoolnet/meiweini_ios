@@ -68,6 +68,7 @@ class MineLoadViewController: UIViewController,UITextViewDelegate,UITextFieldDel
         textViewText.resignFirstResponder()
         update.enabled = false
         placeHolder.hidden = false
+        textViewText.text = ""
         
         
     }

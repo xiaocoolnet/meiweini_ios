@@ -143,6 +143,8 @@ class MineAccountViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     func accountTheView() {
         print("列表")
+        let next = TransactionViewController()
+        self.navigationController?.pushViewController(next, animated: true)
         
     }
     override func didReceiveMemoryWarning() {

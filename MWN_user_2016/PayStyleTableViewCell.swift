@@ -23,10 +23,10 @@ class PayStyleTableViewCell: UITableViewCell {
         for view in self.contentView.subviews {
             view.removeFromSuperview()
         }
-        titImage.frame = CGRectMake(10, 10, 40, 40)
-        titName.frame = CGRectMake(60, 10, WIDTH-60, 20)
+        titImage.frame = CGRectMake(15, 20, 33, 27)
+        titName.frame = CGRectMake(60, 10, WIDTH-100, 25)
         titName.font = UIFont.systemFontOfSize(16)
-        contant.frame = CGRectMake(60, 35, WIDTH-60, 15)
+        contant.frame = CGRectMake(60, 40, WIDTH-100, 17.5)
         contant.textColor = UIColor.grayColor()
         contant.font = UIFont.systemFontOfSize(14)
         

@@ -138,6 +138,12 @@
 		1890C60E1CD9945B009DF5C0 /* Httpresult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890C60B1CD9945B009DF5C0 /* Httpresult.swift */; };
 		1890C60F1CD9945B009DF5C0 /* JSONJoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890C60C1CD9945B009DF5C0 /* JSONJoy.swift */; };
 		1892A4341CC5C76900AD7F52 /* ChildsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A4331CC5C76900AD7F52 /* ChildsViewController.swift */; };
+		189B72611CE2D28900713AFE /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B72601CE2D28900713AFE /* ArticleViewController.swift */; };
+		189B72631CE2D5F400713AFE /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B72621CE2D5F400713AFE /* ArticleTableViewCell.swift */; };
+		189B72651CE2FE0700713AFE /* FineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B72641CE2FE0700713AFE /* FineTableViewCell.swift */; };
+		189B726C1CE3170D00713AFE /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B726B1CE3170D00713AFE /* TransactionViewController.swift */; };
+		189B726E1CE3185300713AFE /* BalanceOfPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B726D1CE3185300713AFE /* BalanceOfPaymentViewController.swift */; };
+		189B72701CE3189A00713AFE /* WithdrawMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B726F1CE3189A00713AFE /* WithdrawMoneyViewController.swift */; };
 		189DA5571CCC51650004B76D /* ChildsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DA5561CCC51650004B76D /* ChildsTableViewCell.swift */; };
 		189DA5591CCC59A10004B76D /* ChildrenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DA5581CCC59A10004B76D /* ChildrenViewController.swift */; };
 		189DA6601CCCA47B0004B76D /* RANModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DA65F1CCCA47B0004B76D /* RANModel.swift */; };
@@ -162,6 +168,7 @@
 		189DA6E51CCCBA0F0004B76D /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 189DA6E21CCCBA0F0004B76D /* 1.plist */; };
 		189DA6E61CCCBA0F0004B76D /* 2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 189DA6E31CCCBA0F0004B76D /* 2.plist */; };
 		189DA6E71CCCBA0F0004B76D /* 3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 189DA6E41CCCBA0F0004B76D /* 3.plist */; };
+		189F170E1CE31C7400C3DC5F /* TransationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F170D1CE31C7400C3DC5F /* TransationTableViewCell.swift */; };
 		18A5EBBE1CCF023D009FB017 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBBD1CCF023D009FB017 /* VideoViewController.swift */; };
 		18A5EBC01CCF02EF009FB017 /* VideoPlayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBBF1CCF02EF009FB017 /* VideoPlayTableViewCell.swift */; };
 		18A5EBC21CCF09E7009FB017 /* UserMassageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5EBC11CCF09E7009FB017 /* UserMassageViewController.swift */; };
@@ -200,6 +207,7 @@
 		18AED7871CD0AF51008764B5 /* ConcernListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED7861CD0AF51008764B5 /* ConcernListTableViewCell.swift */; };
 		18AED7891CD0AFCA008764B5 /* ConcernTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED7881CD0AFCA008764B5 /* ConcernTableViewCell.swift */; };
 		18AED78D1CD0B841008764B5 /* MineAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED78C1CD0B841008764B5 /* MineAccountViewController.swift */; };
+		18B7C6A71CE2BE1800B7C9D1 /* NewArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7C6A61CE2BE1800B7C9D1 /* NewArticleViewController.swift */; };
 		18B807AC1CD19F7B00CB5E0E /* BusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B807AB1CD19F7B00CB5E0E /* BusViewController.swift */; };
 		18B807AE1CD1A33400CB5E0E /* CertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B807AD1CD1A33400CB5E0E /* CertificationViewController.swift */; };
 		18BE78961CD83FAF000C7BF9 /* LoadPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78951CD83FAF000C7BF9 /* LoadPicViewController.swift */; };
@@ -397,6 +405,12 @@
 		1890C60B1CD9945B009DF5C0 /* Httpresult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Httpresult.swift; sourceTree = "<group>"; };
 		1890C60C1CD9945B009DF5C0 /* JSONJoy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONJoy.swift; sourceTree = "<group>"; };
 		1892A4331CC5C76900AD7F52 /* ChildsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildsViewController.swift; sourceTree = "<group>"; };
+		189B72601CE2D28900713AFE /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		189B72621CE2D5F400713AFE /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		189B72641CE2FE0700713AFE /* FineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FineTableViewCell.swift; sourceTree = "<group>"; };
+		189B726B1CE3170D00713AFE /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		189B726D1CE3185300713AFE /* BalanceOfPaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceOfPaymentViewController.swift; sourceTree = "<group>"; };
+		189B726F1CE3189A00713AFE /* WithdrawMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithdrawMoneyViewController.swift; sourceTree = "<group>"; };
 		189DA5561CCC51650004B76D /* ChildsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildsTableViewCell.swift; sourceTree = "<group>"; };
 		189DA5581CCC59A10004B76D /* ChildrenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildrenViewController.swift; sourceTree = "<group>"; };
 		189DA65F1CCCA47B0004B76D /* RANModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RANModel.swift; sourceTree = "<group>"; };
@@ -438,6 +452,7 @@
 		189DA6E21CCCBA0F0004B76D /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
 		189DA6E31CCCBA0F0004B76D /* 2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 2.plist; sourceTree = "<group>"; };
 		189DA6E41CCCBA0F0004B76D /* 3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 3.plist; sourceTree = "<group>"; };
+		189F170D1CE31C7400C3DC5F /* TransationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransationTableViewCell.swift; sourceTree = "<group>"; };
 		18A5EBBD1CCF023D009FB017 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		18A5EBBF1CCF02EF009FB017 /* VideoPlayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayTableViewCell.swift; sourceTree = "<group>"; };
 		18A5EBC11CCF09E7009FB017 /* UserMassageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMassageViewController.swift; sourceTree = "<group>"; };
@@ -476,6 +491,7 @@
 		18AED7861CD0AF51008764B5 /* ConcernListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcernListTableViewCell.swift; sourceTree = "<group>"; };
 		18AED7881CD0AFCA008764B5 /* ConcernTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcernTableViewCell.swift; sourceTree = "<group>"; };
 		18AED78C1CD0B841008764B5 /* MineAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineAccountViewController.swift; sourceTree = "<group>"; };
+		18B7C6A61CE2BE1800B7C9D1 /* NewArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewArticleViewController.swift; sourceTree = "<group>"; };
 		18B807AB1CD19F7B00CB5E0E /* BusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusViewController.swift; sourceTree = "<group>"; };
 		18B807AD1CD1A33400CB5E0E /* CertificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CertificationViewController.swift; sourceTree = "<group>"; };
 		18BE78951CD83FAF000C7BF9 /* LoadPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadPicViewController.swift; sourceTree = "<group>"; };
@@ -863,6 +879,9 @@
 				18A831541CE08B6A00189F21 /* PayStyleTableViewCell.swift */,
 				18742C521CE1B50400532E57 /* BankCardTableViewCell.swift */,
 				18742C541CE1BF2800532E57 /* GiftsTableViewCell.swift */,
+				189B72621CE2D5F400713AFE /* ArticleTableViewCell.swift */,
+				189B72641CE2FE0700713AFE /* FineTableViewCell.swift */,
+				189F170D1CE31C7400C3DC5F /* TransationTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1105,6 +1124,54 @@
 			name = Beautiful;
 			sourceTree = "<group>";
 		};
+		189B72661CE310B900713AFE /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				18C12A4B1CD301B000014A69 /* OneViewController.swift */,
+				18A791831CDF394F0029B307 /* WithdrawViewController.swift */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		189B72671CE310BE00713AFE /* BankCard */ = {
+			isa = PBXGroup;
+			children = (
+				18A8314E1CE0315900189F21 /* BankCardViewController.swift */,
+				18A831501CE036E100189F21 /* TestPhoneNumViewController.swift */,
+				18A831521CE05DAB00189F21 /* BankCardMessageViewController.swift */,
+				18FAAC561CE18C8B00D6CF73 /* DetailsViewController.swift */,
+			);
+			name = BankCard;
+			sourceTree = "<group>";
+		};
+		189B72681CE310C200713AFE /* Dimand */ = {
+			isa = PBXGroup;
+			children = (
+				18A791851CDF3CD70029B307 /* RechargeViewController.swift */,
+				18A8314C1CE028AF00189F21 /* DiamondPayViewController.swift */,
+			);
+			name = Dimand;
+			sourceTree = "<group>";
+		};
+		189B72691CE310C300713AFE /* Gifts */ = {
+			isa = PBXGroup;
+			children = (
+				18FAAC581CE18D8B00D6CF73 /* GetPresentsViewController.swift */,
+				18FAAC5A1CE18DA500D6CF73 /* GiftsViewController.swift */,
+			);
+			name = Gifts;
+			sourceTree = "<group>";
+		};
+		189B726A1CE316D500713AFE /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				189B726B1CE3170D00713AFE /* TransactionViewController.swift */,
+				189B726D1CE3185300713AFE /* BalanceOfPaymentViewController.swift */,
+				189B726F1CE3189A00713AFE /* WithdrawMoneyViewController.swift */,
+			);
+			name = Transaction;
+			sourceTree = "<group>";
+		};
 		189DA6AE1CCCA70F0004B76D /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1174,6 +1241,8 @@
 			isa = PBXGroup;
 			children = (
 				18A7917F1CDF26060029B307 /* MineArticleViewController.swift */,
+				189B72601CE2D28900713AFE /* ArticleViewController.swift */,
+				18B7C6A61CE2BE1800B7C9D1 /* NewArticleViewController.swift */,
 			);
 			name = Article;
 			sourceTree = "<group>";
@@ -1265,16 +1334,11 @@
 			isa = PBXGroup;
 			children = (
 				18AED78C1CD0B841008764B5 /* MineAccountViewController.swift */,
-				18C12A4B1CD301B000014A69 /* OneViewController.swift */,
-				18A791831CDF394F0029B307 /* WithdrawViewController.swift */,
-				18A8314E1CE0315900189F21 /* BankCardViewController.swift */,
-				18A831501CE036E100189F21 /* TestPhoneNumViewController.swift */,
-				18A831521CE05DAB00189F21 /* BankCardMessageViewController.swift */,
-				18FAAC561CE18C8B00D6CF73 /* DetailsViewController.swift */,
-				18A791851CDF3CD70029B307 /* RechargeViewController.swift */,
-				18A8314C1CE028AF00189F21 /* DiamondPayViewController.swift */,
-				18FAAC581CE18D8B00D6CF73 /* GetPresentsViewController.swift */,
-				18FAAC5A1CE18DA500D6CF73 /* GiftsViewController.swift */,
+				189B726A1CE316D500713AFE /* Transaction */,
+				189B72691CE310C300713AFE /* Gifts */,
+				189B72681CE310C200713AFE /* Dimand */,
+				189B72671CE310BE00713AFE /* BankCard */,
+				189B72661CE310B900713AFE /* Account */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -1621,8 +1685,10 @@
 				1807678A1CBF76770062F4A5 /* NVActivityIndicatorAnimationBlank.swift in Sources */,
 				189DA6D31CCCA70F0004B76D /* SDWebImageCompat.m in Sources */,
 				18A831531CE05DAB00189F21 /* BankCardMessageViewController.swift in Sources */,
+				189B72631CE2D5F400713AFE /* ArticleTableViewCell.swift in Sources */,
 				1807676E1CBF76770062F4A5 /* NetworkFetcher.swift in Sources */,
 				180767711CBF76770062F4A5 /* NSURLResponse+Haneke.swift in Sources */,
+				189B72701CE3189A00713AFE /* WithdrawMoneyViewController.swift in Sources */,
 				183B95EF1CD1DD7400C74FC9 /* MineLoadViewController.swift in Sources */,
 				180767521CBF76770062F4A5 /* DisplayView.swift in Sources */,
 				183B95FB1CD2051C00C74FC9 /* PersonCertificationViewController.swift in Sources */,
@@ -1675,6 +1741,7 @@
 				189DA6601CCCA47B0004B76D /* RANModel.swift in Sources */,
 				180767501CBF76770062F4A5 /* BRPlaceholderTextView.m in Sources */,
 				1807679F1CBF76770062F4A5 /* PhotoBrowser+PBType.swift in Sources */,
+				18B7C6A71CE2BE1800B7C9D1 /* NewArticleViewController.swift in Sources */,
 				180767901CBF76770062F4A5 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				18742C531CE1B50400532E57 /* BankCardTableViewCell.swift in Sources */,
 				1807677A1CBF76770062F4A5 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
@@ -1731,6 +1798,7 @@
 				18BE78B91CD87927000C7BF9 /* PinyinFormatter.m in Sources */,
 				180767A11CBF76770062F4A5 /* Layout.swift in Sources */,
 				180767701CBF76770062F4A5 /* NSHTTPURLResponse+Haneke.swift in Sources */,
+				189B72611CE2D28900713AFE /* ArticleViewController.swift in Sources */,
 				1807679E1CBF76770062F4A5 /* PhotoBrowser+Main.swift in Sources */,
 				183178291CC71E2000D93D8A /* ModelTableViewCell.swift in Sources */,
 				189DA6A51CCCA5970004B76D /* RANCollectionViewCell.swift in Sources */,
@@ -1738,10 +1806,12 @@
 				1807677E1CBF76770062F4A5 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				180767651CBF76770062F4A5 /* CryptoSwiftMD5.swift in Sources */,
 				18AED78D1CD0B841008764B5 /* MineAccountViewController.swift in Sources */,
+				189B726E1CE3185300713AFE /* BalanceOfPaymentViewController.swift in Sources */,
 				189DA5571CCC51650004B76D /* ChildsTableViewCell.swift in Sources */,
 				1807676A1CBF76770062F4A5 /* Fetcher.swift in Sources */,
 				180767881CBF76770062F4A5 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				180767541CBF76770062F4A5 /* FlexibleTableViewCell.swift in Sources */,
+				189F170E1CE31C7400C3DC5F /* TransationTableViewCell.swift in Sources */,
 				18A5EBC41CCF1744009FB017 /* DownViewController.swift in Sources */,
 				180767921CBF76770062F4A5 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				18BE78B81CD87927000C7BF9 /* NSString+PinYin4Cocoa.m in Sources */,
@@ -1789,6 +1859,7 @@
 				1863CD341CCA0D43000B4DCF /* BeautyPicViewController.swift in Sources */,
 				180767601CBF76770062F4A5 /* SourceLocation.swift in Sources */,
 				180767A31CBF76770062F4A5 /* PhotoBrowser.swift in Sources */,
+				189B726C1CE3170D00713AFE /* TransactionViewController.swift in Sources */,
 				18A5EBC61CCF4B32009FB017 /* CommodityTableViewCell.swift in Sources */,
 				18501EB11CCE0DF200B6A614 /* PhotoTableViewCell.swift in Sources */,
 				1807677F1CBF76770062F4A5 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
@@ -1812,6 +1883,7 @@
 				189DA6D61CCCA70F0004B76D /* SDWebImageDownloaderOperation.m in Sources */,
 				1807679C1CBF76770062F4A5 /* PhotoBrowser+HUD.swift in Sources */,
 				18A831551CE08B6A00189F21 /* PayStyleTableViewCell.swift in Sources */,
+				189B72651CE2FE0700713AFE /* FineTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
