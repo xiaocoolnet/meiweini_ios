@@ -21,6 +21,7 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var baomi1: UIButton!
     @IBOutlet weak var achieve: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var registerBus: UIButton!
     
     var timeNamal:NSTimer!
     var timeNow:NSTimer!
@@ -36,6 +37,7 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.hidden=true
         timeLabel.hidden = true
+        registerBus.hidden = false
     }
     
     override func viewDidLoad() {
@@ -63,12 +65,16 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
         print("用户")
         userBtn.setBackgroundImage(UIImage(named: "yonghu_normal.png"), forState: .Normal)
         tradesman.setBackgroundImage(UIImage(named: "shouyiren_dissable.png"), forState: .Normal)
+        registerBus.hidden = true
+        registerBtn.hidden = false
     }
     
     @IBAction func tradesmanMassage(sender: AnyObject) {
         print("手艺人")
         tradesman.setBackgroundImage(UIImage(named: "shouyiren_selected.png"), forState: .Normal)
         userBtn.setBackgroundImage(UIImage(named: "yonghu_dissable.png"), forState: .Normal)
+        registerBus.hidden = false
+        registerBtn.hidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -117,6 +123,12 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
+    @IBAction func registerBusiness(sender: AnyObject) {
+        print("注册商户")
+        
+        
+        
+    }
     @IBAction func registerUser(sender: AnyObject) {
         
         print("注册")

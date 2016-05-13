@@ -10,7 +10,17 @@ import UIKit
 
 class CertificationViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
-    var busRenTable: UITableView!
+    var businessTable = UITableView()
+    var headArr:[String] = ["营业身份","营业信息","个人信息"]
+    let styleArr:[String] = ["我是企业","我是个人"]
+    var massArr:[String] = ["营业信息"]
+    let personArr:[String] = ["姓名","身份证号码","身份证照片"]
+    let nake = UIImageView()
+    let nakeOne = UIImageView()
+    var count = Int()
+    var cou = Int()
+    
+    
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.hidden=false
@@ -19,20 +29,113 @@ class CertificationViewController: UIViewController,UITableViewDelegate,UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        businessTable.frame = self.view.bounds
+        businessTable.backgroundColor = RGREY
+        businessTable.delegate = self
+        businessTable.dataSource = self
+        businessTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.view.addSubview(businessTable)
+        count = 1
+        cou = 3
+        
         // Do any additional setup after loading the view.
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 3
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return 2
+        }else if section == 1 {
+            return count
+        }else{
+            return cou
+        }
+    }
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor.clearColor()
+        let headLab = UILabel(frame: CGRectMake(13, 5, 100, 30))
+        headLab.font = UIFont.systemFontOfSize(13)
+        headLab.textColor = UIColor.grayColor()
+        headLab.text = headArr[section]
+        view.addSubview(headLab)
+        return view
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         cell.selectionStyle = .None
+        if indexPath.section == 0 {
+            cell.textLabel?.text = styleArr[indexPath.row]
+            if indexPath.row == 0 {
+                nake.frame = CGRectMake(WIDTH-30, 16, 15, 12)
+                nake.image = UIImage(named: "ic_duigou.png")
+                cell.addSubview(nake)
+               
+                nake.hidden = true
+            }else{
+                nakeOne.frame = CGRectMake(WIDTH-30, 16, 15, 12)
+                nakeOne.image = UIImage(named: "ic_duigou.png")
+                cell.addSubview(nakeOne)
+            }
+            
+        }
+        if indexPath.section == 1 {
+            if count == 1 {
+                cell.textLabel?.text = massArr[0]
+            }else{
+                cell.textLabel?.text = massArr[indexPath.row]
+            }
+        }
+        if indexPath.section == 2 {
+            if cou == 3 {
+                cell.textLabel?.text = personArr[indexPath.row]
+                if indexPath.row == 2 {
+                    cell.accessoryType = .DisclosureIndicator
+                }
+            }
+        }
         
         return cell
         
     }
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print(indexPath.row)
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                count = 6
+                massArr = ["工商注册号","公司名称","营业范围","营业地址","营业执照","店铺图片"]
+                let indexSet = NSIndexSet(index: 1)
+                businessTable.reloadSections(indexSet, withRowAnimation: .Automatic)
+                cou = 0
+                let inSet = NSIndexSet(index: 2)
+                businessTable.reloadSections(inSet, withRowAnimation: .Automatic)
+                headArr = ["营业身份","营业信息","个人信息"]
+                nake.hidden = false
+                nakeOne.hidden = true
+                
+            }else{
+                count = 1
+                massArr = ["营业范围"]
+                let indexSet = NSIndexSet(index: 1)
+                businessTable.reloadSections(indexSet, withRowAnimation: .Automatic)
+                cou = 3
+                let inSet = NSIndexSet(index: 2)
+                businessTable.reloadSections(inSet, withRowAnimation: .Automatic)
+                headArr = ["营业身份","营业信息",""]
+                nakeOne.hidden = false
+                nake.hidden = true
+            }
+        }
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

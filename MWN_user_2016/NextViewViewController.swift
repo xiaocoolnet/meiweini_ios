@@ -98,6 +98,8 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     func shareBtn() {
         print("商家界面")
+        let shop = ShopsViewController()
+        self.navigationController?.pushViewController(shop, animated: true)
         
     }
     

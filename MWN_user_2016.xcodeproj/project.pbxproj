@@ -208,6 +208,8 @@
 		18AED7871CD0AF51008764B5 /* ConcernListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED7861CD0AF51008764B5 /* ConcernListTableViewCell.swift */; };
 		18AED7891CD0AFCA008764B5 /* ConcernTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED7881CD0AFCA008764B5 /* ConcernTableViewCell.swift */; };
 		18AED78D1CD0B841008764B5 /* MineAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED78C1CD0B841008764B5 /* MineAccountViewController.swift */; };
+		18B68DDD1CE428F900FE0E2B /* ShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B68DDC1CE428F900FE0E2B /* ShopsViewController.swift */; };
+		18B68DDF1CE42B7900FE0E2B /* CommodityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B68DDE1CE42B7900FE0E2B /* CommodityViewController.swift */; };
 		18B7C6A71CE2BE1800B7C9D1 /* NewArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7C6A61CE2BE1800B7C9D1 /* NewArticleViewController.swift */; };
 		18B807AC1CD19F7B00CB5E0E /* BusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B807AB1CD19F7B00CB5E0E /* BusViewController.swift */; };
 		18B807AE1CD1A33400CB5E0E /* CertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B807AD1CD1A33400CB5E0E /* CertificationViewController.swift */; };
@@ -493,6 +495,8 @@
 		18AED7861CD0AF51008764B5 /* ConcernListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcernListTableViewCell.swift; sourceTree = "<group>"; };
 		18AED7881CD0AFCA008764B5 /* ConcernTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcernTableViewCell.swift; sourceTree = "<group>"; };
 		18AED78C1CD0B841008764B5 /* MineAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineAccountViewController.swift; sourceTree = "<group>"; };
+		18B68DDC1CE428F900FE0E2B /* ShopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsViewController.swift; sourceTree = "<group>"; };
+		18B68DDE1CE42B7900FE0E2B /* CommodityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommodityViewController.swift; sourceTree = "<group>"; };
 		18B7C6A61CE2BE1800B7C9D1 /* NewArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewArticleViewController.swift; sourceTree = "<group>"; };
 		18B807AB1CD19F7B00CB5E0E /* BusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusViewController.swift; sourceTree = "<group>"; };
 		18B807AD1CD1A33400CB5E0E /* CertificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CertificationViewController.swift; sourceTree = "<group>"; };
@@ -971,6 +975,7 @@
 			children = (
 				180767C31CBF7AB00062F4A5 /* ConcernViewController.swift */,
 				18AA05921CC505B600BDCDF9 /* NextViewViewController.swift */,
+				18B68DE01CE4583F00FE0E2B /* Shop */,
 				18A5EBC31CCF1744009FB017 /* DownViewController.swift */,
 			);
 			name = Controller;
@@ -1346,6 +1351,15 @@
 			name = Account;
 			sourceTree = "<group>";
 		};
+		18B68DE01CE4583F00FE0E2B /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				18B68DDC1CE428F900FE0E2B /* ShopsViewController.swift */,
+				18B68DDE1CE42B7900FE0E2B /* CommodityViewController.swift */,
+			);
+			name = Shop;
+			sourceTree = "<group>";
+		};
 		18B807AA1CD19F5E00CB5E0E /* Busiess */ = {
 			isa = PBXGroup;
 			children = (
@@ -1690,6 +1704,7 @@
 				18A831531CE05DAB00189F21 /* BankCardMessageViewController.swift in Sources */,
 				189B72631CE2D5F400713AFE /* ArticleTableViewCell.swift in Sources */,
 				1807676E1CBF76770062F4A5 /* NetworkFetcher.swift in Sources */,
+				18B68DDF1CE42B7900FE0E2B /* CommodityViewController.swift in Sources */,
 				180767711CBF76770062F4A5 /* NSURLResponse+Haneke.swift in Sources */,
 				189B72701CE3189A00713AFE /* WithdrawMoneyViewController.swift in Sources */,
 				183B95EF1CD1DD7400C74FC9 /* MineLoadViewController.swift in Sources */,
@@ -1872,6 +1887,7 @@
 				18BE78A21CD85259000C7BF9 /* TableViewCell.swift in Sources */,
 				1FF7A3151CBF69800048638F /* AppDelegate.swift in Sources */,
 				1807674D1CBF76770062F4A5 /* PhotoBrowserCell.swift in Sources */,
+				18B68DDD1CE428F900FE0E2B /* ShopsViewController.swift in Sources */,
 				18FAAC591CE18D8B00D6CF73 /* GetPresentsViewController.swift in Sources */,
 				180767891CBF76770062F4A5 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				18AED7891CD0AFCA008764B5 /* ConcernTableViewCell.swift in Sources */,

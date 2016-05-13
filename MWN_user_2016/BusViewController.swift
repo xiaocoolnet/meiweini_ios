@@ -80,6 +80,12 @@ class BusViewController: UIViewController {
         
     }
     
+    @IBAction func goToMoney(sender: AnyObject) {
+        print("我的钱柜")
+        let account = MineAccountViewController()
+        self.navigationController?.pushViewController(account, animated: true)
+        
+    }
     @IBAction func goBack(sender: AnyObject) {
         
         let alertController = UIAlertController(title: NSLocalizedString("", comment: "Warn"), message: NSLocalizedString("确认注销？", comment: "empty message"), preferredStyle: .Alert)

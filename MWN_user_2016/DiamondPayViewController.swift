@@ -14,7 +14,7 @@ class DiamondPayViewController: UIViewController,UITableViewDelegate,UITableView
     var myTableView = UITableView()
     let style:[String] = ["中国工商银行储蓄卡（1123）","银行卡支付","支付宝支付","微信支付","余额支付"]
     let contant:[String] = ["已绑定银行卡，可直接支付。","支持储蓄卡信用卡，无需开通网银。","推荐有支付宝账户的用户使用。","推荐安装微信5.0及以上版本的用户使用。","可在我的账户充值，现在享受9折优惠。"]
-    let titImage:[String] = ["","银行卡支付.png","支付宝.png","微信支付.png","余额支付.png"]
+    let titImage:[String] = ["工商银行支付.png","银行卡支付.png","支付宝.png","微信支付.png","余额支付.png"]
     
     
     override func viewDidLoad() {
