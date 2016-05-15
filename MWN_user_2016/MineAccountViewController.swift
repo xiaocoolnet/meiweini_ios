@@ -29,7 +29,7 @@ class MineAccountViewController: UIViewController,UITableViewDelegate,UITableVie
         
         self.navigationItem.rightBarButtonItem = rightBtn
         
-        accountTable.frame = self.view.bounds
+        accountTable.frame = CGRectMake(0, 0, WIDTH, HEIGHT-15)
         accountTable.backgroundColor = RGREY
         accountTable.delegate = self
         accountTable.dataSource = self
