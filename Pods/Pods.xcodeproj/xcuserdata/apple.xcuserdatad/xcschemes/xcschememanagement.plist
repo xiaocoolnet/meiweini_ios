@@ -29,6 +29,11 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>FBLikeLayout.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>20</integer>
+		</dict>
 		<key>FlexibleTableView.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -102,6 +107,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>01BD3FB10264818C0D256AF5DAED73B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0FF38C485BD8E73F614C919F834D6EAB</key>
 		<dict>
 			<key>primary</key>
@@ -142,6 +152,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>5FC744B63D4A3A5AEFF6AE0961F74508</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>617B0FC57CCB604D47A24E6198763D04</key>
 		<dict>
 			<key>primary</key>
@@ -157,7 +172,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7E4742E615041313F63B1DFF958ACFA0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>82BCCF2E1C1CD561E14C0A966A5E8B5A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>85B4BCCFFBE8B52ED4C796BB5E54B0A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -168,6 +193,16 @@
 			<true/>
 		</dict>
 		<key>99A011DB236AD3D4B60833C8001472C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9FDAF691C736A354A09FCB80C1F246FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BFA66AEBD3AB0BCE92577F5E2C9F2D8B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
