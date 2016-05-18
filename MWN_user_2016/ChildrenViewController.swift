@@ -19,11 +19,15 @@ class ChildrenViewController: UIViewController,UITableViewDelegate,UITableViewDa
         super.viewDidLoad()
 
         self.view.backgroundColor = RGREY
-        myTableView.frame = CGRectMake(0, 10, WIDTH, HEIGHT-124)
+        myTableView.frame = CGRectMake(0, 0, WIDTH, HEIGHT-114)
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.registerClass(ChildsTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         self.view.addSubview(myTableView)
+        
+        let one = UIView(frame: CGRectMake(0, 0, WIDTH, 10))
+        one.backgroundColor = RGREY
+        myTableView.tableHeaderView = one
         
         myTableView.rowHeight = 120
         

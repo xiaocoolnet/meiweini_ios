@@ -19,7 +19,7 @@ class MassageKindViewController: UIViewController,UITableViewDelegate,UITableVie
         
         self.view.backgroundColor = RGREY
         
-        massageTable.frame = CGRectMake(0, 10, WIDTH, HEIGHT)
+        massageTable.frame = CGRectMake(0, 0, WIDTH, HEIGHT)
         massageTable.backgroundColor = RGREY
         massageTable.delegate = self
         massageTable.dataSource = self
@@ -27,6 +27,8 @@ class MassageKindViewController: UIViewController,UITableViewDelegate,UITableVie
         self.view.addSubview(massageTable)
         massageTable.rowHeight = 65
 //        massageTable.scrollEnabled = false
+        let one = UIView(frame: CGRectMake(0, 0, WIDTH, 10))
+        massageTable.tableHeaderView = one
         
     }
     

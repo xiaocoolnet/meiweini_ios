@@ -21,7 +21,7 @@ class BalanceOfPaymentViewController: UIViewController,UITableViewDelegate,UITab
         
         self.view.backgroundColor = RGREY
         
-        myTableView.frame = CGRectMake(0, 10, WIDTH, HEIGHT-74)
+        myTableView.frame = CGRectMake(0, 0, WIDTH, HEIGHT-64)
         myTableView.backgroundColor = UIColor.clearColor()
         myTableView.delegate = self
         myTableView.dataSource = self
@@ -29,6 +29,8 @@ class BalanceOfPaymentViewController: UIViewController,UITableViewDelegate,UITab
         myTableView.rowHeight = 60
         self.view.addSubview(myTableView)
         
+        let view = UIView(frame: CGRectMake(0, 0, WIDTH, 10))
+        myTableView.tableHeaderView = view
         
         // Do any additional setup after loading the view.
     }

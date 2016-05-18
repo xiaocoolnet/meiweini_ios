@@ -28,6 +28,7 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         self.navigationItem.rightBarButtonItem = rightItem
         
         beautyTable.frame = CGRectMake(0, 0, WIDTH, HEIGHT-58)
+        beautyTable.backgroundColor = UIColor.clearColor()
         beautyTable.delegate = self
         beautyTable.dataSource = self
         beautyTable.registerClass(CommentTableViewCell.self, forCellReuseIdentifier: "comment")
@@ -35,6 +36,17 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         beautyTable.registerClass(VideoPlayTableViewCell.self, forCellReuseIdentifier: "video")
         beautyTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(beautyTable)
+        
+        let footView = UIView(frame: CGRectMake(0, 0, WIDTH, 40))
+        let prompt = UILabel()
+        prompt.frame = CGRectMake(WIDTH/4, 10, WIDTH/2, 20)
+        prompt.font = UIFont.systemFontOfSize(14)
+        prompt.textColor = GREY
+        prompt.text = "没有更多了"
+        prompt.textAlignment = .Center
+        footView.addSubview(prompt)
+        footView.backgroundColor = RGREY
+        beautyTable.tableFooterView = footView
         
         self.downViewSet()
         
@@ -138,13 +150,6 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             return 40
         }
     }
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        if section == 2 {
-            return 40
-        }else{
-            return 0
-        }
-    }
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headView = UIView()
         let prompt = UILabel()
@@ -159,19 +164,6 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         headView.addSubview(prompt)
         headView.backgroundColor = RGREY
         return headView
-    }
-    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footView = UIView()
-        let prompt = UILabel()
-        prompt.frame = CGRectMake(WIDTH/4, 10, WIDTH/2, 20)
-        prompt.font = UIFont.systemFontOfSize(14)
-        prompt.textColor = GREY
-        prompt.text = "没有更多了"
-        prompt.textAlignment = .Center
-        footView.addSubview(prompt)
-        footView.backgroundColor = RGREY
-        return footView
-        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

@@ -29,6 +29,7 @@ class BeautyVidViewController: UIViewController,UITableViewDelegate,UITableViewD
         videoTable.registerClass(VideoTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         self.view.addSubview(videoTable)
         
+        
     }
 //collection的组数
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

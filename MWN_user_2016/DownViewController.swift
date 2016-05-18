@@ -28,6 +28,14 @@ class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         downTable.registerClass(MoreTableViewCell.self, forCellReuseIdentifier: "more")
         self.view.addSubview(downTable)
         
+        let view = UIView(frame: CGRectMake(0, 0, WIDTH, 100))
+        view.backgroundColor = RGREY
+        payNow.frame = CGRectMake(WIDTH/24, 30, WIDTH/12*11, 44)
+        payNow.setImage(UIImage(named: "lijizhifu_normal.png"), forState: .Normal)
+        payNow.setImage(UIImage(named: "lijizhifu_pressed.png"), forState: .Highlighted)
+        payNow.addTarget(self, action: #selector(DownViewController.payNowTheCommodity), forControlEvents: .TouchUpInside)
+        view.addSubview(payNow)
+        downTable.tableFooterView = view
         
         // Do any additional setup after loading the view.
     }
@@ -46,7 +54,7 @@ class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if section == 0 {
             return 15
         }else{
-            return 100
+            return 0
         }
     }
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -56,13 +64,6 @@ class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             return view
         }else{
             let view = UIView()
-            view.backgroundColor = RGREY
-            payNow.frame = CGRectMake(WIDTH/24, 30, WIDTH/12*11, 44)
-            payNow.setImage(UIImage(named: "lijizhifu_normal.png"), forState: .Normal)
-            payNow.setImage(UIImage(named: "lijizhifu_pressed.png"), forState: .Highlighted)
-            payNow.addTarget(self, action: #selector(DownViewController.payNowTheCommodity), forControlEvents: .TouchUpInside)
-            view.addSubview(payNow)
-            
             return view
         }
     }

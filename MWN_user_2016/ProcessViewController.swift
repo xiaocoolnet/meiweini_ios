@@ -27,27 +27,21 @@ class ProcessViewController: UIViewController,UITableViewDelegate,UITableViewDat
         self.view.addSubview(myBusiness)
         myBusiness.rowHeight = 110
         
-        // Do any additional setup after loading the view.
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 70
-    }
-    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let view = UIView()
+        let view = UIView(frame: CGRectMake(0, 0, WIDTH, 50))
         view.backgroundColor = UIColor.clearColor()
-        let prompt = UILabel(frame: CGRectMake(WIDTH/2-50, 50, 100, 20))
+        let prompt = UILabel(frame: CGRectMake(WIDTH/2-50, 0, 100, 50))
         prompt.font = UIFont.systemFontOfSize(13)
         prompt.textColor = GREY
         prompt.textAlignment = .Center
         prompt.text = "没有更多了"
         view.addSubview(prompt)
+        myBusiness.tableFooterView = view
         
-        return view
-        
+        // Do any additional setup after loading the view.
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)as!MineBusTableViewCell

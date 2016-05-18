@@ -24,7 +24,7 @@ class DiamondPayViewController: UIViewController,UITableViewDelegate,UITableView
         
         self.view.backgroundColor = RGREY
         
-        myTableView.frame = CGRectMake(0, 15, WIDTH, HEIGHT)
+        myTableView.frame = CGRectMake(0, 0, WIDTH, HEIGHT)
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.registerClass(PayStyleTableViewCell.self, forCellReuseIdentifier: "cell")
@@ -32,24 +32,10 @@ class DiamondPayViewController: UIViewController,UITableViewDelegate,UITableView
         self.view.addSubview(myTableView)
         myTableView.backgroundColor = UIColor.clearColor()
         
-        
-        // Do any additional setup after loading the view.
-    }
-
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44
-    }
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 80
-    }
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView()
-        view.backgroundColor = UIColor.whiteColor()
+        let view = UIView(frame: CGRectMake(0, 0, WIDTH, 59))
         let tit = UILabel()
-        tit.frame = CGRectMake(0, 0, WIDTH, 44)
+        tit.backgroundColor = UIColor.whiteColor()
+        tit.frame = CGRectMake(0, 15, WIDTH, 44)
         tit.textColor = UIColor(red: 244/255.0, green: 81/255.0, blue: 31/255.0, alpha: 1.0)
         tit.font = UIFont.systemFontOfSize(16)
         tit.textAlignment = .Center
@@ -58,20 +44,24 @@ class DiamondPayViewController: UIViewController,UITableViewDelegate,UITableView
         let line = UILabel(frame: CGRectMake(0, 43.5, WIDTH, 0.5))
         line.backgroundColor = GREY
         view.addSubview(line)
+
+        myTableView.tableHeaderView = view
         
-        return view
-     
-    }
-    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let view = UIView()
-        view.backgroundColor = UIColor.clearColor()
+        let viewfoot = UIView(frame: CGRectMake(0, 0, WIDTH, 80))
+        viewfoot.backgroundColor = UIColor.clearColor()
         payFor.frame = CGRectMake(20, 20, WIDTH-40, 44)
         payFor.setBackgroundImage(UIImage(named: "xiaoyibu_pressed.png"), forState: .Normal)
         payFor.setBackgroundImage(UIImage(named: "xiaoyibu_selected.png"), forState: .Highlighted)
         payFor.addTarget(self, action: #selector(DiamondPayViewController.payForMoney), forControlEvents: .TouchUpInside)
         
-        view.addSubview(payFor)
-        return view
+        viewfoot.addSubview(payFor)
+        myTableView.tableFooterView = viewfoot
+        
+        // Do any additional setup after loading the view.
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)as!PayStyleTableViewCell
