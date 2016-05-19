@@ -28,11 +28,19 @@ class NewArticleViewController: UIViewController,UITextViewDelegate,UITextFieldD
         
         // Do any additional setup after loading the view.
     }
-
     func textViewDidBeginEditing(textView: UITextView) {
-        placeholder.hidden = true
         pulish.enabled = true
     }
+    func textViewDidChange(textView: UITextView) {
+
+        if textView.text.isEmpty {
+            placeholder.hidden = false
+
+        }else{
+            placeholder.hidden = true
+        }
+    }
+   
     
     @IBAction func addPicture(sender: AnyObject) {
         print("添加图片")

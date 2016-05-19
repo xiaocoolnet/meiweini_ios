@@ -23,6 +23,7 @@ class GiftsViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         myTableView.backgroundColor = UIColor.clearColor()
         myTableView.delegate = self
         myTableView.dataSource = self
+        myTableView.separatorStyle = .None
         myTableView.registerClass(GiftsTableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(myTableView)
         myTableView.rowHeight = 120

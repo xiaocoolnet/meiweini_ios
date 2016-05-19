@@ -23,6 +23,7 @@ class MassageKindViewController: UIViewController,UITableViewDelegate,UITableVie
         massageTable.backgroundColor = RGREY
         massageTable.delegate = self
         massageTable.dataSource = self
+        massageTable.separatorColor = RGREY
         massageTable.registerClass(MassageListTableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(massageTable)
         massageTable.rowHeight = 65

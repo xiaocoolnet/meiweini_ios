@@ -28,6 +28,7 @@ class MineBusinessViewController: UIViewController,UITableViewDelegate,UITableVi
         myTableView.backgroundColor = UIColor.clearColor()
         myTableView.delegate = self
         myTableView.dataSource = self
+        myTableView.separatorStyle = .None
         myTableView.registerClass(MineBusinessTableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(myTableView)
         myTableView.rowHeight = 80

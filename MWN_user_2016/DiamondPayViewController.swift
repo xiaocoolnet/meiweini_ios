@@ -41,7 +41,7 @@ class DiamondPayViewController: UIViewController,UITableViewDelegate,UITableView
         tit.textAlignment = .Center
         tit.text = "您将购买100钻石，需支付5元"
         view.addSubview(tit)
-        let line = UILabel(frame: CGRectMake(0, 43.5, WIDTH, 0.5))
+        let line = UILabel(frame: CGRectMake(0, 58.5, WIDTH, 0.5))
         line.backgroundColor = GREY
         view.addSubview(line)
 

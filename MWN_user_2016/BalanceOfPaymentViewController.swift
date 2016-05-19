@@ -25,6 +25,7 @@ class BalanceOfPaymentViewController: UIViewController,UITableViewDelegate,UITab
         myTableView.backgroundColor = UIColor.clearColor()
         myTableView.delegate = self
         myTableView.dataSource = self
+        myTableView.separatorColor = RGREY
         myTableView.registerClass(TransationTableViewCell.self, forCellReuseIdentifier: "cell")
         myTableView.rowHeight = 60
         self.view.addSubview(myTableView)

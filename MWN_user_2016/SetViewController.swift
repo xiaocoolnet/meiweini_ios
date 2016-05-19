@@ -29,6 +29,7 @@ class SetViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         getTableView.backgroundColor = UIColor.clearColor()
         getTableView.delegate = self
         getTableView.dataSource = self
+        getTableView.separatorColor = RGREY
         getTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(getTableView)
         getTableView.rowHeight = 50

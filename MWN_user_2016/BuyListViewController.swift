@@ -22,6 +22,7 @@ class BuyListViewController: UIViewController,UITableViewDelegate,UITableViewDat
         buyTable.backgroundColor = RGREY
         buyTable.delegate = self
         buyTable.dataSource = self
+        buyTable.separatorColor = RGREY
         buyTable.registerClass(BuyListTableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(buyTable)
         

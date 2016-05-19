@@ -58,9 +58,17 @@ class MineLoadViewController: UIViewController,UITextViewDelegate,UITextFieldDel
         }
     }
     func textViewDidBeginEditing(textView: UITextView) {
-        placeHolder.hidden = true
         update.enabled = true
     }
+    func textViewDidChange(textView: UITextView) {
+        if textView.text.isEmpty {
+            placeHolder.hidden = false
+            
+        }else{
+            placeHolder.hidden = true
+        }
+    }
+    
     @IBAction func upDate(sender: AnyObject) {
         print("上传")
         nameField.resignFirstResponder()

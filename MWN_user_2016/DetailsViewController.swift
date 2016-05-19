@@ -29,6 +29,7 @@ class DetailsViewController: UIViewController,UITableViewDelegate,UITableViewDat
         myTableView.backgroundColor = UIColor.clearColor()
         myTableView.delegate = self
         myTableView.dataSource = self
+        myTableView.separatorStyle = .None
         myTableView.registerClass(BankCardTableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(myTableView)
         myTableView.rowHeight = 150
