@@ -35,12 +35,13 @@ class ModelTableViewCell: UITableViewCell {
         titleImage.clipsToBounds = true
         
         nameLab.frame = CGRectMake(155, 5, 100, 20)
+        nameLab.font = UIFont.systemFontOfSize(16)
         contactLab.frame = CGRectMake(155, 25, WIDTH/2, 80)
-        contactLab.font = UIFont.systemFontOfSize(13)
+        contactLab.font = UIFont.systemFontOfSize(12)
         contactLab.textColor = GREY
         contactLab.numberOfLines = 0
         locationLab.frame = CGRectMake(155, 125, 60, 20)
-        locationLab.font = UIFont.systemFontOfSize(13)
+        locationLab.font = UIFont.systemFontOfSize(12)
         locationLab.textColor = GREY
         shareBtn.frame = CGRectMake(WIDTH-30, 5, 25, 25)
         shareBtn.setImage(UIImage(named: "ic_fengxiang-hui.png"), forState: .Normal)
@@ -51,8 +52,11 @@ class ModelTableViewCell: UITableViewCell {
         massageBtn.frame = CGRectMake(WIDTH-95, 120, 30, 25)
         massageBtn.setImage(UIImage(named: "ic_liangtian-fen.png"), forState: .Normal)
         
-        presentBtn.frame = CGRectMake(WIDTH-55, 120, 50, 25)
-        presentBtn.backgroundColor = UIColor.orangeColor()
+        presentBtn.frame = CGRectMake(WIDTH-55, 122.5, 50, 20)
+        presentBtn.setBackgroundImage(UIImage(named: "ic_songliwu.png"), forState: .Normal)
+        presentBtn.setTitle("送TA礼物", forState: .Normal)
+        presentBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        presentBtn.titleLabel?.font = UIFont.systemFontOfSize(10)
         
         self.addSubview(titleImage)
         self.addSubview(nameLab)

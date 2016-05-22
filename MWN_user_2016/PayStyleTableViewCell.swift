@@ -10,7 +10,7 @@ import UIKit
 
 class PayStyleTableViewCell: UITableViewCell {
 
-    let titImage = UIImageView()
+    let titImage = UIButton()
     let titName = UILabel()
     let contant = UILabel()
     
@@ -23,7 +23,7 @@ class PayStyleTableViewCell: UITableViewCell {
         for view in self.contentView.subviews {
             view.removeFromSuperview()
         }
-        titImage.frame = CGRectMake(15, 20, 33, 27)
+        titImage.frame = CGRectMake(15, 20, 34, 31)
         titName.frame = CGRectMake(60, 10, WIDTH-100, 25)
         titName.font = UIFont.systemFontOfSize(16)
         contant.frame = CGRectMake(60, 40, WIDTH-100, 17.5)

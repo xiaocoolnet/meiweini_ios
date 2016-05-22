@@ -11,9 +11,9 @@ import UIKit
 class BankCardTableViewCell: UITableViewCell {
 
     let backView = UIView()
+    let backImage = UIImageView()
     
     let titImage = UIImageView()
-    let kuaijie = UIImageView()
     let titLab = UILabel()
     let cardStyle = UILabel()
     let cardNum = UILabel()
@@ -32,10 +32,15 @@ class BankCardTableViewCell: UITableViewCell {
         backView.frame = CGRectMake(15, 20, WIDTH-30, 130)
         backView.layer.cornerRadius = 10
         self.addSubview(backView)
-        titImage.frame = CGRectMake(20, 20, 40, 40)
-        titImage.backgroundColor = UIColor.orangeColor()
-        kuaijie.frame = CGRectMake(WIDTH-105, 20, 65, 15)
-        kuaijie.backgroundColor = UIColor.orangeColor()
+        backImage.frame = backView.bounds
+        backView.addSubview(backImage)
+        let back = UILabel(frame: CGRectMake(20, 20, 40, 40))
+        back.backgroundColor = UIColor.whiteColor()
+        back.layer.cornerRadius = 20
+        back.clipsToBounds = true
+        backView.addSubview(back)
+        
+        titImage.frame = CGRectMake(25, 25, 30, 30)
         titLab.frame = CGRectMake(75, 20, 150, 20)
         titLab.text = "中国工商银行"
         titLab.textColor = UIColor.whiteColor()
@@ -57,7 +62,6 @@ class BankCardTableViewCell: UITableViewCell {
         
         backView.addSubview(titImage)
         backView.addSubview(titLab)
-        backView.addSubview(kuaijie)
         backView.addSubview(cardStyle)
         backView.addSubview(cardNum)
         backView.addSubview(details)

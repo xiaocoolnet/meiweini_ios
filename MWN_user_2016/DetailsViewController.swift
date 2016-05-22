@@ -11,6 +11,10 @@ import UIKit
 class DetailsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     var rightBtn = UIBarButtonItem()
+    let backArr:[String] = ["ic_dise_youzheng","ic_dise_zhaoshang","ic_dise_jianshe","ic_dise_zhongguo","ic_dise_nongye","ic_dise_huaxia","ic_dise_guangfa","ic_dise_jiaotong","ic_dise_xingye","ic_dise_zhongxin","ic_dise_pufa","ic_dise_guangda","ic_dise_minsheng","ic_dise_beijing","ic_dise_pingan"]
+    let titImageArr:[String] = ["ic_youzheng","ic_zhaoshang","ic_jianshe","ic_zhongguo","ic_nongye","ic_huaxia","ic_guangfa","ic_jiaotong","ic_xingye","ic_zhongxin","ic_pufa","ic_guangda","ic_minsheng","ic_beijing","ic_pingan"]
+    let backName:[String] = ["中国邮政储蓄银行","招商银行","中国建设银行","中国农业银行","中国银行","华夏银行","广发银行","交通银行","兴业银行","中信银行","上海浦发银行","中国光大银行","中国民生银行","北京银行","平安银行"]
+    
     
     var myTableView = UITableView()
     
@@ -25,7 +29,7 @@ class DetailsViewController: UIViewController,UITableViewDelegate,UITableViewDat
         
         self.navigationItem.rightBarButtonItem = rightBtn
         
-        myTableView.frame = self.view.bounds
+        myTableView.frame = CGRectMake(0, 0, WIDTH, HEIGHT-64)
         myTableView.backgroundColor = UIColor.clearColor()
         myTableView.delegate = self
         myTableView.dataSource = self
@@ -34,19 +38,22 @@ class DetailsViewController: UIViewController,UITableViewDelegate,UITableViewDat
         self.view.addSubview(myTableView)
         myTableView.rowHeight = 150
         
+        print(backArr.count)
+        print(backName.count)
+        
         // Do any additional setup after loading the view.
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return backArr.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)as!BankCardTableViewCell
         cell.selectionStyle = .None
         cell.backgroundColor = UIColor.clearColor()
-        cell.backView.backgroundColor = UIColor(red: CGFloat(arc4random_uniform(255))/255.0, green: CGFloat(arc4random_uniform(255))/255.0, blue: CGFloat(arc4random_uniform(255))/255.0, alpha: 1.0)
-        
-        
+        cell.backImage.image = UIImage(named: backArr[indexPath.row])
+        cell.titImage.image = UIImage(named: titImageArr[indexPath.row])
+        cell.titLab.text = backName[indexPath.row]
         return cell
         
     }

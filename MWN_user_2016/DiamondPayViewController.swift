@@ -68,7 +68,7 @@ class DiamondPayViewController: UIViewController,UITableViewDelegate,UITableView
         cell.selectionStyle = .None
         cell.titName.text = style[indexPath.row]
         cell.contant.text = contant[indexPath.row]
-        cell.titImage.image = UIImage(named: titImage[indexPath.row])
+        cell.titImage.setImage(UIImage(named: titImage[indexPath.row]), forState: .Normal)
         return cell
         
     }

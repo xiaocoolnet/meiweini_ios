@@ -3805,25 +3805,6 @@
             </objects>
             <point key="canvasLocation" x="2220" y="2008.5"/>
         </scene>
-        <!--我的钱柜-->
-        <scene sceneID="kYB-aa-bKW">
-            <objects>
-                <viewController id="Vgt-fc-0LY" customClass="MineMoneyViewController" customModule="MWN_user_2016" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6w5-fI-IXc"/>
-                        <viewControllerLayoutGuide type="bottom" id="FgM-oN-9eW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1wz-TK-TnM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="我的钱柜" id="anZ-N2-VX5"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K1Z-J2-Tg9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2970" y="2008.5"/>
-        </scene>
         <!--上传产品-->
         <scene sceneID="wtr-5N-KDW">
             <objects>

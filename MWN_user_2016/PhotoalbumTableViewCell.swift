@@ -25,6 +25,7 @@ class PhotoalbumTableViewCell: UITableViewCell {
             view.removeFromSuperview()
         }
         photoName.frame = CGRectMake(10, 10, 100, 20)
+        photoName.font = UIFont.systemFontOfSize(16)
         price.frame = CGRectMake(WIDTH-110, 10, 100, 25)
         price.font = UIFont.systemFontOfSize(19)
         price.textColor = UIColor(red: 247/255.0, green: 80/255.0, blue: 1/255.0, alpha: 1.0)

@@ -19,7 +19,9 @@ class BankCardMessageViewController: UIViewController,UITextFieldDelegate {
     let selector = UIButton()
     let agree = UILabel()
     let user = UIButton()
-   
+    var choose = Bool()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "填写银行卡信息"
@@ -56,8 +58,10 @@ class BankCardMessageViewController: UIViewController,UITextFieldDelegate {
         phoneField.delegate = self
         self.view.addSubview(phoneField)
         
-        selector.frame = CGRectMake(10, 150, 10, 10)
+        choose = true
+        selector.frame = CGRectMake(10, 149.5, 11, 11)
         selector.backgroundColor = UIColor.orangeColor()
+        selector.setImage(UIImage(named: "复选框.png"), forState: .Normal)
         selector.addTarget(self, action: #selector(BankCardMessageViewController.selectTheMessage), forControlEvents: .TouchUpInside)
         self.view.addSubview(selector)
         agree.frame = CGRectMake(25, 140, 30, 30)
@@ -88,6 +92,13 @@ class BankCardMessageViewController: UIViewController,UITextFieldDelegate {
         print("选择")
         nameField.resignFirstResponder()
         phoneField.resignFirstResponder()
+        if choose == true {
+            selector.setImage(UIImage(named: "复选框_已选择.png"), forState: .Normal)
+            choose = false
+        }else{
+            selector.setImage(UIImage(named: "复选框.png"), forState: .Normal)
+            choose = true
+        }
         
     }
     func userMessage() {

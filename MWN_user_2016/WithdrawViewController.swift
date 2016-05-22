@@ -38,14 +38,14 @@ class WithdrawViewController: UIViewController,UITextFieldDelegate {
             self.view.addSubview(bankName)
             
         }
-        bankname.frame = CGRectMake(WIDTH/2, 25, WIDTH/2-40, 20)
+        bankname.frame = CGRectMake(WIDTH/2, 25, WIDTH/2-36, 20)
         bankname.font = UIFont.systemFontOfSize(16)
         bankname.textAlignment = .Right
         bankname.text = "建设银行储蓄卡(0033)"
         self.view.addSubview(bankname)
         
-        jiantou.frame = CGRectMake(WIDTH-35, 25, 25, 20)
-        jiantou.backgroundColor = UIColor.orangeColor()
+        jiantou.frame = CGRectMake(WIDTH-36, 25, 26, 20)
+        jiantou.setImage(UIImage(named: "ic_xiajiantou.png"), forState: .Normal)
         jiantou.addTarget(self, action: #selector(WithdrawViewController.selectorBankCard), forControlEvents: .TouchUpInside)
         self.view.addSubview(jiantou)
         

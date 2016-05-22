@@ -82,7 +82,7 @@ class BusViewController: UIViewController {
     
     @IBAction func goToMoney(sender: AnyObject) {
         print("我的钱柜")
-        let account = MineAccountViewController()
+        let account = MineMoneyViewController()
         self.navigationController?.pushViewController(account, animated: true)
         
     }

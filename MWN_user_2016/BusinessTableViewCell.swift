@@ -34,8 +34,9 @@ class BusinessTableViewCell: UITableViewCell {
         titleImage.clipsToBounds = true
         
         nameLab.frame = CGRectMake(155, 5, 100, 20)
+        nameLab.font = UIFont.boldSystemFontOfSize(16)
         contactLab.frame = CGRectMake(155, 25, WIDTH/2, 80)
-        contactLab.font = UIFont.systemFontOfSize(13)
+        contactLab.font = UIFont.systemFontOfSize(12)
         contactLab.textColor = GREY
         contactLab.numberOfLines = 0
         
@@ -43,7 +44,7 @@ class BusinessTableViewCell: UITableViewCell {
         priceLab.textColor = COLOR
         
         muchLab.frame = CGRectMake(215, 130, 80, 15)
-        muchLab.font = UIFont.systemFontOfSize(13)
+        muchLab.font = UIFont.systemFontOfSize(12)
         muchLab.textColor = GREY
         
         moreBtn.frame = CGRectMake(WIDTH-25, 125, 20, 20)
