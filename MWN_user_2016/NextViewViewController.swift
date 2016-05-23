@@ -170,8 +170,7 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
             if indexPath.row == 0 {
                 let cell = tableView.dequeueReusableCellWithIdentifier("photo")as!PhotoTableViewCell
                 cell.selectionStyle = .None
-                cell.photoImage.image = UIImage(named: "kb4.png")
-                cell.photoNum.text = "1/8"
+//                cell.photoNum.text = "1/8"
                 cell.zanBtn.addTarget(self, action: #selector(NextViewViewController.zanButton), forControlEvents: .TouchUpInside)
                 
                 return cell
@@ -249,6 +248,7 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print(indexPath.row)
+        
         
         
     }
