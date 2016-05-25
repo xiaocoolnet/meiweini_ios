@@ -200,6 +200,7 @@
 		18AA058E1CC504CE00BDCDF9 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA058D1CC504CE00BDCDF9 /* LocationViewController.swift */; };
 		18AA05911CC5052300BDCDF9 /* MassageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA05901CC5052300BDCDF9 /* MassageViewController.swift */; };
 		18AA05931CC505B600BDCDF9 /* NextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA05921CC505B600BDCDF9 /* NextViewViewController.swift */; };
+		18AD6E871CF54573008C60BF /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AD6E861CF54573008C60BF /* ImageCollectionViewCell.swift */; };
 		18AED7731CD05332008764B5 /* MassageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED7721CD05332008764B5 /* MassageListViewController.swift */; };
 		18AED7751CD05EF2008764B5 /* MassageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED7741CD05EF2008764B5 /* MassageListTableViewCell.swift */; };
 		18AED77A1CD0666B008764B5 /* BuyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AED7791CD0666B008764B5 /* BuyListTableViewCell.swift */; };
@@ -213,7 +214,6 @@
 		18B7C6A71CE2BE1800B7C9D1 /* NewArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7C6A61CE2BE1800B7C9D1 /* NewArticleViewController.swift */; };
 		18B807AC1CD19F7B00CB5E0E /* BusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B807AB1CD19F7B00CB5E0E /* BusViewController.swift */; };
 		18B807AE1CD1A33400CB5E0E /* CertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B807AD1CD1A33400CB5E0E /* CertificationViewController.swift */; };
-		18BE78961CD83FAF000C7BF9 /* LoadPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78951CD83FAF000C7BF9 /* LoadPicViewController.swift */; };
 		18BE78981CD84794000C7BF9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BE78971CD84794000C7BF9 /* MapKit.framework */; };
 		18BE789A1CD847A6000C7BF9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BE78991CD847A6000C7BF9 /* CoreLocation.framework */; };
 		18BE789C1CD8485B000C7BF9 /* SpecifyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BE789B1CD8485B000C7BF9 /* SpecifyArray.swift */; };
@@ -487,6 +487,7 @@
 		18AA058D1CC504CE00BDCDF9 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		18AA05901CC5052300BDCDF9 /* MassageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassageViewController.swift; sourceTree = "<group>"; };
 		18AA05921CC505B600BDCDF9 /* NextViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewViewController.swift; sourceTree = "<group>"; };
+		18AD6E861CF54573008C60BF /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		18AED7721CD05332008764B5 /* MassageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassageListViewController.swift; sourceTree = "<group>"; };
 		18AED7741CD05EF2008764B5 /* MassageListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassageListTableViewCell.swift; sourceTree = "<group>"; };
 		18AED7791CD0666B008764B5 /* BuyListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyListTableViewCell.swift; sourceTree = "<group>"; };
@@ -500,7 +501,6 @@
 		18B7C6A61CE2BE1800B7C9D1 /* NewArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewArticleViewController.swift; sourceTree = "<group>"; };
 		18B807AB1CD19F7B00CB5E0E /* BusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusViewController.swift; sourceTree = "<group>"; };
 		18B807AD1CD1A33400CB5E0E /* CertificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CertificationViewController.swift; sourceTree = "<group>"; };
-		18BE78951CD83FAF000C7BF9 /* LoadPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadPicViewController.swift; sourceTree = "<group>"; };
 		18BE78971CD84794000C7BF9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		18BE78991CD847A6000C7BF9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		18BE789B1CD8485B000C7BF9 /* SpecifyArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecifyArray.swift; sourceTree = "<group>"; };
@@ -889,6 +889,7 @@
 				189B72641CE2FE0700713AFE /* FineTableViewCell.swift */,
 				189F170D1CE31C7400C3DC5F /* TransationTableViewCell.swift */,
 				1814FBB91CE3625200F790D9 /* MineBusinessTableViewCell.swift */,
+				18AD6E861CF54573008C60BF /* ImageCollectionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1089,7 +1090,6 @@
 			isa = PBXGroup;
 			children = (
 				183B95EE1CD1DD7400C74FC9 /* MineLoadViewController.swift */,
-				18BE78951CD83FAF000C7BF9 /* LoadPicViewController.swift */,
 			);
 			name = MineLoad;
 			sourceTree = "<group>";
@@ -1710,6 +1710,7 @@
 				183B95EF1CD1DD7400C74FC9 /* MineLoadViewController.swift in Sources */,
 				180767521CBF76770062F4A5 /* DisplayView.swift in Sources */,
 				183B95FB1CD2051C00C74FC9 /* PersonCertificationViewController.swift in Sources */,
+				18AD6E871CF54573008C60BF /* ImageCollectionViewCell.swift in Sources */,
 				180767591CBF76770062F4A5 /* ConstraintItem.swift in Sources */,
 				18C12A4C1CD301B000014A69 /* OneViewController.swift in Sources */,
 				18A5EBC21CCF09E7009FB017 /* UserMassageViewController.swift in Sources */,
@@ -1856,7 +1857,6 @@
 				18A5EBBE1CCF023D009FB017 /* VideoViewController.swift in Sources */,
 				180767731CBF76770062F4A5 /* UIButton+Haneke.swift in Sources */,
 				189DA6DD1CCCA70F0004B76D /* UIImageView+HighlightedWebCache.m in Sources */,
-				18BE78961CD83FAF000C7BF9 /* LoadPicViewController.swift in Sources */,
 				180767CA1CBF7C3D0062F4A5 /* PasswordViewController.swift in Sources */,
 				18501EAF1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift in Sources */,
 				189DA6D41CCCA70F0004B76D /* SDWebImageDecoder.m in Sources */,

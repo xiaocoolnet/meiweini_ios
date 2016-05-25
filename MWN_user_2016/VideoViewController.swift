@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
@@ -16,6 +17,7 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     private let reuseIdentifier = "cell"
     private var collectionView: UICollectionView?
     private var array: [Int] = []
+    var player = MPMoviePlayerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,7 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         self.tabBarController?.tabBar.hidden = true
         self.title = "视频"
         self.view.backgroundColor = RGREY
+        
         
         let rightItem = UIBarButtonItem(image: UIImage(named: "ic_shanghu.png"), style: .Done, target: self, action: #selector(NextViewViewController.shareBtn))
         self.navigationItem.rightBarButtonItem = rightItem
@@ -171,6 +174,14 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             if indexPath.row == 0 {
                 let cell = tableView.dequeueReusableCellWithIdentifier("video")as!VideoPlayTableViewCell
                 cell.selectionStyle = .None
+                let url = NSBundle.mainBundle().pathForResource("生活大爆炸.The.Big.Bang.Theory.2015.S09E03.HD720P.X264.AAC.CHS-ENG.DYTT", ofType: "mp4")
+                player = MPMoviePlayerController(contentURL: NSURL(fileURLWithPath: url!))
+                player.controlStyle = .Embedded
+            
+                player.view.frame = CGRectMake(0, 0, WIDTH, WIDTH/3*2)
+                
+                cell.addSubview(player.view)
+                
                 cell.photoImage.image = UIImage(named: "kb4.png")
                 cell.photoNum.text = "1/8"
                 
@@ -251,10 +262,31 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print(indexPath.row)
-        
+        player.play()
+        self.addNotification()
         
     }
-    
+    func addNotification() {
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.addObserver(self, selector: #selector(self.mediaPlayerPlaybackFinished(_:)), name: MPMoviePlayerPlaybackDidFinishNotification, object: player)
+        notificationCenter.addObserver(self, selector: #selector(self.mediaPlayerPlaybackStateChange(_:)), name: MPMoviePlayerPlaybackStateDidChangeNotification, object: player)
+        
+    }
+    func mediaPlayerPlaybackStateChange(notify:NSNotification) {
+        switch player.playbackState {
+        case .Playing:
+            print("正在播放")
+        case .Paused:
+            print("暂停播放")
+        case .Stopped:
+            print("停止播放")
+        default:
+            print("播放状态：\(player.playbackState)")
+        }
+    }
+    func mediaPlayerPlaybackFinished(notify:NSNotification) {
+        print("播放完成")
+    }
     func zanBtnNum() {
         print("赞")
     }

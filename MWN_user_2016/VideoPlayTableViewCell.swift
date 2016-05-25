@@ -15,6 +15,7 @@ class VideoPlayTableViewCell: UITableViewCell {
     var zanBtn = UIButton()
     var photoNum = UILabel()
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
