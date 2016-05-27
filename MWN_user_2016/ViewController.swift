@@ -138,6 +138,28 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBAction func sinaLogin(sender: AnyObject) {
         print("新浪登录")
         
+        let snsPlatform: UMSocialSnsPlatform = UMSocialSnsPlatformManager.getSocialPlatformWithName(UMShareToSina)
+        
+        snsPlatform.loginClickHandler(self, UMSocialControllerService.defaultControllerService(), true, {response in
+            
+            if response.responseCode == UMSResponseCodeSuccess {
+                
+                let snsAccount:UMSocialAccountEntity = UMSocialAccountManager.socialAccountDictionary()[UMShareToSina] as! UMSocialAccountEntity
+                
+                print("username is \(snsAccount.userName), uid is \(snsAccount.usid), token is \(snsAccount.accessToken) url is \(snsAccount.iconURL)")
+                
+//               登录成功后跳转
+                let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainView")
+                self.presentViewController(vc, animated: true, completion: nil)
+            }
+        })
+        
+        //获取accestoken以及新浪用户信息，得到的数据在回调Block对象形参respone的data属性
+        UMSocialDataService.defaultDataService().requestSnsInformation(UMShareToSina) { (response) -> Void in
+            print("------\(response.data)")
+        }
+        
     }
     
     @IBAction func weixinLogin(sender: AnyObject) {

@@ -229,9 +229,15 @@ class MainViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         cell.name?.text = "科比\(array[indexPath.row])"
         cell.number.text = "\(array[indexPath.row]).0万"
         cell.contact.text = "最后的王者\(array[indexPath.row])"
+        cell.nameBtn.addTarget(self, action: #selector(self.goToModelView), forControlEvents: .TouchUpInside)
         return cell
     }
     
+    func goToModelView() {
+        let next = ModelViewController()
+        self.navigationController?.pushViewController(next, animated: true)
+        
+    }
     // MARK: - UICollectionViewDelegate
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return array.count

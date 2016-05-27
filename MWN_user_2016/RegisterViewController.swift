@@ -143,10 +143,10 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
             "phone":phoneNum.text!,
             "code":phoneTrades.text!,
             "password":password.text!,
-            "devicestate":"1"
+            "devicestate": 1
         ]
         print(url)
-        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+        Alamofire.request(.GET, url, parameters: param as? [String : AnyObject]).response { request, response, json, error in
             if(error != nil){
             }
             else{
@@ -164,10 +164,14 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
                     hud.hide(true, afterDelay: 3)
                 }
                 if(status.status == "success"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.labelText = "注册成功"
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                    self.navigationController?.popToRootViewControllerAnimated(true)
                     
-                    let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-                    let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView")
-                    self.navigationController?.pushViewController(vc, animated: true)
                 }
             }
         }

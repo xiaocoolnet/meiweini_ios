@@ -33,49 +33,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), forBarMetrics: UIBarMetrics.Default)
         
+        // 设置Appkey
+        UMSocialData.setAppKey("57468e9267e58ebf5e0029a3")
+        
+        //打开新浪微博的SSO开关，设置新浪微博回调地址，这里必须要和你在新浪微博后台设置的回调地址一致。若在新浪后台设置我们的回调地址，“http://sns.whalecloud.com/sina2/callback”，这里可以传nil
+        UMSocialSinaSSOHandler.openNewSinaSSOWithAppKey("3982229382", secret: "cec4763673b38b42269c5ad1c80747e2", redirectURL: nil)
+//    http://weibo.com/u/3230871010/home?wvr=5
+        
+//        self.loginCheck()
+        
         return true
     }
 
-//    func loginCheck(){
-//        
-//        let infoDictionary = NSBundle.mainBundle().infoDictionary
-//        let currentAppVersion = infoDictionary!["CFBundleShortVersionString"] as! String
-//        // 取出之前保存的版本号
-//        let userDefaults = NSUserDefaults.standardUserDefaults()
-//        let appVersion = userDefaults.stringForKey("appVersion")
-//        
+    func loginCheck(){
+        
+        let infoDictionary = NSBundle.mainBundle().infoDictionary
+        let currentAppVersion = infoDictionary!["CFBundleShortVersionString"] as! String
+        // 取出之前保存的版本号
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let appVersion = userDefaults.stringForKey("appVersion")
+        
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        
-//        // 如果 appVersion 为 nil 说明是第一次启动；如果 appVersion 不等于 currentAppVersion 说明是更新了
-//        if appVersion == nil || appVersion != currentAppVersion {
-//            // 保存最新的版本号
-//            userDefaults.setValue(currentAppVersion, forKey: "appVersion")
-//            
+        
+        // 如果 appVersion 为 nil 说明是第一次启动；如果 appVersion 不等于 currentAppVersion 说明是更新了
+        if appVersion == nil || appVersion != currentAppVersion {
+            // 保存最新的版本号
+            userDefaults.setValue(currentAppVersion, forKey: "appVersion")
+            
 //            let guideViewController = storyboard.instantiateViewControllerWithIdentifier("scrollView") as! ScrollViewController
 //            self.window?.rootViewController = guideViewController
-//        }
-//            
-//            
-//        else{
-//            let userid = NSUserDefaults.standardUserDefaults()
-//            //let uid = userid.valueForKey("userid")
-//            var segueId = "MainView"
-//            if((userid.valueForKey("userid") == nil) || (userid.valueForKey("userid")?.length == 0 ))
-//            {
-//                segueId = "LoginView"
-//                self.window?.rootViewController = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier(segueId)
-//                
-//            }
-//            else{
-//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                let tableBarController = storyboard.instantiateViewControllerWithIdentifier(segueId) as! UITabBarController
+        }
+            
+            
+        else{
+            let userid = NSUserDefaults.standardUserDefaults()
+            //let uid = userid.valueForKey("userid")
+            var segueId = "MainView"
+            if((userid.valueForKey("userid") == nil) || (userid.valueForKey("userid")?.length == 0 ))
+            {
+                segueId = "LoginView"
+                self.window?.rootViewController = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier(segueId)
+                
+            }
+            else{
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let tableBarController = storyboard.instantiateViewControllerWithIdentifier(segueId) as! UITabBarController
 //                let tableBarItem = tableBarController.tabBar.items![2]
 //                tableBarItem.badgeValue = "3"
-//                self.window?.rootViewController = tableBarController
-//                
-//            }
-//        }
-//    }
+                self.window?.rootViewController = tableBarController
+                
+            }
+        }
+    }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -99,6 +108,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+        return UMSocialSnsService.handleOpenURL(url)
+    }
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        return UMSocialSnsService.handleOpenURL(url)
+    }
 
 }
 

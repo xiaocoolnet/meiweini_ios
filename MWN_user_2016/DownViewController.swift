@@ -131,6 +131,14 @@ class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func payNowTheCommodity() {
         print("立即支付")
         
+        let backView = UIView(frame: CGRectMake(0, 0, WIDTH, HEIGHT+64))
+        
+        
+        var window = UIWindow()
+        window = ((UIApplication.sharedApplication().delegate?.window)!)!
+        window.addSubview(backView)
+        
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -49,8 +49,17 @@ class MineMassageViewController: UIViewController {
         view.addSubview(pagingMenuController.view)
         pagingMenuController.didMoveToParentViewController(self)
         
+        let rightBtn = UIBarButtonItem(title: "反馈", style: .Done, target: self, action: #selector(self.getUpMessage))
+        
+        self.navigationItem.rightBarButtonItem = rightBtn
+        
     }
-    
+    func getUpMessage() {
+        print("反馈")
+        let next = FeedbackViewController()
+        self.navigationController?.pushViewController(next, animated: true)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

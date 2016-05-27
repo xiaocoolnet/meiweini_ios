@@ -31,13 +31,14 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     let picArr:[String] = ["ic_goumai.png","ic_fenxiao.png","ic_wodeqiangui.png","ic_dizhi.png"]
     
     
-    
+//    获取个人信息
     override func viewWillAppear(animated: Bool) {
         titleView.backgroundColor = COLOR
         self.navigationController?.navigationBarHidden = true
         self.tabBarController?.tabBar.hidden = false
         let userid = NSUserDefaults.standardUserDefaults()
         let uid = userid.stringForKey("userid")
+        print("---------\(uid)")
         let url = mwnUrl+"getuserinfo"
         let param = [
             "userid":uid!

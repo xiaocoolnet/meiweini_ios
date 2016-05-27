@@ -11,7 +11,7 @@ import UIKit
 class ChildCollectionViewCell: UICollectionViewCell {
     
     var imageView: UIImageView?
-    
+    let nameBtn = UIButton()
     var name: UILabel?
     var number = UILabel()
     var contact = UILabel()
@@ -32,6 +32,7 @@ class ChildCollectionViewCell: UICollectionViewCell {
             name = UILabel(frame: CGRect(x: 0, y: CGRectGetMaxY(imageView.frame)+5, width: CGRectGetWidth(self.frame) - 100, height: 20))
             //name?.backgroundColor = UIColor.orangeColor()
             name?.font = UIFont.systemFontOfSize(14)
+            nameBtn.frame = CGRect(x: 0, y: CGRectGetMaxY(imageView.frame)+5, width: CGRectGetWidth(self.frame) - 100, height: 20)
             
             number = UILabel(frame: CGRect(x: CGRectGetWidth(self.frame) - 80, y: CGRectGetMaxY(imageView.frame)+5, width: 80, height: 20))
             //number.backgroundColor = UIColor.greenColor()
@@ -47,6 +48,7 @@ class ChildCollectionViewCell: UICollectionViewCell {
             if let text = name {
                 self.addSubview(text)
             }
+            self.addSubview(nameBtn)
             self.addSubview(number)
             self.addSubview(contact)
         }

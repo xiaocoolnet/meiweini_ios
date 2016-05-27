@@ -12,6 +12,8 @@
 #import "BRPlaceholderTextView.h"
 #import "NirKxMenu.h"
 #import "UIImageView+WebCache.h"
+#import "UMSocial.h"
+#import "UMSocialSinaSSOHandler.h"
 /** 拼音搜索 */
 #include "ZYPinYinSearch.h"
 
