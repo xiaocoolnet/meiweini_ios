@@ -174,8 +174,12 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             if indexPath.row == 0 {
                 let cell = tableView.dequeueReusableCellWithIdentifier("video")as!VideoPlayTableViewCell
                 cell.selectionStyle = .None
-                let url = NSBundle.mainBundle().pathForResource("生活大爆炸.The.Big.Bang.Theory.2015.S09E03.HD720P.X264.AAC.CHS-ENG.DYTT", ofType: "mp4")
-                player = MPMoviePlayerController(contentURL: NSURL(fileURLWithPath: url!))
+//               获得本地文件路径
+//                let url = NSBundle.mainBundle().pathForResource("生活大爆炸.The.Big.Bang.Theory.2015.S09E03.HD720P.X264.AAC.CHS-ENG.DYTT", ofType: "mp4")
+                let urlStr = "http://mw5.dwstatic.com/2/4/1529/134981-99-1436844583.mp4"
+                let url = NSURL(string: urlStr)
+                
+                player = MPMoviePlayerController(contentURL: url)
                 player.controlStyle = .Embedded
             
                 player.view.frame = CGRectMake(0, 0, WIDTH, WIDTH/3*2)

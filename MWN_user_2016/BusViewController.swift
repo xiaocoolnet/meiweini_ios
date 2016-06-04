@@ -27,14 +27,14 @@ class BusViewController: UIViewController {
         super.viewDidLoad()
 
         for i in 0...2 {
-            let backLab = UILabel(frame: CGRectMake(((WIDTH-2)/3+1)*CGFloat(i), 196, (WIDTH-2)/3, 44))
+            let backLab = UILabel(frame: CGRectMake(((WIDTH+2)/3+1)*CGFloat(i), 196, (WIDTH+1)/3, 44))
             backLab.backgroundColor = UIColor.grayColor()
             backLab.alpha = 0.35
             titleView.addSubview(backLab)
             
-            let dataLab = UILabel(frame: CGRectMake(((WIDTH-2)/3+1)*CGFloat(i), 196, (WIDTH-2)/3, 44))
+            let dataLab = UILabel(frame: CGRectMake(((WIDTH+2)/3+1)*CGFloat(i), 196, (WIDTH+1)/3, 44))
             dataLab.backgroundColor = UIColor.clearColor()
-            dataLab.font = UIFont.systemFontOfSize(14)
+            dataLab.font = UIFont.systemFontOfSize(13)
             dataLab.textAlignment = .Center
             dataLab.textColor = UIColor.whiteColor()
             dataLab.text = dataArr[i]

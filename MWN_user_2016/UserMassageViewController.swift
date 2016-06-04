@@ -11,7 +11,7 @@ import Alamofire
 import MBProgressHUD
 
 class UserMassageViewController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
-
+    
     var userImage = UIButton()
     var userImageView = UIImageView()
     
@@ -73,16 +73,17 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate,UIImagePic
         sex.text = "性别"
         phone.frame = CGRectMake(10, 370, 60, 30)
         phone.text = "手机号"
-        name.frame = CGRectMake(100, 230, WIDTH/2, 30)
+        name.frame = CGRectMake(WIDTH/2-WIDTH/4, 230, WIDTH/2, 30)
         name.textAlignment = .Center
         name.textColor = UIColor(red: 174/255.0, green: 179/255.0, blue: 190/255.0, alpha: 1.0)
         name.text = username
         name.placeholder = "请输入昵称"
-        phoneNum.frame = CGRectMake(100, 370, WIDTH/2, 30)
+        phoneNum.frame = CGRectMake(WIDTH/2-WIDTH/4, 370, WIDTH/2, 30)
         phoneNum.textAlignment = .Center
         phoneNum.textColor = UIColor(red: 174/255.0, green: 179/255.0, blue: 190/255.0, alpha: 1.0)
         phoneNum.text = phoneNumber
         phoneNum.placeholder = "请输入手机号码"
+        phoneNum.keyboardType = .NumberPad
         clean.frame = CGRectMake(WIDTH-40, 230, 30, 30)
         clean.setImage(UIImage(named: "ic_guangbi.png"), forState: .Normal)
         clean.addTarget(self, action: #selector(UserMassageViewController.cleanTheText), forControlEvents: .TouchUpInside)
@@ -114,6 +115,10 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate,UIImagePic
         
         name.delegate = self
         phoneNum.delegate = self
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.keyBoardChangFrame(_:)), name: UIKeyboardWillChangeFrameNotification, object: nil)
+        
+
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -245,6 +250,30 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate,UIImagePic
             }
         }
     }
+    
+    func keyBoardChangFrame(info:NSNotification) {
+        let infoDic = info.userInfo
+        let keyBoardRect = infoDic!["UIKeyboardFrameEndUserInfoKey"]?.CGRectValue()
+        let keyBoardTranslate = CGFloat((keyBoardRect?.origin.y)!-400)
+        print(keyBoardRect?.origin.y)
+        if keyBoardRect?.origin.y == HEIGHT {
+            UIView.animateWithDuration((infoDic!["UIKeyboardAnimationCurveUserInfoKey"]?.doubleValue)!, delay: 0, options: .TransitionNone, animations: {
+                var rect:CGRect = self.view.frame
+                rect.origin.y = 64
+                self.view.frame = rect
+                
+                }, completion: nil)
+        }else{
+            UIView.animateWithDuration((infoDic!["UIKeyboardAnimationCurveUserInfoKey"]?.doubleValue)!, delay: 0, options: .TransitionNone, animations: {
+                var rect:CGRect = self.view.frame
+                rect.origin.y = keyBoardTranslate
+                self.view.frame = rect
+                
+                }, completion: nil)
+
+        }
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

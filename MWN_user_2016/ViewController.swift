@@ -166,14 +166,14 @@ class ViewController: UIViewController,UITextFieldDelegate {
         print("微信登录")
         
     }
-    @IBAction func businessGoTo(sender: AnyObject) {
-        print("商家")
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Business")
-        self.presentViewController(vc, animated: true, completion: nil)
-        
-        
-    }
+//    @IBAction func businessGoTo(sender: AnyObject) {
+//        print("商家")
+//        let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+//        let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Business")
+//        self.presentViewController(vc, animated: true, completion: nil)
+//        
+//        
+//    }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         print("触摸")

@@ -14,8 +14,8 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
     @IBOutlet weak var backBtn: UIButton!
     
-    @IBOutlet weak var titPic: UIButton!
-    @IBOutlet weak var titleView: UIView!
+    var titPic = UIButton()
+    var titleView = UIView()
     
     let setBtn = UIButton()
     var massageBtn = UIButton()
@@ -78,11 +78,18 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         backBtn.layer.cornerRadius = 25
         
+        titleView.frame = CGRectMake(0, -20, WIDTH, 300)
+        
         let image = UIImageView()
         
         image.sd_setImageWithURL(NSURL(string: "http://mwn.xiaocool.net/uploads/avatar/xiaocool.png"), placeholderImage: UIImage(named: "kb3.png"))
         
+        titPic.frame = CGRectMake(WIDTH/2-50, 100, 100, 100)
+        titPic.layer.cornerRadius = 50
+        titPic.clipsToBounds = true
         titPic.setImage(image.image, forState: .Normal)
+        titPic.addTarget(self, action: #selector(self.changeImage(_:)), forControlEvents: .TouchUpInside)
+        titleView.addSubview(titPic)
         
         setBtn.frame = CGRectMake(WIDTH-45, 30, 30, 30)
         setBtn.setImage(UIImage(named: "ic_set.png"), forState: .Normal)
@@ -93,10 +100,10 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         massageBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         massageBtn.addTarget(self, action: #selector(MineViewController.massageList), forControlEvents:.TouchUpInside)
         
-        titConcern.frame = CGRectMake(0, 250, WIDTH/2-1, 50)
+        titConcern.frame = CGRectMake(0, 250, WIDTH/2+1, 50)
         titConcern.backgroundColor = UIColor(red: 120/255.0, green: 120/255.0, blue: 120/255.0, alpha: 1.0)
         titConcern.alpha = 0.3
-        titRed.frame = CGRectMake(WIDTH/2, 250, WIDTH/2, 50)
+        titRed.frame = CGRectMake(WIDTH/2+2, 250, WIDTH/2+2, 50)
         titRed.backgroundColor = UIColor(red: 120/255.0, green: 120/255.0, blue: 120/255.0, alpha: 1.0)
         titRed.alpha = 0.3
         concernBtn.frame = CGRectMake(0, 250, WIDTH/2, 50)
@@ -115,13 +122,15 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         titleView.addSubview(concernBtn)
         titleView.addSubview(redBtn)
         
-        myTableView.frame = CGRectMake(0, 280, WIDTH, 260)
+        myTableView.frame = CGRectMake(0, -20, WIDTH, HEIGHT+20)
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.registerClass(MineOneTableViewCell.self, forCellReuseIdentifier: "one")
         myTableView.registerClass(MineTwoTableViewCell.self, forCellReuseIdentifier: "two")
-        myTableView.scrollEnabled = false
+        myTableView.bounces = false
         self.view.addSubview(myTableView)
+        myTableView.separatorStyle = .None
+        myTableView.tableHeaderView = titleView
         
         myTableView.rowHeight = 60
         
@@ -268,7 +277,7 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     @IBAction func GoBackLogin(sender: AnyObject) {
         
-        let alertController = UIAlertController(title: NSLocalizedString("", comment: "Warn"), message: NSLocalizedString("确认注销？", comment: "empty message"), preferredStyle: .Alert)
+        let alertController = UIAlertController(title: NSLocalizedString("", comment: "Warn"), message: NSLocalizedString("确认退出？", comment: "empty message"), preferredStyle: .Alert)
         let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
         let doneAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
 

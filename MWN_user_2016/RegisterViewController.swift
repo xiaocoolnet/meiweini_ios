@@ -20,6 +20,7 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var baomi1: UIButton!
     @IBOutlet weak var achieve: UIButton!
+    @IBOutlet weak var autoLine: NSLayoutConstraint!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var registerBus: UIButton!
     
@@ -54,6 +55,8 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
         
         achieve.setBackgroundImage(UIImage(named: "dianjihuoqu_selected.png"), forState: .Highlighted)
         registerBtn.setBackgroundImage(UIImage(named: "zhuce_selected.png"), forState: .Highlighted)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.keyBoardChangFrame(_:)), name: UIKeyboardWillChangeFrameNotification, object: nil)
         
     }
     @IBAction func backLogin(sender: AnyObject) {
@@ -278,6 +281,23 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
         return true
     }
 
+    func keyBoardChangFrame(info:NSNotification) {
+        let infoDic = info.userInfo
+        let keyBoardRect = infoDic!["UIKeyboardFrameEndUserInfoKey"]?.CGRectValue()
+        print(keyBoardRect?.origin.y)
+        if keyBoardRect?.origin.y == HEIGHT {
+            UIView.animateWithDuration((infoDic!["UIKeyboardAnimationCurveUserInfoKey"]?.doubleValue)!, delay: 0, options: .TransitionNone, animations: {
+                self.autoLine.constant = 70
+                
+                }, completion: nil)
+        }else{
+            UIView.animateWithDuration((infoDic!["UIKeyboardAnimationCurveUserInfoKey"]?.doubleValue)!, delay: 0, options: .TransitionNone, animations: {
+                self.autoLine.constant = 0
+                }, completion: nil)
+            
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

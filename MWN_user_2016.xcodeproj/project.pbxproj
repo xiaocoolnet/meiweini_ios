@@ -256,6 +256,7 @@
 		18C12A481CD2F05300014A69 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C12A471CD2F05300014A69 /* AccountTableViewCell.swift */; };
 		18C12A4A1CD2FA8A00014A69 /* DiamondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C12A491CD2FA8A00014A69 /* DiamondTableViewCell.swift */; };
 		18C12A4C1CD301B000014A69 /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C12A4B1CD301B000014A69 /* OneViewController.swift */; };
+		18C182391CFD766F00427142 /* ZSPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C182381CFD766F00427142 /* ZSPasswordView.swift */; };
 		18CFDDE91CC85ED700924F39 /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CFDDE81CC85ED700924F39 /* BusinessTableViewCell.swift */; };
 		18D262841CC0795A00485B13 /* PhoneVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D262831CC0795A00485B13 /* PhoneVerifyViewController.swift */; };
 		18D262861CC0799800485B13 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D262851CC0799800485B13 /* VerificationViewController.swift */; };
@@ -601,6 +602,7 @@
 		18C12A471CD2F05300014A69 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		18C12A491CD2FA8A00014A69 /* DiamondTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiamondTableViewCell.swift; sourceTree = "<group>"; };
 		18C12A4B1CD301B000014A69 /* OneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
+		18C182381CFD766F00427142 /* ZSPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSPasswordView.swift; sourceTree = "<group>"; };
 		18CFDDE81CC85ED700924F39 /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
 		18D262831CC0795A00485B13 /* PhoneVerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneVerifyViewController.swift; sourceTree = "<group>"; };
 		18D262851CC0799800485B13 /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
@@ -1047,6 +1049,7 @@
 				18A5EBC51CCF4B32009FB017 /* CommodityTableViewCell.swift */,
 				18A5EBC71CCF4F00009FB017 /* PayTableViewCell.swift */,
 				18A5EBC91CCF4F28009FB017 /* MoreTableViewCell.swift */,
+				18C182381CFD766F00427142 /* ZSPasswordView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1727,6 +1730,7 @@
 				TargetAttributes = {
 					1FF7A3101CBF69800048638F = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 5473F6K7VB;
 					};
 					1FF7A3241CBF69800048638F = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -1958,6 +1962,7 @@
 				1807674F1CBF76770062F4A5 /* RMDownloadIndicator.swift in Sources */,
 				18BE78A01CD84E2C000C7BF9 /* LocationManager.swift in Sources */,
 				1890C6091CD993DA009DF5C0 /* LoginModel.swift in Sources */,
+				18C182391CFD766F00427142 /* ZSPasswordView.swift in Sources */,
 				189DA5591CCC59A10004B76D /* ChildrenViewController.swift in Sources */,
 				180767511CBF76770062F4A5 /* ConnectModel.m in Sources */,
 				18AED7731CD05332008764B5 /* MassageListViewController.swift in Sources */,
@@ -2166,7 +2171,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chongqian Zhu (43SWZUC27M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chongqian Zhu (43SWZUC27M)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_BITCODE = YES;
@@ -2189,6 +2195,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "9cf9f4b7-1f7e-40cb-a870-9223102a2632";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2212,7 +2219,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chongqian Zhu (43SWZUC27M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chongqian Zhu (43SWZUC27M)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = YES;
@@ -2228,6 +2236,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "9cf9f4b7-1f7e-40cb-a870-9223102a2632";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2240,6 +2249,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chongqian Zhu (43SWZUC27M)";
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = MWN_user_2016/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2286,8 +2296,9 @@
 					"\"YYWebImage\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hellofish.MWN-user-2016";
+				PRODUCT_BUNDLE_IDENTIFIER = xiaocool.cn.meiweini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9cf9f4b7-1f7e-40cb-a870-9223102a2632";
 				SWIFT_OBJC_BRIDGING_HEADER = "MWN_user_2016/MWN_user_2016-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -2299,6 +2310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chongqian Zhu (43SWZUC27M)";
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = MWN_user_2016/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2345,8 +2357,9 @@
 					"\"YYWebImage\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hellofish.MWN-user-2016";
+				PRODUCT_BUNDLE_IDENTIFIER = xiaocool.cn.meiweini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9cf9f4b7-1f7e-40cb-a870-9223102a2632";
 				SWIFT_OBJC_BRIDGING_HEADER = "MWN_user_2016/MWN_user_2016-Bridging-Header.h";
 			};
 			name = Release;

@@ -31,6 +31,14 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>sinaweibohd</string>
+		<string>sinaweibo</string>
+		<string>sinaweibosso</string>
+		<string>weibosdk</string>
+		<string>weibosdk2.5</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -40,14 +48,6 @@
 	</dict>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>允许在后台获取GPS的描述</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>sinaweibohd</string>
-		<string>sinaweibo</string>
-		<string>sinaweibosso</string>
-		<string>weibosdk</string>
-		<string>weibosdk2.5</string>
-	</array>
 	<key>NSLocationWhenInUseDescription</key>
 	<string>允许在前台获取GPS的描述 </string>
 	<key>UILaunchStoryboardName</key>

@@ -8,10 +8,17 @@
 
 import UIKit
 
-class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
 
     var downTable = UITableView()
     let payNow = UIButton()
+    let backView = UIView()
+    let backLab = UIButton()
+    let backview = UIView()
+    var window = UIWindow()
+    var password : ZSPasswordView?
+    let sure = UIButton()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +43,7 @@ class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         payNow.addTarget(self, action: #selector(DownViewController.payNowTheCommodity), forControlEvents: .TouchUpInside)
         view.addSubview(payNow)
         downTable.tableFooterView = view
+        
         
         // Do any additional setup after loading the view.
     }
@@ -131,15 +139,58 @@ class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func payNowTheCommodity() {
         print("立即支付")
         
-        let backView = UIView(frame: CGRectMake(0, 0, WIDTH, HEIGHT+64))
+        backView.frame = CGRectMake(0, 0, WIDTH, HEIGHT+64)
+        backLab.frame = CGRectMake(0, 0, WIDTH, HEIGHT+64)
+        backLab.backgroundColor = UIColor.grayColor()
+        backLab.alpha = 0.4
+        backLab.addTarget(self, action: #selector(self.backButtonClick), forControlEvents: .TouchUpInside)
+        backView.addSubview(backLab)
+        backview.frame = CGRectMake(20, HEIGHT/2-80, WIDTH-40, 200)
+        backview.backgroundColor = UIColor.whiteColor()
+        backView.addSubview(backview)
+        password = ZSPasswordView.init(frame: CGRectMake(10, 40, backview.bounds.size.width - 20, 40))
+        password!.textFiled.delegate = self
+        backview.addSubview(password!)
+        sure.frame = CGRectMake(backview.bounds.size.width/2-50, 120, 100, 40)
+        sure.layer.cornerRadius = 5
+        sure.layer.borderColor = UIColor.blackColor().CGColor
+        sure.layer.borderWidth = 0.5
+        sure.setTitle("确定", forState: .Normal)
+        sure.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        sure.addTarget(self, action: #selector(self.getOverThePassword), forControlEvents: .TouchUpInside)
+        backview.addSubview(sure)
         
         
-        var window = UIWindow()
         window = ((UIApplication.sharedApplication().delegate?.window)!)!
         window.addSubview(backView)
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.keyBoardChangFrame(_:)), name: UIKeyboardWillChangeFrameNotification, object: nil)
         
     }
+    func backButtonClick() {
+        print("消失")
+        backView.removeFromSuperview()
+        
+    }
+    func keyBoardChangFrame(info:NSNotification) {
+        let infoDic = info.userInfo
+        let keyBoardRect = infoDic!["UIKeyboardFrameEndUserInfoKey"]?.CGRectValue()
+        let keyBoardTranslate = CGFloat((keyBoardRect?.origin.y)!-212)
+        
+        UIView.animateWithDuration((infoDic!["UIKeyboardAnimationCurveUserInfoKey"]?.doubleValue)!, delay: 0, options: .TransitionNone, animations: {
+            var rect:CGRect = self.backview.frame
+            rect.origin.y = keyBoardTranslate
+            self.backview.frame = rect
+            
+            }, completion: nil)
+    }
+
+    func getOverThePassword() {
+        print(password!.textFiledString)
+        password!.textFiled.resignFirstResponder()
+        backView.removeFromSuperview()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

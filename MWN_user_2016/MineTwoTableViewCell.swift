@@ -33,7 +33,10 @@ class MineTwoTableViewCell: UITableViewCell {
         address.font = UIFont.systemFontOfSize(13)
         jiantou.frame = CGRectMake(WIDTH-20, 23, 8, 14)
         jiantou.image = UIImage(named: "ic_arrow_right.png")
+        let line = UILabel(frame: CGRectMake(10, 59.5, WIDTH-10, 0.5))
+        line.backgroundColor = GREY
         
+        self.addSubview(line)
         self.addSubview(titImage)
         self.addSubview(titLab)
         self.addSubview(address)
