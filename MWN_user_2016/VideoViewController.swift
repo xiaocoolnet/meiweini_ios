@@ -22,6 +22,7 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.automaticallyAdjustsScrollViewInsets = false
         self.tabBarController?.tabBar.hidden = true
         self.title = "视频"
         self.view.backgroundColor = RGREY
@@ -30,7 +31,7 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let rightItem = UIBarButtonItem(image: UIImage(named: "ic_shanghu.png"), style: .Done, target: self, action: #selector(NextViewViewController.shareBtn))
         self.navigationItem.rightBarButtonItem = rightItem
         
-        beautyTable.frame = CGRectMake(0, 0, WIDTH, HEIGHT-58)
+        beautyTable.frame = CGRectMake(0, 0, WIDTH, HEIGHT-64)
         beautyTable.backgroundColor = UIColor.clearColor()
         beautyTable.delegate = self
         beautyTable.dataSource = self

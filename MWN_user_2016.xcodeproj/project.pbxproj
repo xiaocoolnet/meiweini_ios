@@ -117,6 +117,11 @@
 		183178351CC7577F00D93D8A /* BeautyLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183178341CC7577F00D93D8A /* BeautyLiveViewController.swift */; };
 		183178371CC7592F00D93D8A /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183178361CC7592F00D93D8A /* VideoTableViewCell.swift */; };
 		183178391CC765A100D93D8A /* LiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183178381CC765A100D93D8A /* LiveTableViewCell.swift */; };
+		1837D0061D066B4500726990 /* AddressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837D0041D066B4500726990 /* AddressListViewController.swift */; };
+		1837D0071D066B4500726990 /* AddressListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1837D0051D066B4500726990 /* AddressListViewController.xib */; };
+		1837D0091D06C88000726990 /* ShopPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837D0081D06C88000726990 /* ShopPhotosViewController.swift */; };
+		1837D00C1D06D21800726990 /* IDcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837D00A1D06D21800726990 /* IDcardViewController.swift */; };
+		1837D00D1D06D21800726990 /* IDcardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1837D00B1D06D21800726990 /* IDcardViewController.xib */; };
 		183B95ED1CD1DD6200C74FC9 /* MineBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B95EC1CD1DD6200C74FC9 /* MineBusViewController.swift */; };
 		183B95EF1CD1DD7400C74FC9 /* MineLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B95EE1CD1DD7400C74FC9 /* MineLoadViewController.swift */; };
 		183B95F11CD1DD8000C74FC9 /* MineOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B95F01CD1DD8000C74FC9 /* MineOrderViewController.swift */; };
@@ -413,6 +418,11 @@
 		183178341CC7577F00D93D8A /* BeautyLiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyLiveViewController.swift; sourceTree = "<group>"; };
 		183178361CC7592F00D93D8A /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		183178381CC765A100D93D8A /* LiveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveTableViewCell.swift; sourceTree = "<group>"; };
+		1837D0041D066B4500726990 /* AddressListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressListViewController.swift; sourceTree = "<group>"; };
+		1837D0051D066B4500726990 /* AddressListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressListViewController.xib; sourceTree = "<group>"; };
+		1837D0081D06C88000726990 /* ShopPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopPhotosViewController.swift; sourceTree = "<group>"; };
+		1837D00A1D06D21800726990 /* IDcardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDcardViewController.swift; sourceTree = "<group>"; };
+		1837D00B1D06D21800726990 /* IDcardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDcardViewController.xib; sourceTree = "<group>"; };
 		183B95EC1CD1DD6200C74FC9 /* MineBusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineBusViewController.swift; sourceTree = "<group>"; };
 		183B95EE1CD1DD7400C74FC9 /* MineLoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineLoadViewController.swift; sourceTree = "<group>"; };
 		183B95F01CD1DD8000C74FC9 /* MineOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineOrderViewController.swift; sourceTree = "<group>"; };
@@ -1130,6 +1140,9 @@
 				18D262851CC0799800485B13 /* VerificationViewController.swift */,
 				180767C91CBF7C3D0062F4A5 /* PasswordViewController.swift */,
 				18B807AD1CD1A33400CB5E0E /* CertificationViewController.swift */,
+				1837D0081D06C88000726990 /* ShopPhotosViewController.swift */,
+				1837D00A1D06D21800726990 /* IDcardViewController.swift */,
+				1837D00B1D06D21800726990 /* IDcardViewController.xib */,
 				183B95FA1CD2051C00C74FC9 /* PersonCertificationViewController.swift */,
 			);
 			name = Controller;
@@ -1198,6 +1211,8 @@
 			children = (
 				18A995CB1CC9C01000C4ACC0 /* SetViewController.swift */,
 				18501EA61CCDBB7D00B6A614 /* SafeViewController.swift */,
+				1837D0041D066B4500726990 /* AddressListViewController.swift */,
+				1837D0051D066B4500726990 /* AddressListViewController.xib */,
 				18501EA81CCDBBCE00B6A614 /* ServiceViewController.swift */,
 			);
 			name = SetUp;
@@ -1769,11 +1784,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				188F57DD1CF6DB83002318A1 /* UMSCommentInputController.xib in Resources */,
+				1837D0071D066B4500726990 /* AddressListViewController.xib in Resources */,
 				189DA6E61CCCBA0F0004B76D /* 2.plist in Resources */,
 				18BE78BC1CD87927000C7BF9 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				188F57E21CF6DB83002318A1 /* UMSnsAccountViewController.xib in Resources */,
 				188F57DE1CF6DB83002318A1 /* UMSCommentInputControlleriPad.xib in Resources */,
 				188F57DA1CF6DB83002318A1 /* UMSocialLocalizable.strings in Resources */,
+				1837D00D1D06D21800726990 /* IDcardViewController.xib in Resources */,
 				188F57E41CF6DB83002318A1 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				1807679A1CBF76770062F4A5 /* pic.bundle in Resources */,
 				189DA6E71CCCBA0F0004B76D /* 3.plist in Resources */,
@@ -1873,6 +1890,7 @@
 				18501EA91CCDBBCE00B6A614 /* ServiceViewController.swift in Sources */,
 				18BE78BB1CD87927000C7BF9 /* PinyinHelper.m in Sources */,
 				18D262841CC0795A00485B13 /* PhoneVerifyViewController.swift in Sources */,
+				1837D00C1D06D21800726990 /* IDcardViewController.swift in Sources */,
 				1807676D1CBF76770062F4A5 /* Log.swift in Sources */,
 				1807677C1CBF76770062F4A5 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				1807679D1CBF76770062F4A5 /* PhotoBrowser+Indicator.swift in Sources */,
@@ -1984,6 +2002,7 @@
 				180767C81CBF7AFA0062F4A5 /* RegisterViewController.swift in Sources */,
 				1807674C1CBF76770062F4A5 /* BrowserCellDelegate.swift in Sources */,
 				180767981CBF76770062F4A5 /* NirKxMenu.m in Sources */,
+				1837D0091D06C88000726990 /* ShopPhotosViewController.swift in Sources */,
 				18AED7751CD05EF2008764B5 /* MassageListTableViewCell.swift in Sources */,
 				180767661CBF76770062F4A5 /* Data.swift in Sources */,
 				18B807AC1CD19F7B00CB5E0E /* BusViewController.swift in Sources */,
@@ -2033,6 +2052,7 @@
 				1804BA111CC6606800854F60 /* SanFangViewController.swift in Sources */,
 				1807676C1CBF76770062F4A5 /* Haneke.swift in Sources */,
 				18AED77A1CD0666B008764B5 /* BuyListTableViewCell.swift in Sources */,
+				1837D0061D066B4500726990 /* AddressListViewController.swift in Sources */,
 				180767741CBF76770062F4A5 /* UIImage+Haneke.swift in Sources */,
 				180767C61CBF7ABF0062F4A5 /* MainViewController.swift in Sources */,
 				18BE789C1CD8485B000C7BF9 /* SpecifyArray.swift in Sources */,

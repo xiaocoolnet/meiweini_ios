@@ -25,14 +25,14 @@ class PayTableViewCell: UITableViewCell {
         for view in self.contentView.subviews {
             view.removeFromSuperview()
         }
-        payImage.frame = CGRectMake(10, 30, 33, 26)
-        payStyle.frame = CGRectMake(60, 20, 250, 20)
+        payImage.frame = CGRectMake(20, 30, 33, 26)
+        payStyle.frame = CGRectMake(65, 20, 220, 20)
         payStyle.font = UIFont.systemFontOfSize(16)
-        paySmore.frame = CGRectMake(70, 45, 150, 15)
+        paySmore.frame = CGRectMake(65, 45, 150, 15)
         paySmore.font = UIFont.systemFontOfSize(12)
         paySmore.textColor = UIColor(red: 165/255.0, green: 165/255.0, blue: 165/255.0, alpha: 1.0)
-        selector.frame = CGRectMake(WIDTH-50, 17.5, 45, 45)
-        selector.setImage(UIImage(named: "ic_xuanzhong.png"), forState: .Normal)
+        selector.frame = CGRectMake(WIDTH-37, 30, 20, 20)
+        selector.setBackgroundImage(UIImage(named: "ic_xuanzhong-kong.png"), forState: .Normal)
         
         self.addSubview(paySmore)
         self.addSubview(payStyle)

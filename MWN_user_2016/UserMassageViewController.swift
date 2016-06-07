@@ -254,23 +254,38 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate,UIImagePic
     func keyBoardChangFrame(info:NSNotification) {
         let infoDic = info.userInfo
         let keyBoardRect = infoDic!["UIKeyboardFrameEndUserInfoKey"]?.CGRectValue()
-        let keyBoardTranslate = CGFloat((keyBoardRect?.origin.y)!-400)
+        let keyBoardTranslate = CGFloat((keyBoardRect?.origin.y)!)
         print(keyBoardRect?.origin.y)
         if keyBoardRect?.origin.y == HEIGHT {
             UIView.animateWithDuration((infoDic!["UIKeyboardAnimationCurveUserInfoKey"]?.doubleValue)!, delay: 0, options: .TransitionNone, animations: {
-                var rect:CGRect = self.view.frame
-                rect.origin.y = 64
-                self.view.frame = rect
+                self.view.frame = CGRectMake(0, 64, WIDTH, keyBoardTranslate)
                 
                 }, completion: nil)
         }else{
-            UIView.animateWithDuration((infoDic!["UIKeyboardAnimationCurveUserInfoKey"]?.doubleValue)!, delay: 0, options: .TransitionNone, animations: {
-                var rect:CGRect = self.view.frame
-                rect.origin.y = keyBoardTranslate
-                self.view.frame = rect
+            if keyBoardTranslate <= 500 {
+                if keyBoardTranslate <= 400 {
+                    UIView.animateWithDuration((infoDic!["UIKeyboardAnimationCurveUserInfoKey"]?.doubleValue)!, delay: 0, options: .TransitionNone, animations: {
+                        self.view.frame = CGRectMake(0, -50, WIDTH, keyBoardTranslate+50)
+                        
+                        }, completion: nil)
+                }else{
+                    UIView.animateWithDuration((infoDic!["UIKeyboardAnimationCurveUserInfoKey"]?.doubleValue)!, delay: 0, options: .TransitionNone, animations: {
+                        self.view.frame = CGRectMake(0, 50, WIDTH, keyBoardTranslate+14)
+                        
+                        }, completion: nil)
+                }
+            }else{
+                UIView.animateWithDuration((infoDic!["UIKeyboardAnimationCurveUserInfoKey"]?.doubleValue)!, delay: 0, options: .TransitionNone, animations: {
+                    self.view.frame = CGRectMake(0, 64, WIDTH, keyBoardTranslate)
+                    
+                    //                var rect:CGRect = self.view.frame
+                    //                rect.origin.y = keyBoardTranslate
+                    //                self.view.frame = rect
+                    
+                    }, completion: nil)
                 
-                }, completion: nil)
-
+            }
+            
         }
     }
 

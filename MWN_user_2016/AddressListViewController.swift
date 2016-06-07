@@ -1,69 +1,65 @@
 //
-//  MineBusinessViewController.swift
+//  AddressListViewController.swift
 //  MWN_user_2016
 //
-//  Created by apple on 16/4/22.
+//  Created by apple on 16/6/7.
 //  Copyright © 2016年 xiaocool. All rights reserved.
 //
 
 import UIKit
 
-class MineBusinessViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class AddressListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
-    var myTableView = UITableView()
-    let picArr:[String] = ["ic_liwu.png","ic_zuanshi.png"]
-        
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = false
-        self.tabBarController?.tabBar.hidden = true
-    }
+    @IBOutlet weak var myTableView: UITableView!
+    var addressArr:[String] = ["查令街八十三号","查令街八十四号","查令街八十五号","查令街八十六号"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.edgesForExtendedLayout = .None
         self.automaticallyAdjustsScrollViewInsets = false
-
-        self.title = "我的分销"
-        self.view.backgroundColor = RGREY
         
-        myTableView.frame = CGRectMake(0, 0, WIDTH, HEIGHT-64)
-        myTableView.backgroundColor = UIColor.clearColor()
+        let rightBtn = UIBarButtonItem(title: "添加", style: .Done, target: self, action: #selector(AddressListViewController.addAddress))
+        
+        self.navigationItem.rightBarButtonItem = rightBtn
+
+        self.title = "地址列表"
+        myTableView.backgroundColor = RGREY
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.separatorStyle = .None
-        myTableView.registerClass(MineBusinessTableViewCell.self, forCellReuseIdentifier: "cell")
-        self.view.addSubview(myTableView)
-        myTableView.rowHeight = 80
+        myTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        myTableView.rowHeight = 70
         
         // Do any additional setup after loading the view.
     }
-    
+    func addAddress() {
+        let add = "查令街八十四号"
+        addressArr.append(add)
+        myTableView.reloadData()
+        
+    }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return addressArr.count
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
+    }
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
     }
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         view.backgroundColor = UIColor.clearColor()
         return view
-        
-    }
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)as!MineBusinessTableViewCell
-        cell.selectionStyle = .None
-        cell.titLab.text = "分享XXX的店铺页面到微信，获得xxx礼物一件"
-        cell.timeLab.text = "2016-05-18 09:30"
-        cell.titImage.image = UIImage(named: picArr[indexPath.section])
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell")
+        cell?.selectionStyle = .None
+        cell?.accessoryType = .DisclosureIndicator
+        cell?.textLabel?.text = addressArr[indexPath.section]
         
-        return cell
-        
+        return cell!
     }
-
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

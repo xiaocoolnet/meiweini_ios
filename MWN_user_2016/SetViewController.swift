@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class SetViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UMSocialUIDelegate {
 
     var getTableView = UITableView()
     let titArr:[String] = ["账号与安全","常用地址","服务条款","服务范围","用户反馈","关于我们","分享朋友"]
@@ -40,6 +40,11 @@ class SetViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         return 2
     }
     
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor.clearColor()
+        return view
+    }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 2
@@ -67,12 +72,23 @@ class SetViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print(indexPath.row)
         if indexPath.section == 0 {
-            let safe = SafeViewController()
-            self.navigationController?.pushViewController(safe, animated: true)
+            if indexPath.row == 0 {
+                let safe = SafeViewController()
+                self.navigationController?.pushViewController(safe, animated: true)
+            }else{
+                let address = AddressListViewController(nibName: "AddressListViewController", bundle: nil)
+                self.navigationController?.pushViewController(address, animated: true)
+            }
+            
             
         }else{
-            let service = ServiceViewController()
-            self.navigationController?.pushViewController(service, animated: true)
+            
+            if indexPath.row == 4 {
+                UMSocialSnsService.presentSnsIconSheetView(self, appKey:"57468e9267e58ebf5e0029a3", shareText:"很好玩的小游戏,小时都玩过吧!https://github.com/c-shen", shareImage: UIImage(named:"icon.png"), shareToSnsNames: [UMShareToSina,UMShareToTencent,UMShareToWechatSession,UMShareToQzone,UMShareToQQ,UMShareToRenren], delegate: self)
+            }else{
+                let service = ServiceViewController()
+                self.navigationController?.pushViewController(service, animated: true)
+            }
             
         }
     }

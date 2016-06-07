@@ -18,14 +18,20 @@ class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var window = UIWindow()
     var password : ZSPasswordView?
     let sure = UIButton()
+    var count = Int()
+    var cont = Bool()
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.edgesForExtendedLayout = .None
+        self.automaticallyAdjustsScrollViewInsets = false
 
         self.view.backgroundColor = RGREY
         
-        downTable.frame = self.view.bounds
+        downTable.frame = CGRectMake(0, 0, WIDTH, HEIGHT-64)
         downTable.backgroundColor = RGREY
         downTable.delegate = self
         downTable.dataSource = self
@@ -34,6 +40,7 @@ class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         downTable.registerClass(PayTableViewCell.self, forCellReuseIdentifier: "pay")
         downTable.registerClass(MoreTableViewCell.self, forCellReuseIdentifier: "more")
         self.view.addSubview(downTable)
+        
         
         let view = UIView(frame: CGRectMake(0, 0, WIDTH, 100))
         view.backgroundColor = RGREY
@@ -44,6 +51,8 @@ class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         view.addSubview(payNow)
         downTable.tableFooterView = view
         
+        count = 2
+        cont = true
         
         // Do any additional setup after loading the view.
     }
@@ -55,7 +64,7 @@ class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if section == 0 {
             return 1
         }else{
-            return 2
+            return count
         }
     }
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -66,23 +75,19 @@ class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
     }
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        if section == 0 {
-            let view = UIView()
-            view.backgroundColor = RGREY
-            return view
-        }else{
-            let view = UIView()
-            return view
-        }
+        
+        let view = UIView()
+        view.backgroundColor = UIColor.clearColor()
+        return view
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return (WIDTH-20)/5*3+95
         }else{
-            if indexPath.row == 0 {
-                return 80
-            }else{
+            if indexPath.row == count-1 {
                 return 60
+            }else{
+                return 80
             }
         }
     }
@@ -99,41 +104,56 @@ class DownViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             return cell
             
         }else{
-            if indexPath.row == 0 {
-                let cell = tableView.dequeueReusableCellWithIdentifier("pay")as!PayTableViewCell
-                cell.selectionStyle = .None
-                cell.payImage.image = UIImage(named: "ic_yinhangka.png")
-                cell.payStyle.text = "中国建设银行储蓄卡 尾号8888"
-                cell.paySmore.text = "已绑定银行卡直接支付"
-                cell.selector.addTarget(self, action: #selector(DownViewController.selectorStyle), forControlEvents: .TouchUpInside)
-                
-                return cell
-                
-            }else{
+            if indexPath.row == count-1 {
                 let cell = tableView.dequeueReusableCellWithIdentifier("more")as!MoreTableViewCell
                 cell.selectionStyle = .None
                 cell.morePay.text = "更多支付方式"
                 
                 return cell
+            }else{
+                let cell = tableView.dequeueReusableCellWithIdentifier("pay")as!PayTableViewCell
+                cell.selectionStyle = .None
+                cell.payImage.image = UIImage(named: "ic_yinhangka.png")
+                cell.payStyle.text = "中国建设银行储蓄卡 尾号8888"
+                cell.paySmore.text = "已绑定银行卡直接支付"
+                cell.selector.addTarget(self, action: #selector(DownViewController.selectorStyle(_:)), forControlEvents: .TouchUpInside)
+                cell.selector.tag = indexPath.row
                 
+                return cell
+
             }
         }
-        
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print(indexPath.row)
+        let cell = tableView.cellForRowAtIndexPath(indexPath)as?MoreTableViewCell
+        
         if indexPath.section == 1 {
-            if indexPath.row == 1 {
+            if indexPath.row == count-1 {
                 print("更多支付方式")
-                
-                
+                if cont {
+                    count = 5
+                    UIView.animateWithDuration(0.2, animations: {
+//                        self.downTable.setContentOffset(CGPointMake(0, self.downTable.bounds.size.height), animated: true)
+                        tableView.reloadData()
+                        cell?.more.image = UIImage(named: "")
+                    })
+                    cont = !cont
+                }else{
+                    count = 2
+                 UIView.animateWithDuration(0.2, animations: {
+                        tableView.reloadData()
+                        cell!.more.image = UIImage(named: "ic_jiangtou-down.png")
+                    })
+                    cont = !cont
+                }
             }
         }
         
     }
-    func selectorStyle() {
+    func selectorStyle(btn:UIButton) {
         print("选择支付方式")
-        
+        btn.setBackgroundImage(UIImage(named: "ic_xuanzhong.png"), forState: .Normal)
         
     }
     func payNowTheCommodity() {

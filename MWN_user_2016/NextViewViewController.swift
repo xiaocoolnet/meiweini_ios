@@ -20,6 +20,7 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.automaticallyAdjustsScrollViewInsets = false
         self.tabBarController?.tabBar.hidden = true
         self.title = "商品界面"
         self.view.backgroundColor = RGREY
@@ -27,7 +28,7 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
         let rightItem = UIBarButtonItem(image: UIImage(named: "ic_shanghu.png"), style: .Done, target: self, action: #selector(NextViewViewController.shareBtn))
         self.navigationItem.rightBarButtonItem = rightItem
         
-        beautyTable.frame = CGRectMake(0, 0, WIDTH, HEIGHT-58)
+        beautyTable.frame = CGRectMake(0, 0, WIDTH, HEIGHT-64)
         beautyTable.backgroundColor = UIColor.clearColor()
         beautyTable.delegate = self
         beautyTable.dataSource = self
@@ -161,7 +162,7 @@ class NextViewViewController: UIViewController,UITableViewDelegate,UITableViewDa
             prompt.text = "评论（34）"
         }
         headView.addSubview(prompt)
-        headView.backgroundColor = RGREY
+        headView.backgroundColor = UIColor.clearColor()
         return headView
     }
         

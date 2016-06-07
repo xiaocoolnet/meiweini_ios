@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IDcardViewController" customModule="MWN_user_2016" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NuO-tg-1Xs">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ic_biankuang" translatesAutoresizingMaskIntoConstraints="NO" id="Wza-mb-8iD">
+                            <rect key="frame" x="0.0" y="-426" width="271" height="426"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="426" id="81z-wv-Uwm"/>
+                        <constraint firstItem="Wza-mb-8iD" firstAttribute="leading" secondItem="NuO-tg-1Xs" secondAttribute="leading" id="K9Z-5s-eSF"/>
+                        <constraint firstAttribute="bottom" secondItem="Wza-mb-8iD" secondAttribute="bottom" id="Ndj-uv-opi"/>
+                        <constraint firstAttribute="trailing" secondItem="Wza-mb-8iD" secondAttribute="trailing" id="RTb-F6-Alz"/>
+                        <constraint firstAttribute="width" constant="271" id="Z1N-ig-1hg"/>
+                        <constraint firstItem="Wza-mb-8iD" firstAttribute="top" secondItem="NuO-tg-1Xs" secondAttribute="top" id="qwY-So-htB"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="Wza-mb-8iD"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="81z-wv-Uwm"/>
+                            <exclude reference="Z1N-ig-1hg"/>
+                            <exclude reference="K9Z-5s-eSF"/>
+                            <exclude reference="Ndj-uv-opi"/>
+                            <exclude reference="RTb-F6-Alz"/>
+                            <exclude reference="qwY-So-htB"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="subviews">
+                            <include reference="Wza-mb-8iD"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="81z-wv-Uwm"/>
+                            <include reference="Z1N-ig-1hg"/>
+                            <include reference="K9Z-5s-eSF"/>
+                            <include reference="Ndj-uv-opi"/>
+                            <include reference="RTb-F6-Alz"/>
+                            <include reference="qwY-So-htB"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.8681541982323232" green="0.8681541982323232" blue="0.8681541982323232" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="NuO-tg-1Xs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MTW-MH-KgN"/>
+                <constraint firstItem="NuO-tg-1Xs" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="RMj-zO-0GD"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="NuO-tg-1Xs"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="MTW-MH-KgN"/>
+                    <exclude reference="RMj-zO-0GD"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="NuO-tg-1Xs"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="MTW-MH-KgN"/>
+                    <include reference="RMj-zO-0GD"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_biankuang" width="271" height="426"/>
+    </resources>
+</document>

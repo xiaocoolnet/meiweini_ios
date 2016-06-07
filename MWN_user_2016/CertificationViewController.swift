@@ -77,7 +77,6 @@ class CertificationViewController: UIViewController,UITableViewDelegate,UITableV
                 nake.image = UIImage(named: "ic_duigou.png")
                 cell.addSubview(nake)
                
-                nake.hidden = true
             }else{
                 nakeOne.frame = CGRectMake(WIDTH-30, 16, 15, 12)
                 nakeOne.image = UIImage(named: "ic_duigou.png")
@@ -111,29 +110,35 @@ class CertificationViewController: UIViewController,UITableViewDelegate,UITableV
             if indexPath.row == 0 {
                 count = 6
                 massArr = ["工商注册号","公司名称","营业范围","营业地址","营业执照","店铺图片"]
-                let indexSet = NSIndexSet(index: 1)
-                businessTable.reloadSections(indexSet, withRowAnimation: .Automatic)
                 cou = 0
-                let inSet = NSIndexSet(index: 2)
-                businessTable.reloadSections(inSet, withRowAnimation: .Automatic)
-                headArr = ["营业身份","营业信息","个人信息"]
+                headArr = ["营业身份","营业信息",""]
                 nake.hidden = false
                 nakeOne.hidden = true
-                
+                tableView.reloadData()
             }else{
                 count = 1
                 massArr = ["营业范围"]
-                let indexSet = NSIndexSet(index: 1)
-                businessTable.reloadSections(indexSet, withRowAnimation: .Automatic)
                 cou = 3
-                let inSet = NSIndexSet(index: 2)
-                businessTable.reloadSections(inSet, withRowAnimation: .Automatic)
-                headArr = ["营业身份","营业信息",""]
-                nakeOne.hidden = false
+                headArr = ["营业身份","营业信息","个人信息"]
                 nake.hidden = true
+                nakeOne.hidden = false
+                tableView.reloadData()
             }
         }
-        
+        if indexPath.section == 1 {
+            if indexPath.row == 5 {
+                let photo = ShopPhotosViewController()
+                self.navigationController?.pushViewController(photo, animated: true)
+                
+            }
+        }
+        if indexPath.section == 2 {
+            if indexPath.row == 2 {
+                let Card = IDcardViewController()
+                self.navigationController?.pushViewController(Card, animated: true)
+                
+            }
+        }
         
     }
     override func didReceiveMemoryWarning() {

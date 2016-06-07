@@ -19,6 +19,7 @@ class MineConcernViewController: UIViewController,UITableViewDelegate,UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.automaticallyAdjustsScrollViewInsets = false
 
         // Do any additional setup after loading the view.
         self.title = "我的关注"

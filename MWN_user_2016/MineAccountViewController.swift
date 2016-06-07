@@ -21,6 +21,7 @@ class MineAccountViewController: UIViewController,UITableViewDelegate,UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.automaticallyAdjustsScrollViewInsets = false
 
         self.title = "我的账户"
         self.view.backgroundColor = RGREY

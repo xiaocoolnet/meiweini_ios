@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConcernViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ConcernViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UMSocialUIDelegate {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     let busReuseIdentifier = "businessCell"
@@ -185,7 +185,18 @@ class ConcernViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     func shareTheBusiness() {
         print("分享")
+        UMSocialSnsService.presentSnsIconSheetView(self, appKey:"57468e9267e58ebf5e0029a3", shareText:"很好玩的小游戏,小时都玩过吧!https://github.com/c-shen", shareImage: UIImage(named:"icon.png"), shareToSnsNames: [UMShareToSina,UMShareToTencent,UMShareToWechatSession,UMShareToQzone,UMShareToQQ,UMShareToRenren], delegate: self)
+        //        UMSocialConfig.setSupportedInterfaceOrientations(.Landscape)
         
+        //        形参名含义
+        //        controller分享列表页面所在的UIViewController对象
+        //        appKey友盟appKey，如果你在其他地方用UMSocialData设置了appKey，这里也可以传nil
+        //        shareText分享编辑页面的内嵌文字
+        //        shareImage分享编辑页面的内嵌图片，用户可以在编辑页面中删除。如果你不需要分享图片，可以传入nil
+        //        shareToSnsNames定义列表出现的微博平台字符串构成的数组，字符变量名为UMShareToSina、UMShareToTencent、UMShareToWechatSession、UMShareToWechatTimeline、UMShareToQzone、UMShareToQQ、UMShareToRenren、UMShareToDouban、UMShareToEmail、UMShareToSms、UMShareToFacebook、UMShareToTwitter，分别代表新浪微博、腾讯微博、微信好友、微信朋友圈、QQ空间、手机QQ、人人网、豆瓣、电子邮箱、短信、Facebook、Twitter
+        //        delegate实现分享状态回调方法的对象，回调方法的实现可以参见分享详细说明的回调方法部分。如果你不需要回调的话，可以设为nil
+        //        http://my.oschina.net/u/2475542/blog/511749
+
         
     }
     func zanTheBusiness() {

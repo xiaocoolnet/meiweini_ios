@@ -20,7 +20,8 @@ class MineMoneyViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.edgesForExtendedLayout = .None
+
         self.view.backgroundColor = RGREY
         
         self.title = "我的钱柜"

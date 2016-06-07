@@ -127,16 +127,14 @@ class BeautyViewController: UIViewController {
         
         print("列表")
         if hidden == false {
-            UIView.beginAnimations(nil, context: nil)
-            UIView.setAnimationDuration(0.5)
-            listView.frame = CGRectMake(WIDTH-150, 74, 120, 160)
-            UIView.commitAnimations()
+            UIView.animateWithDuration(0.5, animations: { 
+                self.listView.frame = CGRectMake(WIDTH-150, 74, 120, 160)
+            })
             hidden = true
         }else{
-            UIView.beginAnimations(nil, context: nil)
-            UIView.setAnimationDuration(0.5)
-            listView.frame = CGRectMake(WIDTH-150, -200, 120, 160)
-            UIView.commitAnimations()
+            UIView.animateWithDuration(0.5, animations: { 
+                self.listView.frame = CGRectMake(WIDTH-150, -200, 120, 160)
+            })
             hidden = false
         }
 
