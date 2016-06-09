@@ -24,7 +24,7 @@ class VideoViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         self.automaticallyAdjustsScrollViewInsets = false
         self.tabBarController?.tabBar.hidden = true
-        self.title = "视频"
+        
         self.view.backgroundColor = RGREY
         
         

@@ -87,19 +87,7 @@ class BusViewController: UIViewController {
         
     }
     @IBAction func goBack(sender: AnyObject) {
-        
-        let alertController = UIAlertController(title: NSLocalizedString("", comment: "Warn"), message: NSLocalizedString("确认注销？", comment: "empty message"), preferredStyle: .Alert)
-        let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
-        let doneAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
-            
-            let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-            let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView") as! UINavigationController
-            self.presentViewController(vc, animated: true, completion: nil)
-        }
-        alertController.addAction(doneAction)
-        alertController.addAction(cancelAction)
-        self.presentViewController(alertController, animated: true, completion: nil)
-        
+        self.navigationController?.popViewControllerAnimated(true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -85,6 +85,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
                     hud.labelText = "登录成功"
                     hud.removeFromSuperViewOnHide = true
                     hud.hide(true, afterDelay: 1)
+//                    
                     let userid = NSUserDefaults.standardUserDefaults()
                     userid.setValue(status.data?.id, forKey: "userid")
                     
@@ -93,6 +94,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
                     let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
                     let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainView")
                     self.presentViewController(vc, animated: true, completion: nil)
+                    
                 }
             }
         }
@@ -165,16 +167,29 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBAction func weixinLogin(sender: AnyObject) {
         print("微信登录")
         
+        let snsPlatform: UMSocialSnsPlatform = UMSocialSnsPlatformManager.getSocialPlatformWithName(UMShareToWechatSession)
+        
+        snsPlatform.loginClickHandler(self, UMSocialControllerService.defaultControllerService(), true, {response in
+            
+            if response.responseCode == UMSResponseCodeSuccess {
+                
+                let snsAccount:UMSocialAccountEntity = UMSocialAccountManager.socialAccountDictionary()[UMShareToWechatSession] as! UMSocialAccountEntity
+                
+                print("username is \(snsAccount.userName), uid is \(snsAccount.usid), token is \(snsAccount.accessToken) url is \(snsAccount.iconURL)")
+                
+                //               登录成功后跳转
+                let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainView")
+                self.presentViewController(vc, animated: true, completion: nil)
+            }
+        })
+        
+        //获取accestoken以及新浪用户信息，得到的数据在回调Block对象形参respone的data属性
+        UMSocialDataService.defaultDataService().requestSnsInformation(UMShareToWechatSession) { (response) -> Void in
+            print("------\(response.data)")
+        }
     }
-//    @IBAction func businessGoTo(sender: AnyObject) {
-//        print("商家")
-//        let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-//        let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Business")
-//        self.presentViewController(vc, animated: true, completion: nil)
-//        
-//        
-//    }
-    
+       
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         print("触摸")
         phoneNum.resignFirstResponder()

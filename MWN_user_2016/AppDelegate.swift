@@ -33,12 +33,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), forBarMetrics: UIBarMetrics.Default)
         
+//        let userid = NSUserDefaults.standardUserDefaults()
+//        userid.removeObjectForKey("userid")
+//        
         // 设置Appkey
         UMSocialData.setAppKey("57468e9267e58ebf5e0029a3")
         
+//        新浪微博登录
         //打开新浪微博的SSO开关，设置新浪微博回调地址，这里必须要和你在新浪微博后台设置的回调地址一致。若在新浪后台设置我们的回调地址，“http://sns.whalecloud.com/sina2/callback”，这里可以传nil
         UMSocialSinaSSOHandler.openNewSinaSSOWithAppKey("3982229382", secret: "cec4763673b38b42269c5ad1c80747e2", redirectURL: nil)
 //    http://weibo.com/u/3230871010/home?wvr=5
+        
+//        微信登录
+        UMSocialWechatHandler.setWXAppId("wxb502f298cf368609", appSecret: "622dd1095d76d3d8444ae8f8bba7a0f7", url: "http://www.umeng.com/social")
         
 //        self.loginCheck()
         
@@ -85,7 +92,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        let result = UMSocialSnsService.handleOpenURL(url)
+        if result == false {
+            
+        }
+        return result
+        
+    }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

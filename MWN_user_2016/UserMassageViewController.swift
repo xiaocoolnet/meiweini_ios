@@ -26,6 +26,8 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate,UIImagePic
     var phoneNum = UITextField()
     var clean = UIButton()
     
+    var myActionSheet:UIAlertController?
+    
     let user = NSUserDefaults.standardUserDefaults()
     
     override func viewWillAppear(animated: Bool) {
@@ -51,6 +53,27 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate,UIImagePic
         userImage.frame = CGRectMake(WIDTH/2-55, 50, 110, 110)
         userImage.layer.cornerRadius = 55
         userImage.clipsToBounds = true
+        
+//        修改头像
+        myActionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        myActionSheet?.addAction(UIAlertAction(title: "拍照", style: .Default, handler: {[unowned self] (UIAlertAction) in
+            dispatch_async(dispatch_get_main_queue(), {
+                self.takePhoto()
+            })
+            }))
+        if TCUserInfo.currentInfo.photo != "" {
+            let imageUrlStr = picUrl + TCUserInfo.currentInfo.photo
+            let url = NSURL(string: imageUrlStr)
+            userImage.sd_setImageWithURL(url, forState: .Normal)
+        }
+        
+        myActionSheet?.addAction(UIAlertAction(title: "从相册获取", style: .Default, handler: { [unowned self] (UIAlertAction) in
+            dispatch_async(dispatch_get_main_queue(), {
+                self.changePicture()
+            })
+            }))
+        myActionSheet?.addAction(UIAlertAction(title: "取消", style: .Cancel, handler:nil))
+
 //        userImage.setImage(UIImage(named: "kb3.png"), forState: .Normal)
         userImage.addTarget(self, action: #selector(UserMassageViewController.addPicture), forControlEvents: .TouchUpInside)
         
@@ -120,6 +143,66 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate,UIImagePic
         
 
     }
+    func addPicture() {
+        print("上传图片")
+        presentViewController(myActionSheet!, animated: true, completion:nil)
+    }
+    func takePhoto(){
+        let sourceType = UIImagePickerControllerSourceType.Camera
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.allowsEditing = true
+            picker.sourceType = sourceType
+            self.presentViewController(picker, animated: true, completion: nil)
+        }else{
+            print("无法打开相机")
+        }
+        
+    }
+//    func LocalPhoto(){
+//        let picker = UIImagePickerController()
+//        picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+//        picker.delegate = self
+//        picker.allowsEditing = true
+//        presentViewController(picker, animated: true, completion: nil)
+//    }
+//    // MARK: ------imagepickerDelegate-------
+//    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+//        let type = info[UIImagePickerControllerMediaType] as! String
+//        if type != "public.image" {
+//            return
+//        }
+//        //裁剪后图片
+//        let image = info[UIImagePickerControllerEditedImage] as! UIImage
+//        userImage.setImage(image, forState: .Normal)
+//        let data = UIImageJPEGRepresentation(image, 0.1)!
+//        let dateFormatter = NSDateFormatter()
+//        dateFormatter.dateFormat = "yyyyMMddHHmmss"
+//        let dateStr = dateFormatter.stringFromDate(NSDate())
+//        let imageName = "avatar" + dateStr + TCUserInfo.currentInfo.id
+//        ConnectModel.uploadWithImageName(imageName, imageData: data, URL: "uploadavatar") { [unowned self] (data) in
+//            dispatch_async(dispatch_get_main_queue(), {
+//                let result = Http(JSONDecoder(data))
+//                if result.status != nil {
+//                    if result.status! == "success"{
+//                        let imageName = result.data?.string!
+//                        TCUserInfo.currentInfo.photo = imageName!
+//                    }else{
+//                        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+//                        hud.mode = MBProgressHUDMode.Text
+//                        hud.labelText = "图像上传失败"
+//                        hud.margin = 10.0
+//                        hud.removeFromSuperViewOnHide = true
+//                        hud.hide(true, afterDelay: 1)
+//
+//                    }
+//                }
+//            })
+//        }
+//        
+//        picker.dismissViewControllerAnimated(true, completion: nil)
+//    }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         print("触摸")
@@ -133,7 +216,7 @@ class UserMassageViewController: UIViewController,UITextFieldDelegate,UIImagePic
     }
 
     //    添加图片
-    func addPicture(){
+    func changePicture(){
          print("修改头像")
         let picker = UIImagePickerController()
         picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary

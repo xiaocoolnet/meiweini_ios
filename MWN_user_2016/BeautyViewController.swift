@@ -9,7 +9,8 @@
 import UIKit
 import PagingMenuController
 
-class BeautyViewController: UIViewController {
+
+class BeautyViewController: UIViewController,PagingMenuControllerDelegate {
 
     let oneView = BeautyPicViewController()
     let twoView = BeautyVidViewController()
@@ -30,6 +31,7 @@ class BeautyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BeautyViewController.gameOver(_:)), name: "gameOverNotification", object: nil)
         
         self.view.backgroundColor = RGREY
         
@@ -50,12 +52,16 @@ class BeautyViewController: UIViewController {
         addChildViewController(pagingMenuController)
         view.addSubview(pagingMenuController.view)
         pagingMenuController.didMoveToParentViewController(self)
+        pagingMenuController.delegate = self
         
         
         self.listViewGo()
         // Do any additional setup after loading the view.
     }
-    
+    func gameOver(title:NSNotification)
+    {
+        listView.frame = CGRectMake(WIDTH-150, -200, 120, 160)
+    }
     
     //小视图中的内容和方法
     func listViewGo() {
@@ -86,7 +92,11 @@ class BeautyViewController: UIViewController {
         self.navigationController?.view.addSubview(listView)
         
     }
-    
+    func willMoveToPageMenuController(menuController: UIViewController, previousMenuController: UIViewController) {
+        UIView.animateWithDuration(0.2) { 
+            self.listView.frame = CGRectMake(WIDTH-150, -200, 120, 160)
+        }
+    }
     func listClick(btn:UIButton) {
         print(btn.tag)
         switch btn.tag {

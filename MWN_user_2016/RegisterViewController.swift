@@ -22,23 +22,17 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var achieve: UIButton!
     @IBOutlet weak var autoLine: NSLayoutConstraint!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var registerBus: UIButton!
+    var tagType = Int()
+    
     
     var timeNamal:NSTimer!
     var timeNow:NSTimer!
     var count:Int = 60
-//    var alerView0:UIAlertView!
-//    var alerView1:UIAlertView!
-//    var alerView2:UIAlertView!
-//    var alerView3:UIAlertView!
-//    var alerView4:UIAlertView!
-    
     var baomi = Bool()
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.hidden=true
         timeLabel.hidden = true
-        registerBus.hidden = false
     }
     
     override func viewDidLoad() {
@@ -47,7 +41,7 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
         // Do any additional setup after loading the view.
         
         baomi = true
-        
+        tagType = 1
         phoneNum.delegate = self
         phoneTrades.delegate = self
         password.delegate = self
@@ -68,16 +62,14 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
         print("用户")
         userBtn.setBackgroundImage(UIImage(named: "yonghu_normal.png"), forState: .Normal)
         tradesman.setBackgroundImage(UIImage(named: "shouyiren_dissable.png"), forState: .Normal)
-        registerBus.hidden = true
-        registerBtn.hidden = false
+        tagType = 1
     }
     
     @IBAction func tradesmanMassage(sender: AnyObject) {
         print("手艺人")
         tradesman.setBackgroundImage(UIImage(named: "shouyiren_selected.png"), forState: .Normal)
         userBtn.setBackgroundImage(UIImage(named: "yonghu_dissable.png"), forState: .Normal)
-        registerBus.hidden = false
-        registerBtn.hidden = true
+        tagType = 2
     }
     
     override func didReceiveMemoryWarning() {
@@ -126,14 +118,9 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
-    @IBAction func registerBusiness(sender: AnyObject) {
-        print("注册商户")
-        
-        
-        
-    }
+   
     @IBAction func registerUser(sender: AnyObject) {
-        
+        print(tagType)
         print("注册")
         if PandKong()==true{
             RegisterYanZheng()
@@ -146,6 +133,7 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
             "phone":phoneNum.text!,
             "code":phoneTrades.text!,
             "password":password.text!,
+            "usertype":tagType,
             "devicestate": 1
         ]
         print(url)
@@ -169,7 +157,11 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
                 if(status.status == "success"){
                     let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
                     hud.mode = MBProgressHUDMode.Text;
-                    hud.labelText = "注册成功"
+                    if self.tagType == 1 {
+                        hud.labelText = "用户注册成功"
+                    }else{
+                        hud.labelText = "商户注册成功"
+                    }
                     hud.margin = 10.0
                     hud.removeFromSuperViewOnHide = true
                     hud.hide(true, afterDelay: 1)
@@ -249,22 +241,22 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
                 self.timeDow()
             }
         }
-        if alertView.tag == 1
-        {}
-        if alertView.tag == 2
-        {}
+        
     }
-    
+//   验证码
     func senderMessage()
     {
+        print("======获取验证码")
         let url = mwnUrl+"SendMobileCode"
         let param = [
             "phone":phoneNum.text!,
             ]
         Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
             if(error != nil){
+                print("失败")
             }
             else{
+                print("成功")
             }
         }
     }

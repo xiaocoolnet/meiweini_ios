@@ -67,6 +67,8 @@ class BeautyVidViewController: UIViewController,UITableViewDelegate,UITableViewD
         print(indexPath.row)
         let video = VideoViewController()
         self.navigationController?.pushViewController(video, animated: true)
+        video.title = "视频"
+    NSNotificationCenter.defaultCenter().postNotificationName("gameOverNotification", object: title)
         
         
     }

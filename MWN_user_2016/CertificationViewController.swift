@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CertificationViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class CertificationViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     var businessTable = UITableView()
     var headArr:[String] = ["营业身份","营业信息","个人信息"]
@@ -35,6 +35,7 @@ class CertificationViewController: UIViewController,UITableViewDelegate,UITableV
         businessTable.dataSource = self
         businessTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(businessTable)
+        businessTable.separatorStyle = .None
         count = 1
         cou = 3
         
@@ -70,6 +71,10 @@ class CertificationViewController: UIViewController,UITableViewDelegate,UITableV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         cell.selectionStyle = .None
+        let line = UILabel(frame: CGRectMake(10, 43.5, WIDTH-10, 0.5))
+        line.backgroundColor = GREY
+        cell.addSubview(line)
+        
         if indexPath.section == 0 {
             cell.textLabel?.text = styleArr[indexPath.row]
             if indexPath.row == 0 {
@@ -81,6 +86,7 @@ class CertificationViewController: UIViewController,UITableViewDelegate,UITableV
                 nakeOne.frame = CGRectMake(WIDTH-30, 16, 15, 12)
                 nakeOne.image = UIImage(named: "ic_duigou.png")
                 cell.addSubview(nakeOne)
+                line.removeFromSuperview()
             }
             
         }
@@ -90,12 +96,19 @@ class CertificationViewController: UIViewController,UITableViewDelegate,UITableV
             }else{
                 cell.textLabel?.text = massArr[indexPath.row]
             }
+            if indexPath.row == count-1 {
+                line.removeFromSuperview()
+            }
+            if indexPath.row >= 3 {
+                cell.accessoryType = .DisclosureIndicator
+            }
         }
         if indexPath.section == 2 {
             if cou == 3 {
                 cell.textLabel?.text = personArr[indexPath.row]
                 if indexPath.row == 2 {
                     cell.accessoryType = .DisclosureIndicator
+                    line.removeFromSuperview()
                 }
             }
         }
@@ -126,6 +139,30 @@ class CertificationViewController: UIViewController,UITableViewDelegate,UITableV
             }
         }
         if indexPath.section == 1 {
+            if indexPath.row == 4 {
+//                调用相机
+                if UIImagePickerController.isSourceTypeAvailable(.Camera){
+                    //创建图片控制器
+                    let picker = UIImagePickerController()
+                    //设置代理
+                    picker.delegate = self
+                    //设置来源
+                    picker.sourceType = UIImagePickerControllerSourceType.Camera
+                    //允许编辑
+                    picker.allowsEditing = true
+                    //打开相机
+                    self.presentViewController(picker, animated: true, completion: { () -> Void in
+                        //如果有前置摄像头则调用前置摄像头
+//                        if UIImagePickerController.isCameraDeviceAvailable(UIImagePickerControllerCameraDevice.Front){
+//                            picker.cameraDevice = UIImagePickerControllerCameraDevice.Front
+//                        }
+                        //开启闪光灯
+                        picker.cameraFlashMode = UIImagePickerControllerCameraFlashMode.On
+                    })
+                }else{
+                    print("找不到相机")
+                }
+            }
             if indexPath.row == 5 {
                 let photo = ShopPhotosViewController()
                 self.navigationController?.pushViewController(photo, animated: true)
@@ -134,8 +171,29 @@ class CertificationViewController: UIViewController,UITableViewDelegate,UITableV
         }
         if indexPath.section == 2 {
             if indexPath.row == 2 {
-                let Card = IDcardViewController()
-                self.navigationController?.pushViewController(Card, animated: true)
+//                调用相机
+                if UIImagePickerController.isSourceTypeAvailable(.Camera){
+                    //创建图片控制器
+                    let picker = UIImagePickerController()
+                    //设置代理
+                    picker.delegate = self
+                    //设置来源
+                    picker.sourceType = UIImagePickerControllerSourceType.Camera
+                    //允许编辑
+                    picker.allowsEditing = true
+                    //打开相机
+                    self.presentViewController(picker, animated: true, completion: { () -> Void in
+                        //如果有前置摄像头则调用前置摄像头
+                        //                        if UIImagePickerController.isCameraDeviceAvailable(UIImagePickerControllerCameraDevice.Front){
+                        //                            picker.cameraDevice = UIImagePickerControllerCameraDevice.Front
+                        //                        }
+                        //开启闪光灯
+                        picker.cameraFlashMode = UIImagePickerControllerCameraFlashMode.On
+                    })
+                }else{
+                    print("找不到相机")
+                }
+
                 
             }
         }

@@ -185,7 +185,30 @@ class ConcernViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     func shareTheBusiness() {
         print("分享")
-        UMSocialSnsService.presentSnsIconSheetView(self, appKey:"57468e9267e58ebf5e0029a3", shareText:"很好玩的小游戏,小时都玩过吧!https://github.com/c-shen", shareImage: UIImage(named:"icon.png"), shareToSnsNames: [UMShareToSina,UMShareToTencent,UMShareToWechatSession,UMShareToQzone,UMShareToQQ,UMShareToRenren], delegate: self)
+//        微信
+        //        当分享消息类型为图文时，点击分享内容会跳转到预设的链接
+        UMSocialData.defaultData().extConfig.wechatSessionData.url = "http://baidu.com"
+        //        如果是朋友圈，则替换平台参数名即可
+        UMSocialData.defaultData().extConfig.wechatTimelineData.url = "http://baidu.com"
+        //        设置微信好友title方法为
+        UMSocialData.defaultData().extConfig.wechatSessionData.title = "微信好友title"
+        //        设置微信朋友圈title方法替换平台参数名即可
+        UMSocialData.defaultData().extConfig.wechatTimelineData.title = "微信朋友圈title"
+        //        纯图片分享类型方法
+        UMSocialData.defaultData().extConfig.wxMessageType = UMSocialWXMessageTypeImage
+        //        纯文字分享类型方法
+        UMSocialData.defaultData().extConfig.wxMessageType = UMSocialWXMessageTypeText
+        //        应用分享类型方法
+        UMSocialData.defaultData().extConfig.wxMessageType = UMSocialWXMessageTypeApp
+        
+        
+        
+        UMSocialSnsService.presentSnsIconSheetView(self, appKey: "57468e9267e58ebf5e0029a3", shareText: "也许每个人出生的时候都以为这世界都是为他一个人而存在的,当他发现自己错的时候,他便开始长大.", shareImage: UIImage(named: "1.png"), shareToSnsNames: [UMShareToSina,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToQQ,UMShareToQzone,UMShareToTencent,UMShareToRenren,UMShareToDouban,UMShareToEmail,UMShareToSms,UMShareToFacebook,UMShareToYXSession,UMShareToYXTimeline], delegate: self)
+        
+        
+        
+        
+//        UMSocialSnsService.presentSnsIconSheetView(self, appKey:"57468e9267e58ebf5e0029a3", shareText:"很好玩的小游戏,小时都玩过吧!https://github.com/c-shen", shareImage: UIImage(named:"icon.png"), shareToSnsNames: [UMShareToSina,UMShareToTencent,UMShareToWechatSession,UMShareToQzone,UMShareToQQ,UMShareToRenren], delegate: self)
         //        UMSocialConfig.setSupportedInterfaceOrientations(.Landscape)
         
         //        形参名含义
@@ -217,8 +240,10 @@ class ConcernViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print(indexPath.row)
+        listView.frame = CGRectMake(WIDTH-150, -200, 120, 160)
         let next = NextViewViewController()
         self.navigationController?.pushViewController(next, animated: true)
+        
         
     }
     

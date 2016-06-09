@@ -27,8 +27,8 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var redBtn = UIButton()
     
     var myTableView = UITableView()
-    let titArr:[String] = ["我的购买","我的分销","我的账户","我的地址"]
-    let picArr:[String] = ["ic_goumai.png","ic_fenxiao.png","ic_wodeqiangui.png","ic_dizhi.png"]
+    let titArr:[String] = ["我的购买","我的分销","我的账户","我的地址","我的店铺"]
+    let picArr:[String] = ["ic_goumai.png","ic_fenxiao.png","Wallet.png","ic_dizhi.png","ic_dianpu.png"]
     
     
 //    获取个人信息
@@ -38,37 +38,42 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.tabBarController?.tabBar.hidden = false
         let userid = NSUserDefaults.standardUserDefaults()
         let uid = userid.stringForKey("userid")
-        print("---------\(uid)")
-        let url = mwnUrl+"getuserinfo"
-        let param = [
-            "userid":uid!
-        ]
-        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
-            if(error != nil){
-            }
-            else{
-                
-                let status = LoginModel(JSONDecoder(json!))
-                print("状态是")
-                print(status.status)
-                if(status.status == "error"){
-                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-                    hud.mode = MBProgressHUDMode.Text;
-                    hud.labelText = status.errorData
-                    hud.margin = 10.0
-                    hud.removeFromSuperViewOnHide = true
-                    hud.hide(true, afterDelay: 1)
+        if (uid == nil) {
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView") as! UINavigationController
+            self.presentViewController(vc, animated: true, completion: nil)
+        }else{
+            print("---------\(uid)")
+            let url = mwnUrl+"getuserinfo"
+            let param = [
+                "userid":uid!
+            ]
+            Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+                if(error != nil){
                 }
-                if(status.status == "success"){
-                    print("Success")
-                    let username = NSUserDefaults.standardUserDefaults()
-                    username.setValue(status.data?.name, forKey: "username")
-                    let phoneNumber = NSUserDefaults.standardUserDefaults()
-                    phoneNumber.setValue(status.data?.phoneNumber, forKey: "phoneNumber")
+                else{
+                    
+                    let status = LoginModel(JSONDecoder(json!))
+                    print("状态是")
+                    print(status.status)
+                    if(status.status == "error"){
+                        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                        hud.mode = MBProgressHUDMode.Text;
+                        hud.labelText = status.errorData
+                        hud.margin = 10.0
+                        hud.removeFromSuperViewOnHide = true
+                        hud.hide(true, afterDelay: 1)
+                    }
+                    if(status.status == "success"){
+                        print("Success")
+                        let username = NSUserDefaults.standardUserDefaults()
+                        username.setValue(status.data?.name, forKey: "username")
+                        let phoneNumber = NSUserDefaults.standardUserDefaults()
+                        phoneNumber.setValue(status.data?.phoneNumber, forKey: "phoneNumber")
+                    }
                 }
             }
         }
-
     }
     
     override func viewDidLoad() {
@@ -162,13 +167,9 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.navigationController?.pushViewController(view, animated: true)
         
     }
-
-    //    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    //        return 6
-    //    }
-    //
+//  tableView代理方法
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return titArr.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -195,7 +196,7 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             cell.titLab.text = titArr[2]
             
             return cell
-        }else{
+        }else if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCellWithIdentifier("two")as!MineTwoTableViewCell
             cell.selectionStyle = .None
             cell.titImage.image = UIImage(named: picArr[3])
@@ -203,6 +204,11 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             cell.address.text = "山东省烟台市"
             return cell
 
+        }else{
+            cell.selectionStyle = .None
+            cell.titImage.image = UIImage(named: picArr[4])
+            cell.titLab.text = titArr[4]
+            return cell
         }
         
     }
@@ -224,10 +230,13 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             let account = MineAccountViewController()
             self.navigationController?.pushViewController(account, animated: true)
             
-        }else{
+        }else if indexPath.row == 3 {
             let viewTwo = MineAddressViewController()
             self.navigationController?.pushViewController(viewTwo, animated: true)
-            
+        }else{
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Business")
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     override func didReceiveMemoryWarning() {
@@ -284,6 +293,8 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
             let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView") as! UINavigationController
             self.presentViewController(vc, animated: true, completion: nil)
+            let userid = NSUserDefaults.standardUserDefaults()
+            userid.removeObjectForKey("userid")
         }
         alertController.addAction(doneAction)
         alertController.addAction(cancelAction)

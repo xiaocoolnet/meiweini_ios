@@ -120,8 +120,6 @@
 		1837D0061D066B4500726990 /* AddressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837D0041D066B4500726990 /* AddressListViewController.swift */; };
 		1837D0071D066B4500726990 /* AddressListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1837D0051D066B4500726990 /* AddressListViewController.xib */; };
 		1837D0091D06C88000726990 /* ShopPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837D0081D06C88000726990 /* ShopPhotosViewController.swift */; };
-		1837D00C1D06D21800726990 /* IDcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837D00A1D06D21800726990 /* IDcardViewController.swift */; };
-		1837D00D1D06D21800726990 /* IDcardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1837D00B1D06D21800726990 /* IDcardViewController.xib */; };
 		183B95ED1CD1DD6200C74FC9 /* MineBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B95EC1CD1DD6200C74FC9 /* MineBusViewController.swift */; };
 		183B95EF1CD1DD7400C74FC9 /* MineLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B95EE1CD1DD7400C74FC9 /* MineLoadViewController.swift */; };
 		183B95F11CD1DD8000C74FC9 /* MineOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B95F01CD1DD8000C74FC9 /* MineOrderViewController.swift */; };
@@ -225,6 +223,14 @@
 		18A995D41CC9C0FF00C4ACC0 /* MineBuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A995D31CC9C0FF00C4ACC0 /* MineBuyViewController.swift */; };
 		18A995D61CC9C11F00C4ACC0 /* MineBusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A995D51CC9C11F00C4ACC0 /* MineBusinessViewController.swift */; };
 		18A995D81CC9C13000C4ACC0 /* MineAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A995D71CC9C13000C4ACC0 /* MineAddressViewController.swift */; };
+		18A9D9371D07B0B20073C69E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 188F57FA1CF6DC23002318A1 /* libiconv.tbd */; };
+		18A9D9391D07B0C80073C69E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A9D9381D07B0C80073C69E /* libsqlite3.tbd */; };
+		18A9D93B1D07B0E50073C69E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A9D93A1D07B0E50073C69E /* libz.tbd */; };
+		18A9D93D1D07B0FC0073C69E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A9D93C1D07B0FC0073C69E /* libstdc++.tbd */; };
+		18A9D9441D07B4240073C69E /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A9D93F1D07B4240073C69E /* libSocialWechat.a */; };
+		18A9D9451D07B4240073C69E /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A9D9401D07B4240073C69E /* libWeChatSDK.a */; };
+		18A9D94B1D08186D0073C69E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A9D94A1D08186D0073C69E /* AVFoundation.framework */; };
+		18A9D94D1D0818950073C69E /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A9D94C1D0818950073C69E /* AssetsLibrary.framework */; };
 		18AA058B1CC5037600BDCDF9 /* BeautyGrilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA058A1CC5037600BDCDF9 /* BeautyGrilViewController.swift */; };
 		18AA058E1CC504CE00BDCDF9 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA058D1CC504CE00BDCDF9 /* LocationViewController.swift */; };
 		18AA05911CC5052300BDCDF9 /* MassageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA05901CC5052300BDCDF9 /* MassageViewController.swift */; };
@@ -272,6 +278,7 @@
 		18FAAC571CE18C8B00D6CF73 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAAC561CE18C8B00D6CF73 /* DetailsViewController.swift */; };
 		18FAAC591CE18D8B00D6CF73 /* GetPresentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAAC581CE18D8B00D6CF73 /* GetPresentsViewController.swift */; };
 		18FAAC5B1CE18DA500D6CF73 /* GiftsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAAC5A1CE18DA500D6CF73 /* GiftsViewController.swift */; };
+		18FDBAB01D0965E800906C25 /* TCUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FDBAAF1D0965E800906C25 /* TCUserInfo.swift */; };
 		1FF7A3151CBF69800048638F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7A3141CBF69800048638F /* AppDelegate.swift */; };
 		1FF7A3171CBF69800048638F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7A3161CBF69800048638F /* ViewController.swift */; };
 		1FF7A31A1CBF69800048638F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF7A3181CBF69800048638F /* Main.storyboard */; };
@@ -421,8 +428,6 @@
 		1837D0041D066B4500726990 /* AddressListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressListViewController.swift; sourceTree = "<group>"; };
 		1837D0051D066B4500726990 /* AddressListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressListViewController.xib; sourceTree = "<group>"; };
 		1837D0081D06C88000726990 /* ShopPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopPhotosViewController.swift; sourceTree = "<group>"; };
-		1837D00A1D06D21800726990 /* IDcardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDcardViewController.swift; sourceTree = "<group>"; };
-		1837D00B1D06D21800726990 /* IDcardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDcardViewController.xib; sourceTree = "<group>"; };
 		183B95EC1CD1DD6200C74FC9 /* MineBusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineBusViewController.swift; sourceTree = "<group>"; };
 		183B95EE1CD1DD7400C74FC9 /* MineLoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineLoadViewController.swift; sourceTree = "<group>"; };
 		183B95F01CD1DD8000C74FC9 /* MineOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineOrderViewController.swift; sourceTree = "<group>"; };
@@ -568,6 +573,16 @@
 		18A995D31CC9C0FF00C4ACC0 /* MineBuyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineBuyViewController.swift; sourceTree = "<group>"; };
 		18A995D51CC9C11F00C4ACC0 /* MineBusinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineBusinessViewController.swift; sourceTree = "<group>"; };
 		18A995D71CC9C13000C4ACC0 /* MineAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineAddressViewController.swift; sourceTree = "<group>"; };
+		18A9D9381D07B0C80073C69E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		18A9D93A1D07B0E50073C69E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		18A9D93C1D07B0FC0073C69E /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		18A9D93F1D07B4240073C69E /* libSocialWechat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialWechat.a; sourceTree = "<group>"; };
+		18A9D9401D07B4240073C69E /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		18A9D9411D07B4240073C69E /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
+		18A9D9421D07B4240073C69E /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		18A9D9431D07B4240073C69E /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		18A9D94A1D08186D0073C69E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		18A9D94C1D0818950073C69E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		18AA058A1CC5037600BDCDF9 /* BeautyGrilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyGrilViewController.swift; sourceTree = "<group>"; };
 		18AA058D1CC504CE00BDCDF9 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		18AA05901CC5052300BDCDF9 /* MassageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassageViewController.swift; sourceTree = "<group>"; };
@@ -623,6 +638,7 @@
 		18FAAC561CE18C8B00D6CF73 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		18FAAC581CE18D8B00D6CF73 /* GetPresentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPresentsViewController.swift; sourceTree = "<group>"; };
 		18FAAC5A1CE18DA500D6CF73 /* GiftsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftsViewController.swift; sourceTree = "<group>"; };
+		18FDBAAF1D0965E800906C25 /* TCUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCUserInfo.swift; sourceTree = "<group>"; };
 		1FF7A3111CBF69800048638F /* MWN_user_2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MWN_user_2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF7A3141CBF69800048638F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FF7A3161CBF69800048638F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -646,8 +662,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A9D94D1D0818950073C69E /* AssetsLibrary.framework in Frameworks */,
+				18A9D94B1D08186D0073C69E /* AVFoundation.framework in Frameworks */,
+				18A9D93D1D07B0FC0073C69E /* libstdc++.tbd in Frameworks */,
+				18A9D93B1D07B0E50073C69E /* libz.tbd in Frameworks */,
+				18A9D9391D07B0C80073C69E /* libsqlite3.tbd in Frameworks */,
+				18A9D9371D07B0B20073C69E /* libiconv.tbd in Frameworks */,
 				188F580B1CF6E009002318A1 /* CoreGraphics.framework in Frameworks */,
 				188F58091CF6DFDC002318A1 /* libz.1.1.3.tbd in Frameworks */,
+				18A9D9441D07B4240073C69E /* libSocialWechat.a in Frameworks */,
 				188F58071CF6DFCD002318A1 /* libstdc++.6.0.9.tbd in Frameworks */,
 				188F58051CF6DFB9002318A1 /* libsqlite3.0.tbd in Frameworks */,
 				188F58031CF6DFA7002318A1 /* CoreTelephony.framework in Frameworks */,
@@ -655,6 +678,7 @@
 				188F57FF1CF6DF72002318A1 /* SystemConfiguration.framework in Frameworks */,
 				188F57FD1CF6DF64002318A1 /* libiconv.2.4.0.tbd in Frameworks */,
 				188F57F91CF6DC00002318A1 /* Security.framework in Frameworks */,
+				18A9D9451D07B4240073C69E /* libWeChatSDK.a in Frameworks */,
 				18BE789A1CD847A6000C7BF9 /* CoreLocation.framework in Frameworks */,
 				188F57F61CF6DB92002318A1 /* libWeiboSDK.a in Frameworks */,
 				18BE78981CD84794000C7BF9 /* MapKit.framework in Frameworks */,
@@ -996,6 +1020,7 @@
 		180767B11CBF79850062F4A5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18FDBAAF1D0965E800906C25 /* TCUserInfo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1141,8 +1166,6 @@
 				180767C91CBF7C3D0062F4A5 /* PasswordViewController.swift */,
 				18B807AD1CD1A33400CB5E0E /* CertificationViewController.swift */,
 				1837D0081D06C88000726990 /* ShopPhotosViewController.swift */,
-				1837D00A1D06D21800726990 /* IDcardViewController.swift */,
-				1837D00B1D06D21800726990 /* IDcardViewController.xib */,
 				183B95FA1CD2051C00C74FC9 /* PersonCertificationViewController.swift */,
 			);
 			name = Controller;
@@ -1436,6 +1459,18 @@
 			name = Live;
 			sourceTree = "<group>";
 		};
+		18A9D93E1D07B4240073C69E /* Wechat */ = {
+			isa = PBXGroup;
+			children = (
+				18A9D93F1D07B4240073C69E /* libSocialWechat.a */,
+				18A9D9401D07B4240073C69E /* libWeChatSDK.a */,
+				18A9D9411D07B4240073C69E /* UMSocialWechatHandler.h */,
+				18A9D9421D07B4240073C69E /* WXApi.h */,
+				18A9D9431D07B4240073C69E /* WXApiObject.h */,
+			);
+			path = Wechat;
+			sourceTree = "<group>";
+		};
 		18AA058C1CC504B600BDCDF9 /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -1620,6 +1655,7 @@
 				18BE789D1CD848B0000C7BF9 /* citydict.plist */,
 				1FF7A3201CBF69800048638F /* Info.plist */,
 				180767AF1CBF77F90062F4A5 /* MWN_user_2016-Bridging-Header.h */,
+				18A9D93E1D07B4240073C69E /* Wechat */,
 				188F57E51CF6DB92002318A1 /* SinaSSO */,
 				188F57BF1CF6DB83002318A1 /* UMSocial_Sdk_5.2.1 */,
 				180767CB1CBF89810062F4A5 /* Tool */,
@@ -1648,6 +1684,11 @@
 		6765084A1D0DD68C2FA8CFDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18A9D94C1D0818950073C69E /* AssetsLibrary.framework */,
+				18A9D94A1D08186D0073C69E /* AVFoundation.framework */,
+				18A9D93C1D07B0FC0073C69E /* libstdc++.tbd */,
+				18A9D93A1D07B0E50073C69E /* libz.tbd */,
+				18A9D9381D07B0C80073C69E /* libsqlite3.tbd */,
 				188F580A1CF6E009002318A1 /* CoreGraphics.framework */,
 				188F58081CF6DFDC002318A1 /* libz.1.1.3.tbd */,
 				188F58061CF6DFCD002318A1 /* libstdc++.6.0.9.tbd */,
@@ -1790,7 +1831,6 @@
 				188F57E21CF6DB83002318A1 /* UMSnsAccountViewController.xib in Resources */,
 				188F57DE1CF6DB83002318A1 /* UMSCommentInputControlleriPad.xib in Resources */,
 				188F57DA1CF6DB83002318A1 /* UMSocialLocalizable.strings in Resources */,
-				1837D00D1D06D21800726990 /* IDcardViewController.xib in Resources */,
 				188F57E41CF6DB83002318A1 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				1807679A1CBF76770062F4A5 /* pic.bundle in Resources */,
 				189DA6E71CCCBA0F0004B76D /* 3.plist in Resources */,
@@ -1890,7 +1930,6 @@
 				18501EA91CCDBBCE00B6A614 /* ServiceViewController.swift in Sources */,
 				18BE78BB1CD87927000C7BF9 /* PinyinHelper.m in Sources */,
 				18D262841CC0795A00485B13 /* PhoneVerifyViewController.swift in Sources */,
-				1837D00C1D06D21800726990 /* IDcardViewController.swift in Sources */,
 				1807676D1CBF76770062F4A5 /* Log.swift in Sources */,
 				1807677C1CBF76770062F4A5 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				1807679D1CBF76770062F4A5 /* PhotoBrowser+Indicator.swift in Sources */,
@@ -2029,6 +2068,7 @@
 				189DA6A51CCCA5970004B76D /* RANCollectionViewCell.swift in Sources */,
 				18A791821CDF2A390029B307 /* ProcessViewController.swift in Sources */,
 				1807677E1CBF76770062F4A5 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
+				18FDBAB01D0965E800906C25 /* TCUserInfo.swift in Sources */,
 				180767651CBF76770062F4A5 /* CryptoSwiftMD5.swift in Sources */,
 				18AED78D1CD0B841008764B5 /* MineAccountViewController.swift in Sources */,
 				189B726E1CE3185300713AFE /* BalanceOfPaymentViewController.swift in Sources */,
@@ -2278,6 +2318,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MWN_user_2016/UMSocial_Sdk_5.2.1",
 					"$(PROJECT_DIR)/MWN_user_2016/SinaSSO",
+					"$(PROJECT_DIR)/MWN_user_2016/Wechat",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -2339,6 +2380,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MWN_user_2016/UMSocial_Sdk_5.2.1",
 					"$(PROJECT_DIR)/MWN_user_2016/SinaSSO",
+					"$(PROJECT_DIR)/MWN_user_2016/Wechat",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (

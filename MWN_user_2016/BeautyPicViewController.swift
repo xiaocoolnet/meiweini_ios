@@ -120,10 +120,12 @@ extension BeautyPicViewController : UICollectionViewDataSource,UICollectionViewD
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print(indexPath.row)
+        
         let next = NextViewViewController()
         self.navigationController?.pushViewController(next, animated: true)
         next.title = "美图"
-       
+    NSNotificationCenter.defaultCenter().postNotificationName("gameOverNotification", object: title)
+        
         
     }
     

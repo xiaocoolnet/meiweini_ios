@@ -54,6 +54,8 @@ class BeautyLiveViewController: UIViewController,UITableViewDelegate,UITableView
         print(indexPath.row)
         let next = NextViewViewController()
         self.navigationController?.pushViewController(next, animated: true)
+        next.title = "直播"
+    NSNotificationCenter.defaultCenter().postNotificationName("gameOverNotification", object: title)
         
         
     }
