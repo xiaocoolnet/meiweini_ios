@@ -37,7 +37,7 @@ class BuyListTableViewCell: UITableViewCell {
         staly.textColor = UIColor(red: 1, green: 95/255.0, blue: 73/255.0, alpha: 1.0)
         staly.textAlignment = .Right
         busImage.frame = CGRectMake(10, 40, 60, 60)
-        busCommon.frame = CGRectMake(80, 40, WIDTH/3*2, 40)
+        busCommon.frame = CGRectMake(80, 40, WIDTH-140, 40)
         busCommon.font = UIFont.systemFontOfSize(14)
         busCommon.numberOfLines = 0
         dateLab.frame = CGRectMake(80, 85, 150, 15)

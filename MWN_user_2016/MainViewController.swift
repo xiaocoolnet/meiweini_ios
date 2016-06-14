@@ -8,12 +8,13 @@
 
 import UIKit
 
-class MainViewController: UIViewController,UIScrollViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class MainViewController: UIViewController,UIScrollViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,CityViewControllerDelegate {
     
 //集合视图
     private let reuseIdentifier = "cell"
     private var collectionView: UICollectionView?
     private var array: [Int] = []
+    var cityController:CityViewController!
     var picArr:[String] = ["kb1.png","kb2.png","kb3.png","kb4.png"]
 
     var titArr:[String] = ["养眼美女","视觉盛宴","火热直播","最新更新"]
@@ -26,7 +27,7 @@ class MainViewController: UIViewController,UIScrollViewDelegate,UICollectionView
     let sheying = UIButton()
     let meirong = UIButton()
     
-    @IBOutlet weak var leftItem: UIButton!
+    @IBOutlet weak var location: UIButton!
     @IBOutlet weak var rightItem: UIButton!
 //    @IBOutlet weak var mainScrollerView: UIScrollView!
     
@@ -299,13 +300,20 @@ class MainViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         
     }
     
-//    @IBAction func location(sender: AnyObject) {
-//        print("定位")
-//        let location = LocationViewController()
-//        self.navigationController?.pushViewController(location, animated: true)
-//        
-//        
-//    }
+    @IBAction func locationTheCity(sender: AnyObject) {
+        print("定位")
+        cityController = CityViewController(nibName: "CityViewController", bundle: nil)
+        cityController.delegate = self
+        self.navigationController?.pushViewController(cityController, animated: true)
+//        self.presentViewController(cityController, animated: true) { () -> Void in
+//            
+//        }
+    }
+    func selectCity(city: String) {
+        location.setTitle(city, forState: UIControlState.Normal)
+        location.sizeToFit()
+    }
+    
 //四组分类
     func beautyViewGo() {
         print("beauty")

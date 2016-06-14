@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    http://weibo.com/u/3230871010/home?wvr=5
         
 //        微信登录
-        UMSocialWechatHandler.setWXAppId("wxb502f298cf368609", appSecret: "622dd1095d76d3d8444ae8f8bba7a0f7", url: "http://www.umeng.com/social")
+        UMSocialWechatHandler.setWXAppId("wxf23f4ac82a5a53bf", appSecret: "fbcc07d7ed56e87ddd160dfe1de60e24", url: "http://www.umeng.com/social")
         
 //        self.loginCheck()
         

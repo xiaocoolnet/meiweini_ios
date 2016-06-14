@@ -22,8 +22,6 @@ class CityViewController: UIViewController,UISearchDisplayDelegate,UITableViewDe
     /** 回调接口*/
     var delegate:CityViewControllerDelegate?;
     
-    
-    
     //城市数据库
     var dict:NSMutableDictionary!;
     //所有城市名称
@@ -45,10 +43,6 @@ class CityViewController: UIViewController,UISearchDisplayDelegate,UITableViewDe
     //最近访问城市数据
     var dataHistoryCitys:SpecifyArray!;
     let keyHistory = "keyHistory";
-    
-    
-    
-    
 
     
     override func viewDidLoad() {
@@ -126,8 +120,9 @@ class CityViewController: UIViewController,UISearchDisplayDelegate,UITableViewDe
             dataHistoryCitys.addObject(city);
             NSUserDefaults.standardUserDefaults().setObject(dataHistoryCitys.getaArray(), forKey: keyHistory);
             self.delegate!.selectCity(city);
-            self.dismissViewControllerAnimated(true , completion: { () -> Void in
-            })
+            self.navigationController?.popViewControllerAnimated(true)
+//            self.dismissViewControllerAnimated(true , completion: { () -> Void in
+//            })
         }
         
     }
@@ -176,7 +171,7 @@ class CityViewController: UIViewController,UISearchDisplayDelegate,UITableViewDe
         return view;
     }
     
-    func tableView(tableView: UITableView,      section: Int) -> CGFloat {
+    func tableView(tableView: UITableView, section: Int) -> CGFloat {
         return 30;
     }
     
@@ -281,7 +276,7 @@ class CityViewController: UIViewController,UISearchDisplayDelegate,UITableViewDe
      搜索结束
     */
     internal func searchDisplayControllerWillEndSearch(controller: UISearchDisplayController){
-        self.layoutTopConstraint.constant = 65;
+        self.layoutTopConstraint.constant = 0;
     }
     
     //shouldReloadTableForSearchString

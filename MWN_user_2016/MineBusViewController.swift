@@ -14,6 +14,7 @@ class MineBusViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
+        self.tabBarController?.tabBar.hidden = true
     }
 
     override func viewDidLoad() {

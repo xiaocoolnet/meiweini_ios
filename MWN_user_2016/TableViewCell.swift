@@ -1,28 +1,27 @@
 //
 //  TableViewCell.swift
-//  MWN_user_2016
+//  CityListDemo
 //
-//  Created by apple on 16/5/3.
-//  Copyright © 2016年 xiaocool. All rights reserved.
+//  Created by ray on 15/11/24.
+//  Copyright © 2015年 ray. All rights reserved.
 //
 
 import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    @IBOutlet weak var cityName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
+    
     func setData(cityName:String){
-        self.textLabel!.text = cityName
+        self.cityName.text = cityName;
     }
-
-
+    
 }

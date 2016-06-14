@@ -36,6 +36,7 @@ class MineLoadViewController: UIViewController,UITextViewDelegate,UITextFieldDel
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
+        self.tabBarController?.tabBar.hidden = true
         update.enabled = false
         if(self.i>9){
             let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
@@ -53,13 +54,13 @@ class MineLoadViewController: UIViewController,UITextViewDelegate,UITextFieldDel
         
         self.view.backgroundColor = RGREY
         
-        let backLab = UILabel(frame: CGRectMake(0, 0, WIDTH, WIDTH*9/20))
+        let backLab = UILabel(frame: CGRectMake(0, 0, WIDTH, 210-WIDTH*20/375))
         backLab.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(backLab)
         
         self.pictureArray.addObject("上传")
         
-        self.contentTextView.frame = CGRectMake(8, 5, self.view.bounds.width - 16, 88)
+        self.contentTextView.frame = CGRectMake(10, 5, self.view.bounds.width - 20, 210-WIDTH*20/375-82)
         self.contentTextView.font = UIFont.systemFontOfSize(15)
         self.contentTextView.placeholder = "快来描述一下吧..."
         self.contentTextView.addMaxTextLengthWithMaxLength(200) { (contentTextView) -> Void in
@@ -71,6 +72,7 @@ class MineLoadViewController: UIViewController,UITextViewDelegate,UITextFieldDel
             hud.hide(true, afterDelay: 3)
         }
         
+        
 //        addPicture.frame = CGRectMake(8, WIDTH*9/20-74, 66, 66)
 //        addPicture.setBackgroundImage(UIImage(named: "上传"), forState: UIControlState.Normal)
 //        addPicture.layer.borderWidth = 1.0
@@ -81,12 +83,14 @@ class MineLoadViewController: UIViewController,UITextViewDelegate,UITextFieldDel
         contentTextView.delegate = self
         nameField.delegate = self
         muchField.delegate = self
+        nameField.tag = 1
+        muchField.tag = 2
         
         clear.onTintColor = COLOR
         
         flowLayout.scrollDirection = UICollectionViewScrollDirection.Vertical
         flowLayout.itemSize = CGSizeMake(66,66)
-        self.collectV = UICollectionView(frame: CGRectMake(8, WIDTH*9/20-74, UIScreen.mainScreen().bounds.width-30, 70), collectionViewLayout: flowLayout)
+        self.collectV = UICollectionView(frame: CGRectMake(10, 210-WIDTH*20/375-74, UIScreen.mainScreen().bounds.width-30, 70), collectionViewLayout: flowLayout)
         self.collectV?.registerClass(ImageCollectionViewCell.self, forCellWithReuseIdentifier: "PhotoCell")
         self.collectV?.delegate = self
         self.collectV?.dataSource = self
@@ -94,9 +98,36 @@ class MineLoadViewController: UIViewController,UITextViewDelegate,UITextFieldDel
         self.view.addSubview(self.contentTextView)
         self.view.addSubview(self.collectV!)
         self.view.addSubview(addPicture)
-
         
         // Do any additional setup after loading the view.
+    }
+
+    func textFieldDidBeginEditing(textField: UITextField) {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.keyBoardChangFrame(_:)), name: UIKeyboardWillChangeFrameNotification, object: nil)
+    }
+    func keyBoardChangFrame(info:NSNotification) {
+        let infoDic = info.userInfo
+        let keyBoardRect = infoDic!["UIKeyboardFrameEndUserInfoKey"]?.CGRectValue()
+        let keyBoardTranslate = CGFloat((keyBoardRect?.origin.y)!)
+        print(keyBoardRect?.origin.y)
+        print(HEIGHT)
+        if keyBoardRect?.origin.y == HEIGHT {
+            UIView.animateWithDuration((infoDic!["UIKeyboardAnimationCurveUserInfoKey"]?.doubleValue)!, delay: 0, options: .TransitionNone, animations: {
+                self.view.frame = CGRectMake(0, 64, WIDTH, HEIGHT-64)
+                }, completion: nil)
+        }else{
+            if keyBoardRect?.origin.y <= 450 {
+                UIView.animateWithDuration((infoDic!["UIKeyboardAnimationCurveUserInfoKey"]?.doubleValue)!, delay: 0, options: .TransitionNone, animations: {
+                    self.view.frame = CGRectMake(0, -(390-keyBoardTranslate), WIDTH, HEIGHT-64)
+                    
+                    }, completion: nil)
+                contentTextView.addTextViewBeginEvent { (contentTextView) in
+                    UIView.animateWithDuration(0.1, animations: {
+                        self.view.frame = CGRectMake(0, 64, WIDTH, HEIGHT-64)
+                    })
+                }
+            }
+        }
     }
 
     func addPictureTheView() {
@@ -205,6 +236,7 @@ class MineLoadViewController: UIViewController,UITextViewDelegate,UITextFieldDel
     
     @IBAction func upDate(sender: AnyObject) {
         print("上传")
+
         contentTextView.resignFirstResponder()
         nameField.resignFirstResponder()
         muchField.resignFirstResponder()

@@ -13,6 +13,7 @@ class BusViewController: UIViewController {
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var star: UILabel!
     let dataArr:[String] = ["今日成交00.00元","今日访客888","今日订单888"]
+    @IBOutlet weak var backBtn: UIButton!
     
     @IBOutlet weak var titleView: UIView!
     let setBtn = UIButton()
@@ -20,11 +21,14 @@ class BusViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         titleView.backgroundColor = COLOR
+        self.tabBarController?.tabBar.hidden = false
         self.navigationController?.navigationBarHidden = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        backBtn.setBackgroundImage(UIImage(named: "ic_arrow-left"), forState: .Normal)
 
         for i in 0...2 {
             let backLab = UILabel(frame: CGRectMake(((WIDTH+2)/3+1)*CGFloat(i), 196, (WIDTH+1)/3, 44))

@@ -31,27 +31,28 @@ class ChildsTableViewCell: UITableViewCell {
             view.removeFromSuperview()
         }
         
-        titImage.frame = CGRectMake(10, 5, 110, 110)
+        titImage.frame = CGRectMake(WIDTH*10/375, WIDTH*5/375, WIDTH*110/375, WIDTH*110/375)
         titImage.backgroundColor = rand_color()
         
         
-        titleName.frame = CGRectMake(125, 5, 100, 25)
-        contact.frame = CGRectMake(125, 30, WIDTH/2, 60)
-        contact.font = UIFont.systemFontOfSize(15)
+        titleName.frame = CGRectMake(WIDTH*125/375, WIDTH*5/375, 100, 20)
+        titleName.font = UIFont.systemFontOfSize(15)
+        contact.frame = CGRectMake(WIDTH*125/375, WIDTH*5/375+20, WIDTH*255/375-65, WIDTH*110/375-40)
+        contact.font = UIFont.systemFontOfSize(14)
         contact.textColor = UIColor(red: 62/255.0, green: 63/255.0, blue: 65/255.0, alpha: 1.0)
         contact.numberOfLines = 0
-        sold.frame = CGRectMake(125, 95, 100, 20)
-        sold.font = UIFont.systemFontOfSize(13)
+        sold.frame = CGRectMake(WIDTH*125/375, WIDTH*115/375-20, 100, 20)
+        sold.font = UIFont.systemFontOfSize(12)
         sold.textColor = GREY
-        price.frame = CGRectMake(WIDTH-70, 5, 60, 30)
-        price.textAlignment = .Left
+        price.frame = CGRectMake(WIDTH-65, WIDTH*5/375, 60, 25)
+        price.textAlignment = .Center
         price.textColor = COLOR
-        price.font = UIFont.systemFontOfSize(18)
-        priceOld.frame = CGRectMake(WIDTH-60, 35, 45, 20)
-        priceOld.textAlignment = .Left
+        price.font = UIFont.systemFontOfSize(16)
+        priceOld.frame = CGRectMake(WIDTH-60, WIDTH*5/375+25, 50, 20)
+        priceOld.textAlignment = .Center
         priceOld.textColor = GREY
-        priceOld.font = UIFont.systemFontOfSize(13)
-        redLine.frame = CGRectMake(WIDTH-60, 45, 45, 0.5)
+        priceOld.font = UIFont.systemFontOfSize(12)
+        redLine.frame = CGRectMake(WIDTH-60, WIDTH*5/375+35, 50, 0.5)
         redLine.backgroundColor = COLOR
         
         self.addSubview(titImage)

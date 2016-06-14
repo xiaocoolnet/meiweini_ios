@@ -11,8 +11,6 @@ import Alamofire
 import MBProgressHUD
 
 class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
-    @IBOutlet weak var backBtn: UIButton!
     
     var titPic = UIButton()
     var titleView = UIView()
@@ -27,17 +25,18 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var redBtn = UIButton()
     
     var myTableView = UITableView()
-    let titArr:[String] = ["我的购买","我的分销","我的账户","我的地址","我的店铺"]
-    let picArr:[String] = ["ic_goumai.png","ic_fenxiao.png","Wallet.png","ic_dizhi.png","ic_dianpu.png"]
+    var titArr:[String] = ["我的购买","我的分销","我的账户","我的地址","我是商家"]
+    var picArr:[String] = ["ic_goumai.png","ic_fenxiao.png","Wallet.png","ic_dizhi.png","shop.png"]
     
+    let user = NSUserDefaults.standardUserDefaults()
     
 //    获取个人信息
     override func viewWillAppear(animated: Bool) {
         titleView.backgroundColor = COLOR
         self.navigationController?.navigationBarHidden = true
         self.tabBarController?.tabBar.hidden = false
-        let userid = NSUserDefaults.standardUserDefaults()
-        let uid = userid.stringForKey("userid")
+        let uid = user.stringForKey("userid")
+        
         if (uid == nil) {
             let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
             let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView") as! UINavigationController
@@ -70,6 +69,10 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                         username.setValue(status.data?.name, forKey: "username")
                         let phoneNumber = NSUserDefaults.standardUserDefaults()
                         phoneNumber.setValue(status.data?.phoneNumber, forKey: "phoneNumber")
+                        let userSex = NSUserDefaults.standardUserDefaults()
+                        userSex.setValue(status.data?.userSex, forKey: "sex")
+                        let userPhoto = NSUserDefaults.standardUserDefaults()
+                        userPhoto.setValue(status.data?.photo, forKey: "photo")
                     }
                 }
             }
@@ -81,13 +84,13 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
         // Do any additional setup after loading the view.
         
-        backBtn.layer.cornerRadius = 25
-        
         titleView.frame = CGRectMake(0, -20, WIDTH, 300)
+        
+        let photo = user.stringForKey("photo")
         
         let image = UIImageView()
         
-        image.sd_setImageWithURL(NSURL(string: "http://mwn.xiaocool.net/uploads/avatar/xiaocool.png"), placeholderImage: UIImage(named: "kb3.png"))
+        image.sd_setImageWithURL(NSURL(string: "http://mwn.xiaocool.net/uploads/avatar/\(photo)"), placeholderImage: UIImage(named: "kb3.png"))
         
         titPic.frame = CGRectMake(WIDTH/2-50, 100, 100, 100)
         titPic.layer.cornerRadius = 50
@@ -169,7 +172,13 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
 //  tableView代理方法
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titArr.count
+        let usertype = user.stringForKey("usertype")
+        if usertype == "1" {
+            return titArr.count-1
+        }else{
+            return titArr.count
+        }
+
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -251,8 +260,7 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.navigationController?.pushViewController(userMassage, animated: true)
         userMassage.title = "信息修改"
         
-        let userid = NSUserDefaults.standardUserDefaults()
-        let uid = userid.stringForKey("userid")
+        let uid = user.stringForKey("userid")
         let url = mwnUrl+"getuserinfo"
         let param = [
             "userid":uid!
@@ -284,25 +292,6 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
     }
     
-    @IBAction func GoBackLogin(sender: AnyObject) {
-        
-        let alertController = UIAlertController(title: NSLocalizedString("", comment: "Warn"), message: NSLocalizedString("确认退出？", comment: "empty message"), preferredStyle: .Alert)
-        let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
-        let doneAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
-
-            let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-            let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView") as! UINavigationController
-            self.presentViewController(vc, animated: true, completion: nil)
-            let userid = NSUserDefaults.standardUserDefaults()
-            userid.removeObjectForKey("userid")
-        }
-        alertController.addAction(doneAction)
-        alertController.addAction(cancelAction)
-        self.presentViewController(alertController, animated: true, completion: nil)
-
-        
-    }
-
     /*
     // MARK: - Navigation
 

@@ -20,7 +20,7 @@ class MeijiaViewController: UIViewController {
         
         self.tabBarController?.tabBar.hidden = true
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = RGREY
         
         meijia.title = "美甲"
         meijie.title = "美睫"

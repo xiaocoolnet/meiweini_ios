@@ -89,7 +89,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
                     let userid = NSUserDefaults.standardUserDefaults()
                     userid.setValue(status.data?.id, forKey: "userid")
                     
-//                    self.GetUserInfo()
+                    self.GetUserInfo()
                     
                     let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
                     let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainView")
@@ -124,8 +124,8 @@ class ViewController: UIViewController,UITextFieldDelegate {
                 }
                 if(status.status == "success"){
                     print("Success")
-                    let phoneNumber = NSUserDefaults.standardUserDefaults()
-                    phoneNumber.setValue(status.data?.phoneNumber, forKey: "phoneNumber")
+                    let userType = NSUserDefaults.standardUserDefaults()
+                    userType.setValue(status.data?.usertype, forKey: "usertype")
                 }
             }
         }

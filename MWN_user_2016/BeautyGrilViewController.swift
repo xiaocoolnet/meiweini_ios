@@ -20,7 +20,7 @@ class BeautyGrilViewController: UIViewController {
 
         self.tabBarController?.tabBar.hidden = true
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = RGREY
         
         oneView.title = "全部"
         twoView.title = "热门"

@@ -27,7 +27,7 @@ class GengduoViewController: UIViewController {
         
         self.tabBarController?.tabBar.hidden = true
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = RGREY
         
         oneView.title = nameArr[0]
         twoView.title = nameArr[1]

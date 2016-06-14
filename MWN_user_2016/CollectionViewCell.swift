@@ -18,7 +18,7 @@ class CollectionViewCell: UICollectionViewCell {
     }
     
     func addData(str:String){
-        self.button.setTitle(str, forState: UIControlState.Normal);
+        self.button.setTitle(str, forState: UIControlState.Normal)
     }
    
 }

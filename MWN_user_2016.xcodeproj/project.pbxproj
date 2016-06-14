@@ -127,7 +127,6 @@
 		183B95F51CD1DDA300C74FC9 /* MineMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B95F41CD1DDA300C74FC9 /* MineMoneyViewController.swift */; };
 		183B95F71CD1DDAE00C74FC9 /* MineMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B95F61CD1DDAE00C74FC9 /* MineMoreViewController.swift */; };
 		183B95F91CD1EC8000C74FC9 /* MineBusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B95F81CD1EC8000C74FC9 /* MineBusTableViewCell.swift */; };
-		183B95FB1CD2051C00C74FC9 /* PersonCertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B95FA1CD2051C00C74FC9 /* PersonCertificationViewController.swift */; };
 		18501EA71CCDBB7D00B6A614 /* SafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EA61CCDBB7D00B6A614 /* SafeViewController.swift */; };
 		18501EA91CCDBBCE00B6A614 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EA81CCDBBCE00B6A614 /* ServiceViewController.swift */; };
 		18501EAB1CCE06CC00B6A614 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18501EAA1CCE06CC00B6A614 /* CommentTableViewCell.swift */; };
@@ -232,7 +231,6 @@
 		18A9D94B1D08186D0073C69E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A9D94A1D08186D0073C69E /* AVFoundation.framework */; };
 		18A9D94D1D0818950073C69E /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A9D94C1D0818950073C69E /* AssetsLibrary.framework */; };
 		18AA058B1CC5037600BDCDF9 /* BeautyGrilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA058A1CC5037600BDCDF9 /* BeautyGrilViewController.swift */; };
-		18AA058E1CC504CE00BDCDF9 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA058D1CC504CE00BDCDF9 /* LocationViewController.swift */; };
 		18AA05911CC5052300BDCDF9 /* MassageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA05901CC5052300BDCDF9 /* MassageViewController.swift */; };
 		18AA05931CC505B600BDCDF9 /* NextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA05921CC505B600BDCDF9 /* NextViewViewController.swift */; };
 		18AD6E871CF54573008C60BF /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AD6E861CF54573008C60BF /* ImageCollectionViewCell.swift */; };
@@ -254,7 +252,6 @@
 		18BE789C1CD8485B000C7BF9 /* SpecifyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BE789B1CD8485B000C7BF9 /* SpecifyArray.swift */; };
 		18BE789E1CD848B0000C7BF9 /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BE789D1CD848B0000C7BF9 /* citydict.plist */; };
 		18BE78A01CD84E2C000C7BF9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BE789F1CD84E2C000C7BF9 /* LocationManager.swift */; };
-		18BE78A21CD85259000C7BF9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78A11CD85259000C7BF9 /* TableViewCell.swift */; };
 		18BE78B51CD87927000C7BF9 /* ChineseInclude.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78A51CD87927000C7BF9 /* ChineseInclude.m */; };
 		18BE78B61CD87927000C7BF9 /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78A71CD87927000C7BF9 /* ChineseToPinyinResource.m */; };
 		18BE78B71CD87927000C7BF9 /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE78A91CD87927000C7BF9 /* HanyuPinyinOutputFormat.m */; };
@@ -273,6 +270,19 @@
 		18D262861CC0799800485B13 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D262851CC0799800485B13 /* VerificationViewController.swift */; };
 		18D262881CC091C700485B13 /* MeasureTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D262871CC091C700485B13 /* MeasureTool.swift */; };
 		18D7A1A81CF6971200294995 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7A1A71CF6971200294995 /* FeedbackViewController.swift */; };
+		18F1494E1D0F991E00AB452A /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F149431D0F991E00AB452A /* CityViewController.swift */; };
+		18F1494F1D0F991E00AB452A /* CityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F149441D0F991E00AB452A /* CityViewController.xib */; };
+		18F149501D0F991E00AB452A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F149451D0F991E00AB452A /* CollectionViewCell.swift */; };
+		18F149511D0F991E00AB452A /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F149461D0F991E00AB452A /* CollectionViewCell.xib */; };
+		18F149521D0F991E00AB452A /* TableViewHeadSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F149471D0F991E00AB452A /* TableViewHeadSectionCell.swift */; };
+		18F149531D0F991E00AB452A /* TableViewHeadSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F149481D0F991E00AB452A /* TableViewHeadSectionCell.xib */; };
+		18F149541D0F991E00AB452A /* CityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F149491D0F991E00AB452A /* CityButton.swift */; };
+		18F149551D0F991E00AB452A /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1494A1D0F991E00AB452A /* SectionView.swift */; };
+		18F149561D0F991E00AB452A /* SectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F1494B1D0F991E00AB452A /* SectionView.xib */; };
+		18F149571D0F991E00AB452A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1494C1D0F991E00AB452A /* TableViewCell.swift */; };
+		18F149581D0F991E00AB452A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F1494D1D0F991E00AB452A /* TableViewCell.xib */; };
+		18F2E8381D0D51AE00030B5B /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F2E8361D0D51AE00030B5B /* PhoneViewController.swift */; };
+		18F2E8391D0D51AE00030B5B /* PhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F2E8371D0D51AE00030B5B /* PhoneViewController.xib */; };
 		18FA28671CC487DA00B73CCC /* ChildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA28661CC487DA00B73CCC /* ChildCollectionViewCell.swift */; };
 		18FA286B1CC4C7B700B73CCC /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA286A1CC4C7B700B73CCC /* HeaderCollectionReusableView.swift */; };
 		18FAAC571CE18C8B00D6CF73 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAAC561CE18C8B00D6CF73 /* DetailsViewController.swift */; };
@@ -435,7 +445,6 @@
 		183B95F41CD1DDA300C74FC9 /* MineMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineMoneyViewController.swift; sourceTree = "<group>"; };
 		183B95F61CD1DDAE00C74FC9 /* MineMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineMoreViewController.swift; sourceTree = "<group>"; };
 		183B95F81CD1EC8000C74FC9 /* MineBusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineBusTableViewCell.swift; sourceTree = "<group>"; };
-		183B95FA1CD2051C00C74FC9 /* PersonCertificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCertificationViewController.swift; sourceTree = "<group>"; };
 		18501EA61CCDBB7D00B6A614 /* SafeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeViewController.swift; sourceTree = "<group>"; };
 		18501EA81CCDBBCE00B6A614 /* ServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 		18501EAA1CCE06CC00B6A614 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
@@ -584,7 +593,6 @@
 		18A9D94A1D08186D0073C69E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		18A9D94C1D0818950073C69E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		18AA058A1CC5037600BDCDF9 /* BeautyGrilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyGrilViewController.swift; sourceTree = "<group>"; };
-		18AA058D1CC504CE00BDCDF9 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		18AA05901CC5052300BDCDF9 /* MassageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassageViewController.swift; sourceTree = "<group>"; };
 		18AA05921CC505B600BDCDF9 /* NextViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewViewController.swift; sourceTree = "<group>"; };
 		18AD6E861CF54573008C60BF /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -606,7 +614,6 @@
 		18BE789B1CD8485B000C7BF9 /* SpecifyArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecifyArray.swift; sourceTree = "<group>"; };
 		18BE789D1CD848B0000C7BF9 /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
 		18BE789F1CD84E2C000C7BF9 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		18BE78A11CD85259000C7BF9 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		18BE78A41CD87927000C7BF9 /* ChineseInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseInclude.h; sourceTree = "<group>"; };
 		18BE78A51CD87927000C7BF9 /* ChineseInclude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseInclude.m; sourceTree = "<group>"; };
 		18BE78A61CD87927000C7BF9 /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
@@ -633,6 +640,19 @@
 		18D262851CC0799800485B13 /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		18D262871CC091C700485B13 /* MeasureTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureTool.swift; sourceTree = "<group>"; };
 		18D7A1A71CF6971200294995 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		18F149431D0F991E00AB452A /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
+		18F149441D0F991E00AB452A /* CityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityViewController.xib; sourceTree = "<group>"; };
+		18F149451D0F991E00AB452A /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		18F149461D0F991E00AB452A /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		18F149471D0F991E00AB452A /* TableViewHeadSectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewHeadSectionCell.swift; sourceTree = "<group>"; };
+		18F149481D0F991E00AB452A /* TableViewHeadSectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewHeadSectionCell.xib; sourceTree = "<group>"; };
+		18F149491D0F991E00AB452A /* CityButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityButton.swift; sourceTree = "<group>"; };
+		18F1494A1D0F991E00AB452A /* SectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		18F1494B1D0F991E00AB452A /* SectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionView.xib; sourceTree = "<group>"; };
+		18F1494C1D0F991E00AB452A /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		18F1494D1D0F991E00AB452A /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		18F2E8361D0D51AE00030B5B /* PhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		18F2E8371D0D51AE00030B5B /* PhoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneViewController.xib; sourceTree = "<group>"; };
 		18FA28661CC487DA00B73CCC /* ChildCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildCollectionViewCell.swift; sourceTree = "<group>"; };
 		18FA286A1CC4C7B700B73CCC /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		18FAAC561CE18C8B00D6CF73 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -1113,7 +1133,6 @@
 				18FA28661CC487DA00B73CCC /* ChildCollectionViewCell.swift */,
 				18FA286A1CC4C7B700B73CCC /* HeaderCollectionReusableView.swift */,
 				189DA5561CCC51650004B76D /* ChildsTableViewCell.swift */,
-				18BE78A11CD85259000C7BF9 /* TableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1166,7 +1185,6 @@
 				180767C91CBF7C3D0062F4A5 /* PasswordViewController.swift */,
 				18B807AD1CD1A33400CB5E0E /* CertificationViewController.swift */,
 				1837D0081D06C88000726990 /* ShopPhotosViewController.swift */,
-				183B95FA1CD2051C00C74FC9 /* PersonCertificationViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1474,7 +1492,17 @@
 		18AA058C1CC504B600BDCDF9 /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				18AA058D1CC504CE00BDCDF9 /* LocationViewController.swift */,
+				18F149431D0F991E00AB452A /* CityViewController.swift */,
+				18F149441D0F991E00AB452A /* CityViewController.xib */,
+				18F149451D0F991E00AB452A /* CollectionViewCell.swift */,
+				18F149461D0F991E00AB452A /* CollectionViewCell.xib */,
+				18F149471D0F991E00AB452A /* TableViewHeadSectionCell.swift */,
+				18F149481D0F991E00AB452A /* TableViewHeadSectionCell.xib */,
+				18F149491D0F991E00AB452A /* CityButton.swift */,
+				18F1494A1D0F991E00AB452A /* SectionView.swift */,
+				18F1494B1D0F991E00AB452A /* SectionView.xib */,
+				18F1494C1D0F991E00AB452A /* TableViewCell.swift */,
+				18F1494D1D0F991E00AB452A /* TableViewCell.xib */,
 			);
 			name = Location;
 			sourceTree = "<group>";
@@ -1511,6 +1539,8 @@
 			isa = PBXGroup;
 			children = (
 				18A5EBC11CCF09E7009FB017 /* UserMassageViewController.swift */,
+				18F2E8361D0D51AE00030B5B /* PhoneViewController.swift */,
+				18F2E8371D0D51AE00030B5B /* PhoneViewController.xib */,
 			);
 			name = UserMassage;
 			sourceTree = "<group>";
@@ -1825,6 +1855,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				188F57DD1CF6DB83002318A1 /* UMSCommentInputController.xib in Resources */,
+				18F2E8391D0D51AE00030B5B /* PhoneViewController.xib in Resources */,
 				1837D0071D066B4500726990 /* AddressListViewController.xib in Resources */,
 				189DA6E61CCCBA0F0004B76D /* 2.plist in Resources */,
 				18BE78BC1CD87927000C7BF9 /* unicode_to_hanyu_pinyin.txt in Resources */,
@@ -1835,11 +1866,16 @@
 				1807679A1CBF76770062F4A5 /* pic.bundle in Resources */,
 				189DA6E71CCCBA0F0004B76D /* 3.plist in Resources */,
 				189DA6E51CCCBA0F0004B76D /* 1.plist in Resources */,
+				18F149561D0F991E00AB452A /* SectionView.xib in Resources */,
+				18F1494F1D0F991E00AB452A /* CityViewController.xib in Resources */,
 				188F57DF1CF6DB83002318A1 /* UMShareEditViewController.xib in Resources */,
 				1FF7A31F1CBF69800048638F /* LaunchScreen.storyboard in Resources */,
 				18BE789E1CD848B0000C7BF9 /* citydict.plist in Resources */,
+				18F149581D0F991E00AB452A /* TableViewCell.xib in Resources */,
 				188F57DC1CF6DB83002318A1 /* UMSCommentDetailController.xib in Resources */,
 				180767A61CBF76770062F4A5 /* ItemCell.xib in Resources */,
+				18F149531D0F991E00AB452A /* TableViewHeadSectionCell.xib in Resources */,
+				18F149511D0F991E00AB452A /* CollectionViewCell.xib in Resources */,
 				188F57E01CF6DB83002318A1 /* UMShareEditViewControlleriPad.xib in Resources */,
 				188F57E31CF6DB83002318A1 /* UMSShareListController.xib in Resources */,
 				188F57E11CF6DB83002318A1 /* UMSLoginViewController.xib in Resources */,
@@ -1937,6 +1973,7 @@
 				180767991CBF76770062F4A5 /* PhotoBrowser+Common.swift in Sources */,
 				1890C60F1CD9945B009DF5C0 /* JSONJoy.swift in Sources */,
 				1807675D1CBF76770062F4A5 /* EdgeInsets.swift in Sources */,
+				18F149501D0F991E00AB452A /* CollectionViewCell.swift in Sources */,
 				180767A71CBF76770062F4A5 /* ShowImageView.swift in Sources */,
 				1807678C1CBF76770062F4A5 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				180767621CBF76770062F4A5 /* ViewController+SnapKit.swift in Sources */,
@@ -1950,7 +1987,6 @@
 				189B72701CE3189A00713AFE /* WithdrawMoneyViewController.swift in Sources */,
 				183B95EF1CD1DD7400C74FC9 /* MineLoadViewController.swift in Sources */,
 				180767521CBF76770062F4A5 /* DisplayView.swift in Sources */,
-				183B95FB1CD2051C00C74FC9 /* PersonCertificationViewController.swift in Sources */,
 				18AD6E871CF54573008C60BF /* ImageCollectionViewCell.swift in Sources */,
 				180767591CBF76770062F4A5 /* ConstraintItem.swift in Sources */,
 				18C12A4C1CD301B000014A69 /* OneViewController.swift in Sources */,
@@ -2015,6 +2051,7 @@
 				18AA05931CC505B600BDCDF9 /* NextViewViewController.swift in Sources */,
 				180767A21CBF76770062F4A5 /* PhotoBrowser+Model.swift in Sources */,
 				180767A51CBF76770062F4A5 /* ItemCell.swift in Sources */,
+				18F149521D0F991E00AB452A /* TableViewHeadSectionCell.swift in Sources */,
 				18BE78B71CD87927000C7BF9 /* HanyuPinyinOutputFormat.m in Sources */,
 				1807674F1CBF76770062F4A5 /* RMDownloadIndicator.swift in Sources */,
 				18BE78A01CD84E2C000C7BF9 /* LocationManager.swift in Sources */,
@@ -2024,6 +2061,7 @@
 				180767511CBF76770062F4A5 /* ConnectModel.m in Sources */,
 				18AED7731CD05332008764B5 /* MassageListViewController.swift in Sources */,
 				1807678E1CBF76770062F4A5 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
+				18F1494E1D0F991E00AB452A /* CityViewController.swift in Sources */,
 				183178371CC7592F00D93D8A /* VideoTableViewCell.swift in Sources */,
 				18D262861CC0799800485B13 /* VerificationViewController.swift in Sources */,
 				1807675A1CBF76770062F4A5 /* ConstraintMaker.swift in Sources */,
@@ -2084,6 +2122,7 @@
 				18A5EBC01CCF02EF009FB017 /* VideoPlayTableViewCell.swift in Sources */,
 				1807678F1CBF76770062F4A5 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				18BE78BA1CD87927000C7BF9 /* PinYinForObjc.m in Sources */,
+				18F149551D0F991E00AB452A /* SectionView.swift in Sources */,
 				183178331CC7576B00D93D8A /* BeautyVidViewController.swift in Sources */,
 				1807675F1CBF76770062F4A5 /* SnapKit.swift in Sources */,
 				180767871CBF76770062F4A5 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
@@ -2099,14 +2138,15 @@
 				183178351CC7577F00D93D8A /* BeautyLiveViewController.swift in Sources */,
 				180767941CBF76770062F4A5 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				1807675C1CBF76770062F4A5 /* Debugging.swift in Sources */,
+				18F2E8381D0D51AE00030B5B /* PhoneViewController.swift in Sources */,
 				18A995CE1CC9C08300C4ACC0 /* MineMassageViewController.swift in Sources */,
+				18F149571D0F991E00AB452A /* TableViewCell.swift in Sources */,
 				18A5EBBE1CCF023D009FB017 /* VideoViewController.swift in Sources */,
 				180767731CBF76770062F4A5 /* UIButton+Haneke.swift in Sources */,
 				189DA6DD1CCCA70F0004B76D /* UIImageView+HighlightedWebCache.m in Sources */,
 				180767CA1CBF7C3D0062F4A5 /* PasswordViewController.swift in Sources */,
 				18501EAF1CCE0DCD00B6A614 /* PhotoalbumTableViewCell.swift in Sources */,
 				189DA6D41CCCA70F0004B76D /* SDWebImageDecoder.m in Sources */,
-				18AA058E1CC504CE00BDCDF9 /* LocationViewController.swift in Sources */,
 				183B95F71CD1DDAE00C74FC9 /* MineMoreViewController.swift in Sources */,
 				189DA6D11CCCA70F0004B76D /* NSData+ImageContentType.m in Sources */,
 				18FAAC5B1CE18DA500D6CF73 /* GiftsViewController.swift in Sources */,
@@ -2131,7 +2171,7 @@
 				1807677F1CBF76770062F4A5 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				18C12A4A1CD2FA8A00014A69 /* DiamondTableViewCell.swift in Sources */,
 				180767811CBF76770062F4A5 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
-				18BE78A21CD85259000C7BF9 /* TableViewCell.swift in Sources */,
+				18F149541D0F991E00AB452A /* CityButton.swift in Sources */,
 				1FF7A3151CBF69800048638F /* AppDelegate.swift in Sources */,
 				1807674D1CBF76770062F4A5 /* PhotoBrowserCell.swift in Sources */,
 				18B68DDD1CE428F900FE0E2B /* ShopsViewController.swift in Sources */,

@@ -37,12 +37,12 @@ class ChildCollectionViewCell: UICollectionViewCell {
             number = UILabel(frame: CGRect(x: CGRectGetWidth(self.frame) - 80, y: CGRectGetMaxY(imageView.frame)+5, width: 80, height: 20))
             //number.backgroundColor = UIColor.greenColor()
             number.textAlignment = .Right
-            number.font = UIFont.systemFontOfSize(13)
+            number.font = UIFont.systemFontOfSize(12)
             number.textColor = UIColor(red: 202/255.0, green: 202/255.0, blue: 202/255.0, alpha: 1.0)
             
-            contact = UILabel(frame: CGRect(x: 0, y: CGRectGetMaxY(imageView.frame) + 30, width: CGRectGetWidth(self.frame) - 20, height: 20))
+            contact = UILabel(frame: CGRect(x: 0, y: CGRectGetMaxY(imageView.frame) + 25, width: CGRectGetWidth(self.frame) - 20, height: 30))
             //contact.backgroundColor = UIColor.brownColor()
-            contact.font = UIFont.systemFontOfSize(13)
+            contact.font = UIFont.systemFontOfSize(12)
             contact.textColor = GREY
             
             if let text = name {

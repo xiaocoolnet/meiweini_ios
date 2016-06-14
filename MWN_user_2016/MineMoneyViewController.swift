@@ -16,6 +16,7 @@ class MineMoneyViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
+        self.tabBarController?.tabBar.hidden = true
     }
     
     override func viewDidLoad() {

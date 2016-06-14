@@ -16,6 +16,7 @@ class AddressListViewController: UIViewController,UITableViewDelegate,UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.edgesForExtendedLayout = .None
+//        组头和组尾随tableview滑动
         self.automaticallyAdjustsScrollViewInsets = false
         
         let rightBtn = UIBarButtonItem(title: "添加", style: .Done, target: self, action: #selector(AddressListViewController.addAddress))

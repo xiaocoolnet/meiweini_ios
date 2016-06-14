@@ -88,8 +88,6 @@ class BeautyPicViewController: UIViewController {
         
         
     }
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

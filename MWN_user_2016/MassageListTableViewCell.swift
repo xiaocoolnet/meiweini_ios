@@ -29,7 +29,7 @@ class MassageListTableViewCell: UITableViewCell {
         massageImage.layer.cornerRadius = 22.5
         massageImage.clipsToBounds = true
         userName.frame = CGRectMake(65, 10, WIDTH/2, 20)
-        common.frame = CGRectMake(65, 35, WIDTH/3*2, 20)
+        common.frame = CGRectMake(65, 35, WIDTH-120, 20)
         common.textColor = UIColor(red: 104/255.0, green: 104/255.0, blue: 104/255.0, alpha: 1.0)
         common.font = UIFont.systemFontOfSize(15)
         timeLab.frame = CGRectMake(WIDTH-110, 25, 100, 20)

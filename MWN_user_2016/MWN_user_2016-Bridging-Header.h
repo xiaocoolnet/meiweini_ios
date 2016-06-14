@@ -16,6 +16,7 @@
 #import "UMSocial.h"
 #import "UMSocialSinaSSOHandler.h"
 #import "UMSocialWechatHandler.h"
+#import <AFNetworking/AFNetworking.h>
 //#import "UMSocialQQHandler.h"
 /** 拼音搜索 */
 #include "ZYPinYinSearch.h"

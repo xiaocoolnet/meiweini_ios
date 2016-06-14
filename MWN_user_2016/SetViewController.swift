@@ -21,6 +21,7 @@ class SetViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
         self.title = "设置"
         self.view.backgroundColor = RGREY
@@ -33,9 +34,20 @@ class SetViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         getTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(getTableView)
         getTableView.rowHeight = 50
-        getTableView.scrollEnabled = false
+//        getTableView.scrollEnabled = false
+        self.bottomView()
     }
-
+//退出登录
+    func bottomView() {
+        let bottom = UIView(frame: CGRectMake(0, 0, WIDTH, 100))
+        
+        let back = UIButton(frame: CGRectMake(20, 40, WIDTH-40, 44))
+        back.setImage(UIImage(named: "lijitijiao_normal-1"), forState: .Normal)
+        back.addTarget(self, action: #selector(self.GoBackLogin), forControlEvents: .TouchUpInside)
+        bottom.addSubview(back)
+        getTableView.tableFooterView = bottom
+        
+    }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
@@ -92,6 +104,26 @@ class SetViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
             
         }
     }
+//    退出登录
+    func GoBackLogin() {
+        
+        let alertController = UIAlertController(title: NSLocalizedString("", comment: "Warn"), message: NSLocalizedString("确认退出？", comment: "empty message"), preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
+        let doneAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+            
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView") as! UINavigationController
+            self.presentViewController(vc, animated: true, completion: nil)
+            let userid = NSUserDefaults.standardUserDefaults()
+            userid.removeObjectForKey("userid")
+        }
+        alertController.addAction(doneAction)
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
+        
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

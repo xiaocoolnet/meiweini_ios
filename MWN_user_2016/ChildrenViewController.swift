@@ -20,6 +20,7 @@ class ChildrenViewController: UIViewController,UITableViewDelegate,UITableViewDa
 
         self.view.backgroundColor = RGREY
         myTableView.frame = CGRectMake(0, 0, WIDTH, HEIGHT-114)
+        myTableView.backgroundColor = RGREY
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.registerClass(ChildsTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
@@ -29,7 +30,7 @@ class ChildrenViewController: UIViewController,UITableViewDelegate,UITableViewDa
         one.backgroundColor = RGREY
         myTableView.tableHeaderView = one
         
-        myTableView.rowHeight = 120
+        myTableView.rowHeight = WIDTH*120/375
         
         for i in 0...30 {
             array.append(i)
